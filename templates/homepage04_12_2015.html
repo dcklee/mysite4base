@@ -1,0 +1,131 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% url "area_study" as areastudy_url %}
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            <div id="dialog-box">
+                <div class="left">
+                 <h2>{% blocktrans %}Enlingo 留学老师  今天老师博客{% endblocktrans %}</h2>
+                <p>
+                 {% blocktrans %}
+                 Enlingo matches Chinese Outbound Students to the largest International Education and Visa Agent network globally.<br>留学老师让中国留学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的留学与签证专业人士。
+                 {% endblocktrans %}
+                </p>
+                </div>
+                <div class="right">
+                <p>{% blocktrans %}<a href="{{ login_url }}" class="btn btn-default">Log In</a> <br>or<br> <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a>{% endblocktrans %}</p>
+                </div>
+            </div>
+            {%  else %}
+            <div>
+                <h2>{% blocktrans %}Enlingo 留学老师  今天老师博客{% endblocktrans %}</h2>
+            <p>
+                {% blocktrans %}
+                Enlingo matches Chinese Outbound Students to the largest International Education and Visa Agent network globally.<br>留学老师让中国留学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的留学与签证专业人士。
+                {% endblocktrans %}
+            </p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    <section>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+         $("#carousel-aos").carousel({
+         interval : false
+        });
+     });
+    </script>
+
+        <div id="carousel-aos" class="container carousel slide" data-ride="carousel" data-interval="false" style="height: 250px">
+            <h1 class="text-center">{% blocktrans %}专业范围{% endblocktrans %}</h1>
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-aos" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-aos" data-slide-to="1"></li>
+                <li data-target="#carousel-aos" data-slide-to="2"></li>
+            </ol>
+    <!-- Carousel items -->
+           <!-- Carousel items -->
+                <div class="carousel-inner">
+                 {% for area in areaofstudy %}
+                     {% cycle 'start' '' '' '' as slidestart silent %}
+                         {% cycle  '' '' '' 'end' as slideend silent %}
+                        {%  if slidestart %}
+                            {% if forloop.first %}
+                                <div class="item active study-columns">
+                            {% else %}
+                                <div class="item study-columns">
+                            {% endif %}
+                                            {% endif %}
+                                                <div>
+                                                <a href="{%  url "coursesearch:areastudy" area.pk %}">
+                                                <i class="{{ area.fontlogo }}"></i><br>
+                                                    <b>{{ area.name }}<br></b> <br>100老师顾问在线<br>2000同学现在看中</a>
+                                                </div>
+                                {%  if slideend or forloop.last %}
+                                </div>
+                     {%  endif %}
+                 {%  endfor %}
+                 </div>
+            <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel-aos" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#carousel-aos" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        </div>
+    </section>
+        <section class="jumbotron">
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <i class="fa fa-globe fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>国家<br>Country</b>
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-building fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>学校创新<br>College Innovation</b>
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-newspaper-o fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>老师介绍<br>College News</b> <br>80老师顾问在线<br>1200同学现在看中
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-user fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>老师介绍<br>Teacher Profile</b> <br>80老师顾问在线<br>1200同学现在看中
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <p class="lead text-center">
+                {% blocktrans %}
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "userpanel/userpanel_base.html" %}
+{% load static from staticfiles %}
+{% load metron_tags %}
+{% load i18n %}
+
+{# bootstrap 3 library #}
+{% load bootstrap3 %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% block styles %}
+    {% include "userpanel/_styles.html" %}
+{% endblock %}
+
+
+{% block extra_head_base %}
+    {% block extra_head %}{% endblock %}
+{% endblock %}
+
+
+{% block footer %}
+    {% include "userpanel/_footer.html" %}
+{% endblock %}
+
+
+{% block scripts %}
+    {% include "userpanel/_scripts.html" %}
+{% endblock %}
+
+{% block extra_body_base %}
+    {% analytics %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}

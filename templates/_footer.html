@@ -1,0 +1,294 @@
+{% load i18n %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+
+               <section id="bottom">
+                    <div class="section-inner">
+                        <div class="container">
+                            <div class="row normal-sidebar">
+                				<div id="text-10" class=" col-md-3  widget widget_text"><div class=" widget-inner">
+                                    <a href="{% url "coursesearch:country" %}">
+                                        <div class="textwidget">
+                                            <div id="un-icon-box-5" class="media un-icon-box  " data-delay=0>
+                                                <div class="pull-left">
+                            	                   <div class="un-icon">
+                                	                    <i class="fa fa-cube"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h4 class="media-heading">按国家检索课程</h4><p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+            		              </div>
+                                </a>
+                            </div>
+                            <div id="text-11" class=" col-md-3  widget widget_text">
+                                <div class=" widget-inner">
+                                    <a href="{% url "blog" %}">
+                			            <div class="textwidget">
+                                            <div id="un-icon-box-6" class="media un-icon-box  " data-delay=0>
+                                                <div class="pull-left">
+                        	                       <div class="un-icon">
+                            	                       <i class="fa fa-leaf"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">教育机构项目和博客新闻</h4><p></p>
+                                                </div>
+                                            </div>
+                                        </a>
+            	                    </div>
+            		            </div>
+                            </div>
+                            <div id="text-13" class=" col-md-3  widget widget_text">
+                                <a href="{% url "consultantregistration:consultant_list" %}">
+                                    <div class=" widget-inner">
+                                        <div class="textwidget">
+                                            <div id="un-icon-box-7" class="media un-icon-box  " data-delay=0>
+                                                <div class="pull-left">
+                        	                        <div class="un-icon">
+                            	                       <i class="fa fa-thumbs-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h4 class="media-heading">顾问简介搜索</h4><p></p>
+                                                </div>
+                                            </div>
+                	                    </div>
+                		            </div>
+                                </a>
+                            </div>
+                            <div id="text-16" class=" col-md-3  widget widget_text">
+                                <div class=" widget-inner">
+                                    <a href="javascript:void(0)">
+                    		            <div class="textwidget">
+                                            <div id="un-icon-box-8" class="media un-icon-box  " data-delay=0>
+                                                <div class="pull-left">
+                            	                   <div class="un-icon">
+                                	                   <i class="fa fa-rocket"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h4 class="media-heading">教育机构创新项目</h4><p></p>
+                                                </div>
+                                            </div>
+                	                    </div>
+                		            </div>
+                                    </a>
+                                </div>
+                                <div id="divider-6" class=" col-md-3  widget divider_widget">
+                                    <a href="#">
+                                        <div class=" widget-inner">
+                                            <div class="un-heading un-separator">
+                                                <div class="un-heading-wrap">
+                                                    <span class="un-heading-line un-heading-before"><span></span></span>
+                                                    <span class="un-heading-line un-heading-after"><span></span></span>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="nav_menu-11" class=" col-md-3  widget widget_nav_menu">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">老师及导师课程信息</h2>
+                                        <div class="menu-law-business-container">
+                                            <ul id="menu-law-business" class="menu">
+                                                <li id="menu-item-1280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1280">
+                                                    <a href="#">M. Accounting 老师 Alex Farra先生</a>
+                                                </li>
+                                                <li id="menu-item-1281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1281">
+                                                    <a href="#">MBA 老师 Michael Vela先生</a>
+                                                </li>
+                                                <li id="menu-item-1282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1282">
+                                                    <a href="#">B. Business Law 导师 Michelle Gains女士</a>
+                                                </li>
+                                                <li id="menu-item-1283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1283">
+                                                    <a href="#">M. Entrepreneurship 导师 Su Ning女士</a>
+                                                </li>
+                                                <li id="menu-item-1284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1284">
+                                                    <a href="#">D. Tourism and Hospitality 教授 Jeff Gurney先生</a>
+                                                </li>
+                                                <li id="menu-item-1285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1285">
+                                                    <a href="#">M. Marketing 教授 Jeff Gurney先生</a>
+                                                </li>
+                                                <li id="menu-item-1286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1286">
+                                                    <a href="#">B. Public Relations 导师 Michelle Gains女士</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-7" class=" col-md-3  widget widget_nav_menu">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">留学顾问专家栏</h2>
+                                        <div class="menu-engineering-container">
+                                            <ul id="menu-engineering" class="menu">
+                                                <li id="menu-item-1287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1287">
+                                                    <a href="#">M. Information Technology MARA 苏先生</a>
+                                                </li>
+                                                <li id="menu-item-1288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1288">
+                                                    <a href="#">B. Information System MARA John Bains先生</a>
+                                                </li>
+                                                <li id="menu-item-1289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1289">
+                                                    <a href="#">M. Chemical Engineering Edugobal 杜军女士</a>
+                                                </li>
+                                                <li id="menu-item-1290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1290">
+                                                    <a href="#">M. Electrical Engineering Navitas 李文娟女士</a>
+                                                </li>
+                                                <li id="menu-item-1291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1291">
+                                                    <a href="#">B. Mechanical Engineering MARA Jack Banes先生</a>
+                                                </li>
+                                                <li id="menu-item-1292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1292">
+                                                    <a href="#">B. Software Engineering MARA　Sam Kelly女士</a>
+                                                </li>
+                                                <li id="menu-item-1293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1293">
+                                                    <a href="#">M. Applied Geology MARA Jamie Sugo先生</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-8" class=" col-md-3  widget widget_nav_menu">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">浏览热门课程</h2>
+                                        <div class="menu-higher-education-container">
+                                            <ul id="menu-higher-education" class="menu">
+                                                <li id="menu-item-1294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1294">
+                                                    <a href="#">Master Of Taxation</a>
+                                                </li>
+                                                <li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1295">
+                                                    <a href="#">Master of IT</a>
+                                                </li>
+                                                <li id="menu-item-1296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1296">
+                                                    <a href="#">Master Of Accounting</a>
+                                                </li>
+                                                <li id="menu-item-1297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1297">
+                                                    <a href="#">MBA</a>
+                                                </li>
+                                                <li id="menu-item-1298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1298">
+                                                    <a href="#">Master of Geology</a>
+                                                </li>
+                                                <li id="menu-item-1299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1299">
+                                                    <a href="#">Diploma</a>
+                                                </li>
+                                                <li id="menu-item-1300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1300">
+                                                    <a href="#">Other Degrees</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-14" class=" col-md-3 border widget widget_text">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">联系我们</h2>
+                                        <div class="textwidget">
+                                            <p>Email: student@enlingo.com<br />
+                                                电话: 4000 717 313<br />
+                                                地址: 中国上海市长宁区延安东路1号
+                                            </p>
+                                        </div>
+            		                </div>
+                                </div>
+                                <div id="divider-7" class=" col-md-3  widget divider_widget">
+                                    <div class=" widget-inner">
+                                        <div class="un-heading un-separator">
+                                            <div class="un-heading-wrap">
+                                                <span class="un-heading-line un-heading-before"><span></span></span>
+                                                <span class="un-heading-line un-heading-after"><span></span></span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-15" class=" col-md-3  widget widget_text">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">留西洋网</h2>
+                                        <div class="textwidget">让中国留学生找最佳出国留学的专业顾问，完全免费。我们拥有全世界最多，最专业的留学与签证专业人士。
+                                        </div>
+            		                </div>
+                                </div>
+                                <div id="recent-posts-3" class=" col-md-3  widget widget_recent_entries">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">最新信息</h2>
+                                        <ul>
+            					           <li>
+            				                    <a href="#">莫纳什大学 Kelly博士解读 CSIRO Lab 3D打印实习机会</a>
+            						        </li>
+            					            <li>
+            				                    <a href="#">普度大学 Johnson讲师谈新iOS课程</a>
+            						        </li>
+            					            <li>
+            				                    <a href="#">大学排榜
+                                                </a>
+            						        </li>
+            					            <li>
+            				                    <a href="#">澳大利亚422类度假工作签证新政策</a>
+            						        </li>
+            					            <li>
+            				                    <a href="#">TAFE NSW Lawerence Gaffer讲师欢迎新Cordone Bleu合作项目</a>
+            						        </li>
+            					            <li>
+            				                    <a href="#">2017年夏季UCLA招生</a>
+            						        </li>
+            				            </ul>
+            		                </div>
+                                </div>
+                                <div id="nav_menu-10" class=" col-md-3  widget widget_nav_menu">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">其他信息</h2>
+                                        <div class="menu-others-container">
+                                            <ul id="menu-others" class="menu">
+                                                <li id="menu-item-1306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1306">
+                                                    <a href="#">留西洋平台</a>
+                                                </li>
+                                                <li id="menu-item-1307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1307">
+                                                    <a href="#">签证信息</a>
+                                                </li>
+                                                <li id="menu-item-1308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1308">
+                                                    <a href="#">学校机构新闻</a>
+                                                </li>
+                                                <li id="menu-item-1309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1309">
+                                                    <a href="#">教授兰</a>
+                                                </li>
+                                                <li id="menu-item-1310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1310">
+                                                    <a href="#">奖学金</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="zflickr-4" class=" col-md-3  widget widget_flickr">
+                                    <div class=" widget-inner">
+                                        <h2 class="widget-title maincolor1">微信与微博</h2>
+                                        <div class='flickr-badge-wrapper zframe-flickr-wrap-ltr'>
+                                        </div>
+                                        <div class="flickr_badge_image">
+                                            <a href="#" target="_blank">
+                                                <div class="weibo"></div>
+                                            </a>
+                                        </div>
+                                        <div class="flickr_badge_image">
+                                            <img src="{%  static  'images/QRchat.jpg' %}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="bottom-nav">
+                    <div class="container">
+                        <div class="text-center line-under">
+                            <a class="btn btn-default main-color-2-bg back-to-top" href="#top">置顶</a>
+
+                        </div>
+                        <div class="row footer-content">
+                            <div class="copyright col-md-6">
+                                   		© 2016 Enlingo
+                            </div>
+
+                        </div><!--/row-->
+                    </div><!--/container-->
+                </div>

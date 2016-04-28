@@ -1,0 +1,107 @@
+{% extends 'site_base.html' %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}search{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+        <h2>国家搜索</h2>
+            <div class="container">
+            <table id="example" class="table table-condensed table-striped">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+            <thead>
+                <tr>
+                    <th><p>{% blocktrans %} <b>专业 学校 Institution</b>{% endblocktrans %}</p></th>
+                    <th><p>{% blocktrans %} <b>城市 City</b>{% endblocktrans %}</p></th>
+                    <th> <p>{% blocktrans %} <b>课程 Course Name</b>{% endblocktrans %}</p></th>
+                    <th> <p>{% blocktrans %} <b>老师日记</b>{% endblocktrans %}</p></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for course in courselist %}
+                <tr>
+                    <td>{{ course.educationalinstitution }}</td>
+                    <td>{{  course.educationalinstitution.city }}</td>
+                    <td><a href="{#%  url "coursesearch:course" areaofstudy.pk course.pk  %#}">{{ course.course_name }}</a></td>
+                    <td>50</td>
+                </tr>
+             {%  empty  %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {%  endfor %}
+            </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="container">
+    <form method="get" action=".">
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Search">
+                </td>
+            </tr>
+        </table>
+
+        {% if query %}
+            <h3>Results</h3>
+
+            {% for result in page.object_list %}
+                <p>
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
+                </p>
+            {% empty %}
+                <p>No results found.</p>
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+    </form>
+    </div>
+    </section>
+            <section class="jumbotron">
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <b><a href="{% url "coursesearch:country" %}"><i class="fa fa-globe fa-3x"></i><br>
+                     国家 <br>Country</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-building fa-3x"></i><br>
+                    学校创新<br>College Innovation</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-newspaper-o fa-3x"></i><br>
+                    老师介绍<br>College News <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "consultantregistration:consultant_list" %}"><i class="fa fa-user fa-3x"></i><br>
+                    老师介绍<br>Teacher Profile <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

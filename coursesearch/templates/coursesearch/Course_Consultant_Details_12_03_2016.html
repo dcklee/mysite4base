@@ -1,0 +1,127 @@
+{% extends "site_base.html" %}
+{% load django_tables2 %}
+{%  load render_table from django_tables2 %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% url "course_chat" as course_chat_url %}
+            <h2><b><a href="{% url "coursesearch:areastudy" studyarea %}">{{ course.course_name }}</a></b></h2>
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            {% endif %}
+        </div>
+    </section>
+        <section>
+        <div class="container">
+            <p class="lead text-center">
+                <b>{{ course.educationalinstitution }}<br> 专科信息 Course Details</b>
+            </p>
+        </div>
+    </section>
+    <section>
+    <div class="container">
+        <table id="example" class="table table-condensed table-striped">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:40%">
+        <thead>
+            <tr>
+                <th><p>{% blocktrans %} <b>专业编号 Course Code</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>专业开学 Course Start Date</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>申请截止 Application Deadline</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>专科部门 Faculty Name</b>{% endblocktrans %}</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{  course.course_code }}</td>
+                <td>{{  course.course_start_date }}</td>
+                <td>{{  course.application_deadline }}</td>
+                <td>{{  course.faculty_name }}</td>
+            </tr>
+        </tbody>
+        </table>
+            <table id="example" class="table table-condensed table-striped">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:40%">
+        <thead>
+            <tr>
+                <th><p>{% blocktrans %} <b>学费 Fees</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>学期期间 Duration</b>{% endblocktrans %}</p></th>
+                <th> <p>{% blocktrans %} <b>2016 课程内容 2016 Course Structure</b>{% endblocktrans %}</p></th>
+                <th> <p>{% blocktrans %} <b></b>{% endblocktrans %}</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{  course.fees }}</td>
+                <td>{{ course.duration }}</td>
+                <td>信息 Details</td>
+                <td></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <section class="jumbotron">
+        <div class="container">
+            <div class="consultant-columns">
+                {%  for courseconsultant in courseconsultantlist %}
+                <div>
+                    <a href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.profile.pk %}">
+                        <img src="{{ courseconsultant.profile.profile_image.url }}" width='100' height='110'><br>
+                        <b>{{ courseconsultant.last_name }} {{ courseconsultant.profile.salutation }}</b> <br>75 同学咨询过他</a>
+                </div>
+                {%  empty  %}
+                <div>
+                    <i></i><br>
+                    {% blocktrans %}
+                    <b><br></b> <br>
+                    {% endblocktrans %}
+                </div>
+                {%  endfor %}
+            </div>
+        </div>
+    </section>
+        <section>
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <b><a href="{% url "coursesearch:country" %}"><i class="fa fa-globe fa-3x"></i><br>
+                     国家 <br>Country</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-building fa-3x"></i><br>
+                    学校创新<br>College Innovation</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-newspaper-o fa-3x"></i><br>
+                    老师介绍<br>College News <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "consultantregistration:consultant_list" %}"><i class="fa fa-user fa-3x"></i><br>
+                    老师介绍<br>Teacher Profile <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <p class="lead text-center">
+                {% blocktrans %}
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+{% endblock %}

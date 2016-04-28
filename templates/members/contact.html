@@ -1,0 +1,163 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active5 %}active{% endblock %}
+{% block index_or_subpage_component %}
+    <div class="text-center">
+        <h2 class="subpageTitle">Contact Us</h2>
+    </div>
+{%  endblock %}
+
+{% block body_base %}
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Have questions? Pelase feel free to <strong>enquire</strong> or provide <strong>feedback</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact -->
+	<div class="mainForm js-contactForm">
+		<div class="container">
+			<div class="row">
+				<form>
+					<div class="col-xs-12 col-lg-4 options">
+						<label class="option active">
+							<input type="radio" name="option" checked>
+							<div class="wrap">
+								<div class="name">Support</div>
+								<div class="text">Technical or service glitch? Let us know.</div>
+							</div>
+							<span class="sprite icon icon-support"></span>
+						</label>
+						<label class="option">
+							<input type="radio" name="option">
+							<div class="wrap">
+								<div class="name">Sales</div>
+								<div class="text">Payments or invoice questions? Write us, we will have one of our staff get in touch with you.</div>
+							</div>
+							<span class="sprite icon icon-sales"></span>
+						</label>
+						<label class="option">
+							<input type="radio" name="option">
+							<div class="wrap">
+								<div class="name">Say hello</div>
+								<div class="text">Thanks for the support! Any thanks you would like to give us, we cherish all the way.</div>
+							</div>
+							<span class="sprite icon icon-hallo"></span>
+						</label>
+					</div>
+					<div class="col-xs-12 col-lg-8">
+						<div class="row">
+							<div class="col-xs-12 col-md-6 i">
+								<div class="input">
+									<input type="text" class="form-control input-field">
+									<label class="input-label">
+										<span class="input-label-content">Name</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 i">
+								<div class="input">
+									<input type="email" class="form-control input-field">
+									<label class="input-label">
+										<span class="input-label-content">Email</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-xs-12 i">
+								<div class="input textform">
+									<textarea class="form-control input-field"></textarea>
+									<label class="input-label">
+										<span class="input-label-content">Message</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-xs-12 i">
+								<button type="submit" class="btn btn-red submit btn-effect">Send message</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<p class="text-center info">Unit 1005/3 Herbert Street, St Leonards, NSW, Australia 2065, tel: +612 8006 2982, <a href="#" title="#">membersupport@enlingo.com</a></p>
+		</div>
+	</div>
+
+	<!-- Google map -->
+	<div id="googleMap" data-lat="40.779165" data-lng="-73.962928"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+{% endblock %}
+
+{% block footer %}
+		<div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 i">
+						<h2>Enlingo</h2>
+						<div class="content">
+							Unit 1005/3 Herbert Street<br />
+							St Leonards, NSW<br />
+							Australia 2065<br />
+							+612 8006 2982<br />
+							<a href="#" title="#">membersupport@enlingo.com</a>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 i">
+						<h2>Newsletter</h2>
+						<p>Get the latest news via email:</p>
+						<form>
+							<input type="email" class="form-control">
+							<button type="submit" class="submit sprite"></button>
+						</form>
+					</div>
+					<div class="col-xs-6 col-sm-3 i">
+						<h2>Follow</h2>
+						<p>Get close to us</p>
+
+						<div class="socials">
+							<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+							<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+							<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 i">
+						<h2>Account</h2>
+						<div class="content clearfix">
+							<a href="#" title="#">My account</a>
+							<a href="#" title="#">Activity history</a>
+							<a href="#" title="#">Deploys</a>
+							<a href="#" title="#">My worklogs</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Copyright -->
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 i">Copyright © 2016 <a href="http://www.enlingo.com/" title="Enlingo">Enlingo</a></div>
+					<div class="col-xs-6 i">Web Design: <a href="http://www.enlingo.com/" title="Juraj Molnar" target="_blank">Enlingo Team</a></div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

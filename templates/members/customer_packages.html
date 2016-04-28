@@ -1,0 +1,132 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active3 %}active{% endblock %}
+{% block index_or_subpage_component %}
+        <div class="text-center">
+            <h2 class="subpageTitle">Starter Packages</h2>
+        </div>
+{% endblock %}
+
+{% block body_base %}
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">
+						Enlingo members starter credit packages are tailored to <strong>attracting</strong> new client leads no matter the size of your organisation. Setup your profiles today and <strong>start posting</strong>!
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pricing tables -->
+	<div class="pricingTables">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-3 i active">
+					<div class="c">
+						<div class="head">SOHO</div>
+						<div class="price">
+							9<sup>.95 $</sup><span>/ Package†</span>
+						</div>
+						<div class="info">
+							<strong>Single </strong>Localised Account<br />
+							<strong>Unlimited</strong> Enlingo Posts<sup>*</sup><br />
+							<strong>Followers</strong> Tracking Reports<br />
+							<strong>Dedicated</strong> Member Manager<br />
+                            <strong>500</strong> Credits Pack<br />
+							For the Active Professional<br />
+                            <strong>&nbsp;</strong><br />
+                            <strong>&nbsp;</strong><br />
+                            <strong>&nbsp;</strong>
+						</div>
+						<div class="btnWrap">
+							<a href="{%  url "subscription_wizard" soho.pk %}" title="subscriptionwizard" class="btn btn-gray">Sign Up</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 i active">
+					<div class="c">
+						<div class="head">Agency</div>
+						<div class="price">
+							29<sup>.95 $</sup><span>/ Package†</span>
+						</div>
+						<div class="info">
+							<strong>3</strong> Localised Accounts <br />
+                            <strong>Localised</strong> Agency Profile<br />
+							<strong>Unlimited</strong> Enlingo Posts<sup>*</sup><br />
+							<strong>Followers</strong> Tracking Reports<br />
+							<strong>Dedicated</strong> Member Manager<br />
+                            <strong>1500</strong> Credits Pack<br />
+							Suit Partnerships<br />
+                            <strong>&nbsp;</strong><br />
+                            <strong>&nbsp;</strong>
+						</div>
+						<div class="btnWrap">
+							<a href="{%  url "subscription_wizard" agency.pk %}" title="#" class="btn btn-gray">Sign Up</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 i">
+					<div class="c">
+						<div class="head">Agency Plus</div>
+						<div class="price">
+							89<sup>.95 $</sup><span>/ Package†</span>
+						</div>
+						<div class="info">
+							<strong>10</strong> Localised Accounts<br />
+                            <strong>Localised</strong> Agency Profile<br />
+                            <strong>Localised</strong> Agency Weibo & Wechat<br />
+							<strong>Unlimited</strong> Enlingo Posts<sup>*</sup><br />
+							<strong>Followers</strong> Tracking Reports<br />
+							<strong>Dedicated</strong> Member Manager<br />
+                            <strong>4500</strong> Credits Pack<br />
+							Corporate Agency<br />
+                            <strong>&nbsp;</strong><br />
+                            <strong>&nbsp;</strong>
+						</div>
+						<div class="btnWrap">
+							<a href="{%  url "subscription_wizard" agencyplus.pk %}" title="#" class="btn btn-gray">Sign Up</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 i">
+					<div class="c">
+						<div class="head">Education Institute</div>
+						<div class="price">
+							99<sup>.95 $</sup><span>/ Package†</span>
+						</div>
+						<div class="info">
+							<strong>10</strong> Localised Accounts<br />
+                            <strong>Localised</strong> Institute Profile<br />
+                            <strong>Localised</strong> Institute Weibo & Wechat<br />
+                            <strong>Localised</strong> Institute Recruitment Campaigns<sup>**</sup><br />
+							<strong>Unlimited</strong> Enlingo Posts<sup>*</sup><br />
+							<strong>Followers</strong> Tracking Reports<br />
+							<strong>Dedicated</strong> Member Manager<br />
+                            <strong>4500</strong> Credits Pack<br />
+							International Student Institutions
+						</div>
+						<div class="btnWrap">
+							<a href="{%  url "subscription_wizard" educationinstitute.pk %}" title="#" class="btn btn-gray">Sign Up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="text-center moreInfo">† Package Credits are valid for one year * Subject to <strong>fair use</strong> policy.<br> ** <strong>One</strong> online campaign per month.</p>
+		</div>
+	</div>
+
+{% endblock %}

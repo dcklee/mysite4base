@@ -1,0 +1,151 @@
+{% load static from staticfiles %}
+{% load account_tags %}
+{% load humanize %}
+{% load guardian_tags %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} | {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+        {% block viewport %}
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+        {% endblock %}
+
+        {% block styles %}{% endblock %}
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<![endif]-->
+        {% block extra_head_base %}
+            {% block extra_head %}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}" {% block body_extra_attributes %}{% endblock %}>
+ 	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+        <div id="wrapper">
+    {% block topbar_base %}
+        <!-- Header -->
+            <div id="header">
+				<h1><a href="{% url 'userpanel:userpanel_main' %}">Enlingo Post Manager</a></h1>
+				<a id="menu-trigger" href="#"><i class="fa fa-bars"></i></a>
+			</div>
+
+			<div id="user-nav">
+	            <ul class="btn-group">
+	                <li class="btn" ><a title="" href="#"><i class="fa fa-user"></i> <span class="text">{% user_display request.user %}</span></a></li>
+	                <li class="btn dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="fa fa-envelope"></i> <span class="text">Messages</span> <span class="label label-danger">0</span> <b class="caret"></b></a>
+	                    <ul class="dropdown-menu messages-menu">
+	                        <li class="title"><i class="fa fa-envelope-alt"></i>Messages<a class="title-btn" href="#" title="Write new message"><i class="fa fa-share"></i></a></li>
+{#	                        <li class="message-item">#}
+{#	                        	<a href="#">#}
+{#		                            <img alt="User Icon" src="img/demo/av1.jpg" />#}
+{#		                            <div class="message-content">#}
+{#		                            	<span class="message-time">#}
+{#			                                3 mins ago#}
+{#			                            </span>#}
+{#		                                <span class="message-sender">#}
+{#		                                    Nunc Cenenatis#}
+{#		                                </span>#}
+{#		                                <span class="message">#}
+{#		                                    Hi, can you meet me at the office tomorrow morning?#}
+{#		                                </span>#}
+{#		                            </div>#}
+{#	                        	</a>#}
+{#	                        </li>#}
+	                    </ul>
+	                </li>
+                    <li class="btn"><a title="" href="{% url 'account_settings' %}"><i class="fa fa-cog"></i> <span class="text">Settings</span></a></li>
+	                <li class="btn"><a title="" href=""> <span class="text">credits {{ creditbalance|floatformat:"0"|intcomma }}</span></a></li>
+	                <li class="btn"><a title="" href="{% url 'account_logout' %}"><i class="fa fa-share"></i> <span class="text">Logout</span></a></li>
+	            </ul>
+	        </div>
+    {% endblock %}
+                    {% block body_base %}
+            {% block aidebar %}<div id="sidebar">
+				<div id="search">
+					<input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="fa fa-search"></i></button>
+				</div>
+				<ul>
+					<li class="active"><a href="{% url 'userpanel:userpanel_main' %}"><i class="fa fa-home"></i> <span>Post Manager</span></a></li>
+					<li class="submenu">
+						<a href="#"><i class="fa fa-flask"></i> <span>Member Details</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="{% url 'userpanel:member-profile-edit' %}">Basic Profile</a></li>
+							<li><a href="{% url 'userpanel:member-professional-details-edit' %}">Professional Details</a></li>
+						</ul>
+					</li>
+					{% if perms.consultantregistration.change_enlingopackagecustomerbillingdetails %}<li class="submenu">
+						<a href="#"><i class="fa fa-th-list"></i> <span>Billing & Accounts</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="{% url 'userpanel:customer-billing-details-edit' %}">Billing Details</a></li>
+							<li><a href="{% url 'userpanel:customer-purchase-history' %}">Purchase History</a></li>
+						</ul>
+					</li>{%  endif %}
+					{% if perms.invitations.add_joininvitation %}<li class="submenu">
+						<a href="#"><i class="fa fa-file"></i> <span>Package Management</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="{% url 'userpanel:customer-package-details-edit' %}">Edit Package Details</a></li>
+                            <li><a href="{% url 'userpanel:member-group-manager-add' %}">Add Package Members</a></li>
+							<li><a href="{% url 'userpanel:member-group-manager-deactivate' %}">Deactivate Package Members</a></li>
+						</ul>
+                    </li>{%  endif %}
+				</ul>
+			</div>{%  endblock %}
+            {%  block contenthead %}<div id="content">
+				<div id="content-header" class="mini">
+					<h1>Post Manager</h1>
+					<ul class="mini-stats box-3">
+						<li>
+							<div class="left sparkline_bar_good"><span>2,4,9,7,12,10,12</span>+10%</div>
+							<div class="right">
+								<strong>1094</strong>
+								Post Views
+							</div>
+						</li>
+						<li>
+							<div class="left sparkline_bar_neutral"><span>1,2,3,4,5,6,12,15</span>0%</div>
+							<div class="right">
+								<strong>433</strong>
+								Profile Views
+							</div>
+						</li>
+						<li>
+							<div class="left sparkline_bar_bad"><span>3,5,9,7,12,20,10</span>+50%</div>
+							<div class="right">
+								<strong>50</strong>
+								Enquires
+							</div>
+						</li>
+					</ul>
+				</div>
+                                {% include "userpanel/_messages.html" %}
+                                {% block body %}
+                                {% endblock %}
+            </div>{%  endblock %}
+                    {% endblock %}
+			<div class="row">
+                    {% block footer_base %}
+                        <!--<hr /> -->
+                        <footer id="footer" class="col-xs-12">
+                                {% block footer %}{% endblock %}
+                        </footer>
+                    {% endblock %}
+            </div>
+
+        {% block scripts %}{% endblock %}
+
+        {% block theme_script %}
+            <script src="{% static "pinax/js/theme.js" %}"></script>
+        {% endblock %}
+
+        {% block extra_body_base %}
+            {% block extra_body %}{% endblock %}
+        {% endblock %}
+        </div>
+    </body>
+</html>

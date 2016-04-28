@@ -1,0 +1,70 @@
+{% extends "userpanel/userpanel_site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load pinax_invitations_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block body_class %}flat{% endblock %}
+{% block body_extra_attributes %}data-color="blue"{% endblock %}
+
+{% block body %}
+
+				<div id="breadcrumb">
+					<a href="#" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Home</a>
+                    <a href="#" title="postmanager" class="tip-bottom"></i> Post Manager</a>
+					<a href="#" class="current">Deactivate Package Member</a>
+				</div>
+				<div class="container-fluid">
+					<br />
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="widget-box">
+								<div class="widget-title"><span class="icon"><i class="fa fa-comment"></i></span><h5>Deactivate Member</h5><span title="" class="label label-info tip-left"></span></div>
+								<div class="widget-content padding">
+									<div class="row">
+                                            <form id="deactivate" method="post" action="{% url 'userpanel:member-group-manager-deactivate' %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                                                {% csrf_token %}
+                                                {{ formset|bootstrap }}
+                                                {% if redirect_field_value %}
+                                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                                {% endif %}
+                                                <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
+                                            </form>
+                                        <div class="col-md-4">
+                                            {% include "account/_signup_sidebar.html" %}
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					</div>
+				</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/excanvas.min.js' %}"></script>
+<!--<script src="{% static 'assets/js/jquery.min.js' %}"></script> -->
+<script src='{% static "assets/js/jquery-1.11.2.min.js" %}'></script>
+<script src="{% static "assets/js/eldarion-ajax.min.js" %}"></script>
+<script src="{% static 'assets/js/jquery-ui.custom.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.flot.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.flot.resize.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.sparkline.min.js' %}"></script>
+<script src="{% static 'assets/js/fullcalendar.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.nicescroll.min.js' %}"></script>
+<script src="{% static 'assets/js/unicorn.js' %}"></script>
+<script src="{% static 'assets/js/unicorn.dashboard.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}

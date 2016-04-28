@@ -1,0 +1,117 @@
+{% extends "userpanel/userpanel_site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{%  load purchase_history_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block body_class %}flat{% endblock %}
+{% block body_extra_attributes %}data-color="blue"{% endblock %}
+
+{% block body %}
+
+				<div id="breadcrumb">
+					<a href="#" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Home</a>
+                    <a href="#" title="postmanager" class="tip-bottom"></i> Post Manager</a>
+					<a href="#" class="current">Member Purchase History</a>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="fa fa-th-list"></i>
+								</span>
+								<h5>Invoice</h5>
+								<div class="buttons">
+									<a title="Icon Title" class="btn" href="#"><i class="fa fa-shopping-cart"></i> <span class="text">Paid</span></a>
+									<a title="Icon Title" class="btn" href="#"><i class="fa fa-print"></i> <span class="text">Print</span></a>
+								</div>
+							</div>
+							<div class="widget-content">
+								{%  for invoice in invoices %}<div class="invoice-content">
+									<div class="invoice-head">
+										<div class="invoice-meta">
+											Invoice <span class="invoice-number">{{ invoice.pk }} </span><span class="invoice-date">Date: {{ invoice.charge_created | date:"d/m/Y"  }}</span>
+										</div>
+										<h5></h5>
+										<div class="invoice-from">
+											<ul>
+												<li>
+												<span><strong>From</strong></span>
+												<span>Asiascript Pty Ltd</span>
+												<span>Unit 1005, 3 Herbert St,</span>
+												<span>St Leonards.</span>
+												</li>
+											</ul>
+										</div>
+										<div class="invoice-to">
+											<ul>
+												<li>
+												<span><strong>To</strong></span>
+												<span>{{ customer }}</span>
+												<span>{{ billingaddress_1 }} </span>
+												<span>{{ billingaddress_city }} {{ billingaddress_state }}  {{ billingaddress_postcode }} </span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div>
+										<table class="table table-bordered table-striped table-hover">
+										<thead>
+											<tr>
+												<th>
+													 Transaction Id
+												</th>
+												<th>
+													 Title
+												</th>
+												<th>
+													 Amount
+												</th>
+											</tr>
+										</thead>
+										<tfoot>
+											<tr>
+												<th class="total-label" colspan="2">
+													 Total:
+												</th>
+												<th class="total-amount">
+													 ${{ invoice.amount }}
+												</th>
+											</tr>
+										</tfoot>
+										<tbody>
+										<tr>
+											<td>
+												 {{ invoice.description }}
+											</td>
+											<td>
+												 {% locate_item_description invoice %}
+											</td>
+											<td>
+												 ${{ invoice.amount }}
+											</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>{%  endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}

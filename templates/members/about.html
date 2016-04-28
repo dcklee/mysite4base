@@ -1,0 +1,202 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active2 %}active{% endblock %}
+{% block index_or_subpage_component %}
+			<div class="text-center">
+				<h2 class="subpageTitle">Products</h2>
+			</div>
+{% endblock %}
+
+{% block body_base %}
+
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Enlingo has over 30 years of <strong>bilingual</strong> brand and media technology experience. Founded in Sydney, Australia, with satellite offices in Shanghai & Hong Kong, Enlingo continues to deliver more to the <strong>international education B2C community</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Features -->
+	<section class="section gray aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-pull-1 col-lg-4 col-lg-pull-1 i image pull-right">
+					<img src="{% static "img/feature-icon-1.png" %}" alt="#" width="185" height="243" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2>Enlingo Social Media <strong>Posts</strong></h2>
+					<p>"Our Diploma of Accounting lecturer, Mr Moore C.A., consults with the industry body on new GAAP Standards." Everyone in your organisation are service based knowledge professionals. The Australian international education is regarded as the best in the world. Using our Chinese Social Media technology platform targets each of your messages to each and every of the millions of Chinese customers globally. </p>
+					<a href="#" title="#" class="more">More <span class="sprite icon-arrow"></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Features -->
+	<section class="section aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 i image">
+					<img src="{% static "img/feature-icon-2.png" %}" alt="#" width="207" height="208" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2><strong>Tracking & Feedback</strong> Analytics</h2>
+					<p>What posts do your <strong>customers</strong> really like? How many views and sales conversions are happening?</p>
+					<a href="#" title="#" class="more">More <span class="sprite icon-arrow"></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Features -->
+	<section class="section gray aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-pull-1 col-lg-4 col-lg-pull-1 i image pull-right">
+					<img src="{% static "img/feature-icon-3.png" %}" alt="#" width="221" height="234" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2>Social Identity = <strong>Results</strong></h2>
+					<p>Maximise your organisation's knowledge workers, whether they be an agent, student administrator or tutor. <strong>Empower</strong> your staff to build professional yet personal identities that your Chinese customer can relate to.</p>
+					<a href="icons.html" title="#" class="more">More <span class="sprite icon-arrow"></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats -->
+	<div class="section stats">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-projects"></span>
+							<div class="num js-count" data-to="10102" data-speed="3000">10,112</div>
+							<h2>Social Media Algorithms</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-hours"></span>
+							<div class="num js-count" data-to="925685" data-speed="3000">925,685</div>
+							<h2>Online Social Views</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-done"></span>
+							<div class="num js-count" data-to="40000" data-speed="3000">40,000</div>
+							<h2>Posts</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-diary"></span>
+							<div class="num"><span class="js-count" data-to="2000" data-speed="3000">2000</span>+</div>
+							<h2>Consultants</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Meet our team -->
+	<div class="section ourTeam">
+		<div class="container">
+			<header class="text-center">
+				<h2>Meet <strong>Our Team</strong></h2>
+			</header>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/team-1.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">John Doe</h3>
+								<h4 class="position">Chief Executive Officer</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/team-2.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Elizabeth Doe</h3>
+								<h4 class="position">Marketing Specialist</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/team-3.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Doug Doe</h3>
+								<h4 class="position">Head of Support</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/team-4.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Fabricio Doe</h3>
+								<h4 class="position">Chief Technical Officer</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+
+{% block body_class %}page page-id-270 page-child parent-pageid-647 page-template-default full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <h1><a href="{%  url "home" %}">学习科目</a>：{{ areaofstudy.name }}</h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs">
+                                <a href="#" >Home</a> \ <span typeof="v:Breadcrumb">
+                                <a href="#">course</a></span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->  
+            <div id="body" >
+                <div class="container">
+                    <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-12" role="main">
+                                
+                                <div class="courses-filter">
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">国家 : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">澳大利亚</span>
+                                                <span>英国</span>
+                                                <span>美国</span>
+                                                <span>加拿大</span>
+                                                <span>新西兰</span>
+                                                <span>日本</span>
+                                                <span>法国</span>
+                                                <span>德国</span>
+                                                <span>韩国</span>
+                                                <span>新加坡</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>香港</span>
+                                                <span>意大利</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">更多<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">省州 : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span> 新南威尔士</span>
+                                                <span class="active"> 维多利亚</span>
+                                                <span> 加州</span>
+                                                <span> 安大略湖</span>
+                                                <span> 南澳</span>
+                                                <span> 得克斯</span>
+                                                <span> 伊利诺斯</span>
+                                                <span> 昆斯兰</span>
+                                                <span> </span>
+                                                <span> 不列颠哥伦比亚</span>
+                                                <span> 纽约</span>
+                                                <span> 华盛顿</span>
+                                                <span> 麻城</span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                                <span> </span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span> </span>
+                                                <span> </span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">更多<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">城市 : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span> 悉尼</span>
+                                                <span> 墨尔本</span>
+                                                <span> 阿德莱德</span>
+                                                <span> 布里斯班</span>
+                                                <span> 堪培拉</span>
+                                                <span> 洛杉矶</span>
+                                                <span> 纽约</span>
+                                                <span class="active"> 波斯顿</span>
+                                                <span> 伦敦</span>
+                                                <span> 巴黎</span>
+                                                <span> 罗马</span>
+                                                <span> 奥克兰</span>
+                                                <span> 东京</span>
+                                                <span> 多伦多</span>
+                                                <span> 温哥华</span>
+                                                <span> 曼切斯特</span>
+                                                <span> 圣地亚哥</span>
+                                                <span> 拉菲特</span>
+                                                <span> 大阪</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span> </span>
+                                                <span> </span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">更多<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">学位类型 : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">本科</span>
+                                                <span>硕士研究生</span>
+                                                <span>博士</span>
+                                                <span>学位证书</span>
+                                                <span>其他</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="courses-filter-part courses-filter-part-last">
+                                        <div class="course-label">开课时间 : </div>
+                                        <div class="course-option">
+                                            <input type="text" id="calendar"/>
+                                        </div>
+                                    </div>
+                                </div> <!-- end filter -->
+
+                                <article class="single-page-content">
+                                    <div class="u_row">
+                                        <div class="vc_row wpb_row vc_row-fluid">
+                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                <div class="vc_column-inner ">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="courses-list">
+                                                            <h1 class="course-list-title">课程表</h1>
+                                                            <div class="wrap-field">
+                                                            <div class="wrap-field wrap-field-last"></div>
+                                                            <table class="table course-list-table area-table">{% for course in courselist %}
+                                                                {%  if forloop.first %}<thead class="main-color-1-bg dark-div">
+                                                                    <tr>
+                                                                        <th>课程名</th>
+                                                                        <th>教育机构</th>
+                                                                        <th>校园</th>
+                                                                        <th>咨询顾问博客</th>
+                                                                    </tr>
+                                                                </thead> {% endif %}
+                                                                <tbody>
+                                                                <tr><td><b>国家: USA</b></td><td><b>城市:{{  course.educationalinstitution.city }}</b></td></tr>
+                                                                <tr>
+                                                                        <td>
+                                                                            <a href="{%  url "coursesearch:course" areaofstudy.pk course.pk  %}">{{ course.course_name }}</a>
+                                                                        </td>
+                                                                        <td><a href="{%  url "coursesearch:course" areaofstudy.pk course.pk  %}">{{ course.educationalinstitution }}</a></td>
+                                                                        <td><a href="{%  url "coursesearch:course" areaofstudy.pk course.pk  %}">abc</a></td>
+                                                                        <td><a href="{%  url "coursesearch:course" areaofstudy.pk course.pk  %}">Something...</a></td>
+                                                                    </tr>
+                                                                </tbody>{%  endfor %}
+                                                            </table>
+                                                        </div><!--/courses-list-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--/u_row-->
+                                </article>
+                            </div><!--/content-->
+                        </div><!--/row-->
+                    </div><!--/content-pad-3x-->
+                </div><!--/container-->
+            </div><!--/body-->
+    {% endblock %}
+
+{% block extra_body %}
+{%  include "_mobile.html" %}
+
+            <!-- For Date Picker -->
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.common.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.rtl.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.dataviz.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.dataviz.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.mobile.all.min.css" %}">
+
+    <script type='text/javascript' src="{% static "js/date-picker/kendo.all.min.js" %}"></script>
+    <script type='text/javascript' src="{% static "js/date-picker/angular.min.js" %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/datepicker.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/wp-embed.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/learndash_template_script.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/js_composer_front.min.js' %}"></script>
+
+{% endblock %}
+

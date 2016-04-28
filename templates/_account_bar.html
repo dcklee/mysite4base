@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load account_tags %}
+{% load static from staticfiles %}
+                                    <div id="text-17" class=" col-md-12  widget_text">
+                                        <div class= "widget-inner">
+                                            <div class="textwidget">
+                                                <a class="webchat" href="#"><i class="fa fa-weixin"></i>
+                                                    <span class="text">微信登陆</span>
+                                                    <i class="fa fa-down"></i>
+                                                    <div class="webchatqr">
+                                                        <img src="{% static 'images/code.jpg' %}">
+                                                    </div>
+                                                </a>
+                                                 {% if request.user.is_authenticated %}
+                                                     <span><i class="fa fa-user"></i>{% user_display request.user %}</span>
+                                                        <a href="{% url 'account_settings' %}"><span><i class="fa fa-cog"></i> {% trans "Settings" %}</span></a>
+                                                     {% if request.user.is_staff %}
+                                                    <a href="{% url THEME_ADMIN_URL|default:"admin:index" %}"><span><i class="fa fa-cog"></i> {% trans "Admin" %}</span></a>
+                                                    {% endif %}
+                                                        <a id="account_logout" href="{% url 'account_logout' %}"><span><i class="fa fa-power-off"></i> {% trans "Log out" %}</span></a>
+                                                {% else %}
+                                                     <a href="{% url 'account_login' %}"><span>{% trans "Log in" %}</span></a>
+                                                {% if ACCOUNT_OPEN_SIGNUP %}
+                                                    <a href="{% url 'account_signup' %}"><span>{% trans "Sign up" %}</span></a>
+                                                {% endif %}
+                                            {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+<form id="accountLogOutForm" style="display: none;" action="{% url 'account_logout' %}" method="POST">
+    {% csrf_token %}
+</form>

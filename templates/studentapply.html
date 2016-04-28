@@ -1,0 +1,155 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+{% block extra_head %}
+<link rel="icon" type="image/png" href="{% static "images/favicon.ico" %}">
+<link href="{% static "assets/css/base.css" %}" rel="stylesheet" />{% endblock %}
+
+{% block body_class %}single single-u_member postid-180 full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <h1>Danny Awesome</h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs">
+                                <a href="#" rel="v:url" property="v:title">Home</a> \ <span typeof="v:Breadcrumb">
+                                <a rel="v:url" property="v:title" href="#">member</a></span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->
+            <div id="body">
+                <div class="container">
+                    <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-12">
+                                <article class="single-event-content">
+                                    <form>
+                                        <div class="member-item">
+                    	                   <div class="row">
+                                                <div class="item-content" id="student-course-info">
+                                                    <div class="form-group col-sm-6">
+                                                        <label>学生名 : </label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label>地址 :</label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label>出生日期 :</label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label>电话号码 :</label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label>Email : </label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label>QQ : </label>
+                                                        <input type="text">
+                                                    </div>
+                                                </div>
+                                            </div><!--/row-->
+                                        </div><!--/member-item-->
+                                        <!--COUNT LIST-->
+            	    	                <h1 class="course-list-title">课程</h1>
+                        	            <div class="courses-list student-course-list">
+                                            <div class="wrap-field"><strong>顾问 </strong>Andra</div>
+                                            <div class="wrap-field wrap-field-last"><strong>Enlingo小秘书  </strong>Turan</div>
+                                            
+
+                                    	    <table class="table course-list-table">
+                                        	    <thead class="main-color-1-bg dark-div">
+                                            		<tr>
+                                            		    <th>课程ID</th>
+                                                        <th>课程</th>
+                                            		    <th>教育机构</th>
+                                                        <th>课程开课时间</th>
+                                    		        </tr>
+                                	            </thead>
+                                    	        <tbody>
+                                    	  			<tr>
+                                        			   <td>NURS1</td>
+                                        			   <td><a href="#">Master Of Gamification</a></td>
+                                        			   <td>demo</td>
+                                                       <td>20/03/2016</td>
+                                    			    </tr>
+                                                    <tr>
+                                                       <td>NURS2</td>
+                                                       <td><a href="#">Master Of Gamification</a></td>
+                                                       <td>demo</td>
+                                                       <td>10/03/2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                       <td>MD 5</td>
+                                                       <td><a href="#">Master Of Gamification</a></td>
+                                                       <td>demo</td>
+                                                       <td>10/03/2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                       <td>MD 5</td>
+                                                       <td><a href="#">Master Of Gamification</a></td>
+                                                       <td>demo</td>
+                                                       <td>10/03/2016</td>
+                                                    </tr>
+                                    			</tbody>
+                            	            </table>
+            	                        </div><!--/courses-list-->
+                                        <h3>Attachments</h3>
+                                        <div id="btnupload" class="courses-list">
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传户口本</a>
+                                            </div>
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传身份证</a>
+                                            </div>
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传护照标识页</a>
+                                            </div>
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传学业成绩</a>
+                                            </div>
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传毕业证书</a>
+                                            </div>
+                                            <div class="content col-md-4 col-sm-6 col-xs-12">
+                                                <a class="btn btn-primary" href="javascript:void(0)">上传学位证</a>
+                                            </div>
+                                        </div>
+            	                        <!--Learndash-->
+                                        <div class="wrap-btn-student">
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block btn-student-submit">递交</button>
+                                        </div>
+                                    </form>
+                                </article>
+        			        </div><!--/content-->
+                        </div><!--/row-->
+                    </div><!--/content-pad-3x-->
+                </div><!--/container-->
+            </div><!--/body-->
+{% endblock %}
+
+{% block extra_body %}
+    {%  include "_mobile.html" %}
+    {% include "_contact_bar.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mod/base"
+            src="{% static "assets/js/base.js" %}"></script>
+{% endblock %}

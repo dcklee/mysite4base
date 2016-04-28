@@ -1,0 +1,267 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block extra_head %}
+    <!-- subscription Wizard CSS stylesheet - clashes with app.min.css-->
+<link rel="icon" type="image/png" href="{% static "images/favicon.ico" %}">
+<link href="{% static "assets/css/gsdk-base.css" %}" rel="stylesheet" />{% endblock %}
+    <!-- end of custom CSS stylesheet page inclusion -->
+{% block topbar_base %}{% endblock %}
+{% block body_base %}
+    <div id="pageloader" class="dark-div" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:99999; background:#179bd7;">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+    <!-- Custom Header Subscription Page -->
+<div class="image-container set-full-height" style="background-image: url('{% static 'images/wizard-city.jpg' %}')">
+    <!--   Creative Tim Branding   -->
+    <a href="{%  url "home" %}">
+         <div class="logo-container">
+            <div class="logo">
+                <img src="{% static 'images/inverse_logo_chinese.png' %}" alt="Enlingo Theme"/>
+            </div>
+            <div class="brand">
+
+            </div>
+        </div>
+    </a>
+            <!--   Big container   -->
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <!--      Wizard container        -->
+                <div class="wizard-container">
+                    <div class="card wizard-card ct-wizard-blue" id="wizardProfile">
+                    <form id="myForm" class="form" {% if not request.user.customer.default_source %} data-stripe-key="{{ PINAX_STRIPE_PUBLIC_KEY }}"{% endif %} action="{% url "subscription_wizard" packageidentifier %}" method="post" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                    <!--        You can switch "ct-wizard-azzure"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
+                    {% csrf_token %}
+
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                            <div class="wizard-header">
+                                <h3>
+                                   ENLINGO <b>PREMIUM</b> <br>
+                                   <small>This information will let us know more about you</small>
+                                </h3>
+                            </div>
+                            <ul>
+                                <li><a href="#about" data-toggle="tab">Primary Profile</a></li>
+                                <li><a href="#details" data-toggle="tab">Details</a></li>
+                                <li><a href="#order" data-toggle="tab">Order Summary</a></li>
+                                <li><a href="#membermanager" data-toggle="tab">Member Manager</a></li>
+                            </ul>
+                            <div class="tab-content">
+                            <div class="tab-pane" id="about">
+                              <div class="row">
+                                  <h4 class="info-text"> Personal & Account Details</h4>
+                                  <div class="col-sm-4 col-sm-offset-1">
+                                     <div class="picture-container">
+                                          <div class="picture">
+                                              <img src="{%  static "images/default-avatar.png" %}" class="picture-src" id="wizardPicturePreview" title=""/>
+                                              <input type="file" name="profile_image" id="wizard-picture">
+                                          </div>
+                                          <h6>Upload Photo<small>(required)</small></h6>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label>First Name <small>(required)</small></label>
+                                        <input name="firstname" type="text" class="form-control" placeholder="Andrew...">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Last Name <small>(required)</small></label>
+                                        <input name="surname" type="text" class="form-control" placeholder="Smith...">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="salutation">Salutation <small>(required)</small></label>
+                                          <select id="salutation" name="salutation" class="form-control">
+                                            <option disabled="" selected="">- select -</option>
+                                            <option>Mr</option>
+                                            <option>Ms </option>
+                                            <option>Miss</option>
+                                            <option>Dr</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="details">
+                                <h4 class="info-text">Details </h4>
+                               <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                      <div class="form-group">
+                                          <label for="registrationqualifications">Registration Type</label>
+                                          <select id="registrationqualifications" name="registrationqualifications" class="form-control">
+                                            <option disabled="" selected="">- select -</option>
+                                            <option>MARA</option>
+                                            <option>Institute of Law </option>
+                                            <option>IEAA</option>
+                                          </select>
+                                      </div>
+                                         <div class="form-group">
+                                            <label>Agency Name</label>
+                                             <input name="companyname" type="text" class="form-control" placeholder="ABC Pty Ltd...">
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label>City</label>
+                                             <input name="city" type="text" class="form-control" placeholder="Sydney...">
+                                          </div>
+                                        <div class="choice" data-toggle="" title="Yes">
+                                          <label>Register for Enlingo Commission Sharing Scheme?<small> (Your Enlingo Member Manager will contact you, we provide commission sharing for over 150 Australian intitutions)</small></label>
+                                          <input name="schemeregister" type="checkbox" class="form">
+                                       </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="order">
+                                <h4 class="info-text">Order Summary</h4>
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                      <div class="form-group">
+                                          <label><b>Package Name</b></label><br>
+                                          <label>{{ packagedescription }}</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label><b>Package Amount</b></label><br>
+                                             <label>{{ packageamount }}</label>
+                                          </div>
+                                        <div class="choice" data-toggle="" title="Yes">
+                                          <label>Auto-Recharge<small>(When credits fall below 5?)</small> </label>
+                                            <input name="autorecharge" type="checkbox" class="form">
+                                       </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="membermanager">
+                              <div class="row">
+                                  <h4 class="info-text">Meet your Member Manager</h4>
+                                  <div class="col-sm-4 col-sm-offset-1">
+                                     <div class="picture-container">
+                                          <div class="picture">
+                                              <img src="{%  static "tmp/team-2.jpg" %}" class="picture-src" id="wizardPicturePreview" title=""/>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label><b>Name</b><br>Jamie Li</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <label><b>City of Residence</b><br>Shanghai</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <label><b>Languages</b><br>Chinese/English</label>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            </div>
+                            <div class="wizard-footer">
+                                    <div class="pull-right">
+                                        <input type='button' class='btn btn-next btn-fill btn-primary btn-wd btn-sm' name='next' value='Next' />
+                                        <script src="https://checkout.stripe.com/checkout.js"></script>
+                                        <input type='submit' id="customButton"  onclick="this.disabled=true;" class='btn btn-finish btn-fill btn-primary btn-wd btn-sm trigger' name='finish' value='Subscribe' />
+                                    </div>
+                                <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- wizard container -->
+            </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+{% endblock %}
+
+{%  block footer %}
+    <div class="footer">
+        <div class="container">
+            Copyright © 2016 <a href="http://www.enlingo.com/" title="Enlingo">Enlingo</a>
+        </div>
+    </div>
+</div>
+
+{%  endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+<script type="text/javascript">
+
+    $('#myForm').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    var handler = StripeCheckout.configure({
+    key: 'pk_test_i5Sbgm8vVklVN5lLOFSIMfmC',
+    image: '/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token, args) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+        var $form = $("form[data-stripe-key]");
+      // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token.id));
+        $form.append($('<input type="hidden" name="stripeBillingName" />').val(args['billing_name']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressLine1" />').val(args['billing_address_line1']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressZip" />').val(args['billing_address_zip']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressCity" />').val(args['billing_address_city']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressState1" />').val(args['billing_address_state']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressCountry" />').val(args['billing_address_country']));
+      // and re-submit
+        $form.get(0).submit();
+    }
+    });
+
+  $('#customButton').on('click', function(e) {
+      $( "#pageloader" ).show();
+    // Open Checkout with further options
+    handler.open({
+      name: 'Enlingo',
+      description: '{{ packagedescription }}',
+      zipCode: true,
+      billingAddress: true,
+      currency: '{{ packagecurrency }}',
+      amount: {{ stripeamount|floatformat:'0' }},
+      email: "{{ request.user.email }}",
+      panelLabel: "Subscribe"
+
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
+    <script>
+        $( "#pageloader" ).hide();
+
+        $( document ).ajaxStart(function() {
+            $( "#customButton" ).click(function() {
+});
+});
+    </script>
+
+{% endblock %}

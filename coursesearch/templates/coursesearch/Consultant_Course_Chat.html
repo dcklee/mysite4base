@@ -1,0 +1,177 @@
+{% extends "site_base.html" %}
+{%  load thumbnail %}
+{% load aliyunthumbnail %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+{% block extra_head %}
+<link rel="icon" type="image/png" href="{% static "images/favicon.ico" %}">
+<link href="{% static "assets/css/base.css" %}" rel="stylesheet" />{% endblock %}
+
+{% block body_class %}single single-u_member postid-180 full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+    {% url "indexform" as student_account_sign_up_url %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <h1><a href ="{%  url  "coursesearch:course" studyarea courseid %}">{{ course }}</a></h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs" >
+                                <a href="#">Home</a> \ <span typeof="v:Breadcrumb">
+                                <a href="#">member</a></span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->   
+            <div id="body">
+    	       <div class="container">
+        	        <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-12">
+                                <article class="single-event-content">
+                                    <div class="member-item">
+	                                   <div class="row">
+    	                                   <div class="col-md-4 col-xs-5">
+        	                                   <div class="content-pad">
+                                                    <div class="item-thumbnail">
+                                                        <img src="{%  locate_image_location consultant_object whq="@500w_500h_100Q" %}" class="attachment-thumb_263x263 size-thumb_263x263 wp-post-image" alt="U-member-1" sizes="(max-width: 263px) 100vw, 263px" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-xs-7">
+        	                                   <div class="content-pad">
+                                                    <div class="item-content">
+                                                        <h3 class="item-title">{{ courseconsultanti }}</h3>
+                                                        <h4 class="small-text">Guest Lecturer - Design</h4>
+                                                        <div class="member-tax small-text" id="infor-chatroom">
+                                                            <!-- <a href="#" class="cat-link">Business Programme</a>  -->
+                                                            <!-- <a href="#" class="cat-link">Information Technology</a>    -->   
+                                                            <p>居住城市 : <span>{{ location}}</span></p>
+                                                            <p>专业注册详细信息: <span>{{ regdetails }}</span></p>
+                                                            <p>学历 : <span>{{ acadetails }}</span></p>
+                                                            <p>工作经验: <span>{{ workdetails }}</span></p>
+                                                            <p>以前居住地 : <span>{{ lived }}</span></p>
+                                                        </div>
+                            		                    <ul class="list-inline social-light">
+                                	                       <li><a class="btn btn-default social-icon" href="#"><i class="fa fa-weibo"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!--/content-pad-->
+                                            </div>
+                                        </div><!--/row-->
+                                    </div><!--/member-item-->
+                                    <div class="pure-content">
+                                        <div class="content-pad">
+                                            <h3>{% if aos_section %}<a href="{% url "blog_section" aos_section.slug %}">所有咨询顾问的博客账户链接</a>{%  endif %}</h3>
+                                        </div>
+                                    </div><!--/pure-content-->
+                                    <div class="pure-content">
+	                                    <div class="content-pad">
+                                            <h3>直接与选定课程相关的顾问声明:</h3>
+	                                        <p>
+                                                <p>{{ consultantoutlook }}</p>
+                                                <p></p>
+                                            </p>
+                                        </div>
+                                    </div><!--/pure-content-->
+                                    <!--COUNT LIST-->
+	    	                        
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3>Enlingo 留学老师小秘书</h3>
+                                    </div>
+                                    <div class="col-md-2 col-xs-5">
+                                        <img width="131" height="131" src="{%  locate_image_location consultantassistant_object whq="@131w_131h_100Q" %}">
+                                    </div>
+                                    <div class="col-md-10 col-xs-7">
+                                        <div class="content-pad">
+                                            <div class="item-content infor-chatroom-detail">
+                                                <h3 class="item-title"><span>{{ consultantassistant }}老师</span></h3>
+                                                <p>微信二维码 : <span><img width="80" height="80" src="{% static "images/QRchat.jpg" %}"></span></p>
+                                                <p>QQ: <span>132465</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+{% comment %}                                <div id="chatbox" class="row">
+                                    <div class="content col-sm-12">
+                                        <h3>Rolling Webchat</h3>
+                                        <h3>Technology tentatively supplied by www.k53.com</h3>
+                                    </div>
+                                </div>{% endcomment %}
+                                <div id="visabutton" class="row">
+                                    <div class="col-sm-12">
+                                        <p> <a href="{{ student_account_sign_up_url }}" class="btn btn-primary btn-lg btn-block"><b>申请</b></a></p>
+                                        <p></p>
+                                    </div>
+                                    <div class="content-pad single-event-detail chatroom-consultants col-sm-12">
+                                        <div class="event-detail">
+                                            <div class="event-speaker">
+                                                <h5 class="normal-text">老师顾问</h5>
+                                                <div class="row">{%  for courseconsultant in courseconsultantlist %}
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="media professor">
+                                                            <div class="pull-left">
+                                                                <a href="{% url 'coursesearch:courseconsultant' studyarea courseid courseconsultant.profile.pk %}" class="main-color-2"><img width="60" height="60" src="{%  locate_image_location courseconsultant.profile whq="@50w_50h_100Q" %}" class="attachment-thumb_50x50 size-thumb_50x50 wp-post-image" alt="U-member-2" sizes="(max-width: 50px) 100vw, 50px"></a>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <h6 class="media-heading main-color-2"><a class="main-color-2" href="{% url 'coursesearch:courseconsultant' studyarea courseid courseconsultant.profile.pk %}">{{ courseconsultant.last_name }}</a></h6>
+                                                                <span>MARA签证律师</span>
+                                                                <h6><i class="fa fa-eye"></i>1000</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>{%  endfor %}
+                                                </div>
+                                            </div><!--/event-speaker-->
+                                        </div><!--/event-detail-->
+                                        <div class="event-content">
+                                            <div class="related-event ">
+                                                <h3>有关课程</h3>
+                                                <div class="ev-content">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6 related-item">
+                                                            <div class="thumb"><a href="#"><img width="80" height="80" src="{% static "images/university-course-008-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image" alt="university-course-008" sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                            <div class="ev-title"> 
+                                                                <a href="#" class="related-ev-title main-color-1-hover">Bachelor Of Nursing</a>
+                                                            </div>
+                                                            <div class="ev-start small-text">July 24, 2015</div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 related-item">
+                                                            <div class="thumb"><a href="#"><img width="80" height="80" src="{% static "images/university-course-002-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image" alt="university-course-007" sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                            <div class="ev-title"> <a href="#" class="related-ev-title main-color-1-hover">Game Theory 101</a></div>
+                                                            <div class="ev-start small-text">June 26, 2016</div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </div><!--/event-content-->
+                                    </div>
+                                </div>
+	                           <!--Learndash-->
+                            </article>
+						</div><!--/content-->
+                    </div><!--/content-pad-3x-->
+                </div><!--/container-->
+            </div><!--/body-->
+ {% endblock %}
+
+{% block extra_body %}
+    {%  include "_mobile.html" %}
+    {% include "_contact_bar.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mod/base"
+            src="{% static "assets/js/base.js" %}"></script>
+{% endblock %}

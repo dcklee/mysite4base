@@ -1,0 +1,62 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block body_class %}loginPage{% endblock %}
+{% block topbar_base %}{% endblock %}
+{% block body_base %}
+
+	<div class="container">
+		<a href="{% url "home" %}" title="#" class="back btn-effect">
+			<span class="sprite icon"></span> Back
+		</a>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+				<form class="loginRegistrationForm" method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+				{% csrf_token %}
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <a class="close" data-dismiss="alert">&times;</a>
+                        {% for non_field_error in form.non_field_errors %}
+                             {{ non_field_error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                					<h1 class="text-center">Login</h1>
+					<div class="input">
+						<input name = "{{ form.email.name }}" type="email" class="form-control input-field">
+						<label class="input-label">
+							<span class="input-label-content">Email Address</span>
+						</label>
+					</div>
+					<div class="input">
+						<input name = "{{ form.password.name }}" type="password" class="form-control input-field">
+						<label class="input-label">
+							<span class="input-label-content">Password</span>
+						</label>
+					</div>
+					<a href="{% url "account_password_reset" %}" title="#" class="forgotPassword">Forgot your password?</a>
+					<button type="submit" class="btn btn-lg btn-yellow btn-effect">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{%  endblock %}
+
+{%  block footer %}
+    <div class="footer">
+        <div class="container">
+            Copyright © 2016 <a href="http://www.enlingo.com/" title="Enlingo">Enlingo</a>
+        </div>
+    </div>
+
+{%  endblock %}

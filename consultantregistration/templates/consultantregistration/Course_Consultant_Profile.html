@@ -1,0 +1,121 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load thumbnail %}
+{% load aliyunthumbnail %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+{% block extra_head %}
+<link rel="icon" type="image/png" href="{% static "images/favicon.ico" %}">
+<link href="{% static "assets/css/base.css" %}" rel="stylesheet" />{% endblock %}
+
+{% block body_class %}single single-u_member postid-180 full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <h1>Consultants</h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs">
+                                <a href="#" rel="v:url" property="v:title">Home</a> \ <span typeof="v:Breadcrumb">
+                                <a rel="v:url" property="v:title" href="#">member</a></span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->
+            <div id="body">
+                <div class="container">
+                    <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-12">
+                                <article class="single-event-content">
+                                    <div class="member-item">
+                                        <div class="row">
+                                            <div class="col-md-4 col-xs-5">
+                                                <div class="content-pad">
+                                                    <div class="item-thumbnail">
+                                                        <img width="263" height="263" src="{%  locate_image_location object whq="@500w_500h_100Q" %}" sizes="(max-width: 263px) 100vw, 263px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-xs-7">
+                                                <div class="content-pad">
+                                                    <div class="item-content profile-detail-item">
+                                                        <h3 class="item-title">{{ teacher }}顾问</h3>
+                                                        <h4 class="small-text">{{ position }}</h4>
+                                                        <div class="member-tax small-text">
+                                                        </div>
+                                                        <h5>City of Residence : <span>{{ location }}</span></h5>
+                                                        <h5>Email : <span>{{  email }}</span></h5>
+                                                        <h5>Academic Qualifications : <span>{{ acadetails }}</span></h5>
+                                                        <h5>Professional Registration Details : <span>{{  regdetails }}</span></h5>
+                                                        <h5>Prior Work Experience : <span>{{ workposition }}</span></h5>
+                                                        <h5>Previous Places Lived : <span>{{ lived }}</span></h5>
+                                                        <ul class="list-inline social-light">
+                                                            <li><a class="btn btn-default social-icon" href="#"><i class="fa fa-weibo"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!--/content-pad-->
+                                            </div>
+                                        </div><!--/row-->
+                                    </div><!--/member-item-->
+                                    
+                                    <h1 class="course-list-title">Posts</h1>
+                                    <div class="courses-list profile-table">
+                                        <div class="wrap-field wrap-field-last"><strong>Date Posted : </strong>18/03/2016</div>
+                                        <table class="table course-list-table">
+                                            <thead class="main-color-1-bg dark-div">
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Post Title</th>
+                                                    <th>Area of Study</th>
+                                                    <th>Views</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>MD 5</td>
+                                                    <td>Master Of Gamification</td>
+                                                    <td>May 29, 2016</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>abc</td>
+                                                    <td>Master Of Gamification</td>
+                                                    <td>Jan 29, 2016</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!--/courses-list-->
+                                </article>
+        			        </div><!--/content-->
+                        </div><!--/row-->
+                    </div><!--/content-pad-3x-->
+                </div><!--/container-->
+            </div><!--/body-->
+    {% endblock %}
+
+{% block extra_body %}
+{% include "_mobile.html" %}
+ {% include "_contact_bar.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mod/base"
+            src="{% static "assets/js/base.js" %}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}

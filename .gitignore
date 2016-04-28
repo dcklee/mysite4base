@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# static files
+
+static
+site_media
+
 # =========================
 # Operating System Files
 # =========================

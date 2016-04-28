@@ -1,0 +1,53 @@
+{% extends "userpanel/userpanel_site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Account" %}{% endblock %}
+
+{% block body_class %}flat account account-settings{% endblock %}
+{% block body_extra_attributes %}data-color="blue"{% endblock %}
+            {% block aidebar %}<div id="sidebar">
+				<div id="search">
+					<input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="fa fa-search"></i></button>
+				</div>
+				<ul>
+					<li><a href="{% url 'userpanel:userpanel_main' %}"><i class="fa fa-home"></i> <span>Post Manager</span></a></li>
+					<li class="submenu active">
+						<a href="#"><i class="fa fa-flask"></i> <span>Settings</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li class="active"><a href="{% url "account_settings" %}">Account</a></li>
+							<li><a href="{% url "account_password" %}">Change Password</a></li>
+							<li class="active"><a href="{% url "account_delete" %}">Delete Account</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>{%  endblock %}
+
+
+
+{% block body %}
+				<div id="breadcrumb">
+					<a href="#" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Home</a>
+					<a href="#" class="current">Delete Account</a>
+				</div>
+				<div class="container-fluid">
+					<br />
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="widget-box">
+								<div class="widget-content padding">
+                                    <form method="post" action="{% url "account_delete" %}" autocapitalize="off">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">{% trans "Delete My Account" %}</button>
+                                    </form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					</div>
+                </div>
+{% endblock %}

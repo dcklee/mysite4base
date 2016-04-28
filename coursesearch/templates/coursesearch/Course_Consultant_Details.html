@@ -1,0 +1,207 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load thumbnail %}
+{% load aliyunthumbnail %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+{% block body_class %}single single-u_course postid-529 full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">{% url "course_chat" as course_chat_url %}
+                            <h1><a href="{% url "coursesearch:areastudy" studyarea %}">{{ course.course_name }}</a></h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs">
+                                <a href="#" >Home</a> \ <span typeof="v:Breadcrumb">
+                                <a href="#">course</a></span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->   
+            <div id="body">
+                <div class="container">
+                    <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-9">
+                                <article class="row single-event-content">
+                					<div class="col-md-4 col-sm-5">
+                						<div class="content-pad single-event-meta single-course-meta">
+                	    					<div class="item-thumbnail">
+                    							<img width="263" height="263" src="{% static "images/university-course-001-263x263.jpg" %}" class="attachment-thumb_263x263 size-thumb_263x263 wp-post-image" alt="university-course-001" />
+    				                        </div><!--/item-thumbnail-->
+                        					<div class="event-description course-des">
+                                            	<div class="course-meta">
+                                                    <h5 class="course-title-detail">课程ID : <span>{{  course.course_code }}</span></h5>
+                                                    <h5 class="course-title-detail">课程名 : <span>{{ course.course_name }}</span></h5>
+                                                    <h5 class="course-title-detail">学位类型 : <span>Game</span></h5>
+                                                    <h5 class="course-title-detail">课程时长 : <span>{{ course.duration }}</span></h5>
+                                                    <h5 class="course-title-detail">课程费用 : <span>{{  course.fees }}</span></h5>
+                                                    <h5 class="course-title-detail">开课时间 : <span>{{  course.course_start_date }}</span></h5>
+                                                    <h5 class="course-title-detail">课程申请截止时间 : <span>{{  course.application_deadline }}</span></h5>
+                                                    <h5 class="course-title-detail">教育机构: <span>{{ course.educationalinstitution }}</span></h5>
+                                                </div>
+                                            </div>
+                                            <div class="event-action">
+    	                                        <form action="" method="POST">
+                                                    <div class="element-pad"  style="display:none">
+                                                    	<input type="hidden" name="event_action" value="add" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>								
+                                    </div>
+    						        <div class="col-md-8 col-sm-7">
+                                        <div class="content-pad single-event-detail single-course-detail">
+                                            <div class="event-detail">
+                                                <div class="event-speaker">
+                                                    <h5 class="normal-text">老师顾问</h5>
+                                                    <div class="row"> {%  for courseconsultant in courseconsultantlist %}
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <div class="media professor">
+                                                                <div class="pull-left">
+                                                                    <a href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.profile.pk %}" class="main-color-2"><img width="60" height="60" src="{%  locate_image_location courseconsultant.profile whq="@50w_50h_100Q" %}" class="attachment-thumb_50x50 size-thumb_50x50 wp-post-image" alt="U-member-2"  sizes="(max-width: 50px) 100vw, 50px"></a>
+                                                                </div>
+                                                                <div class="media-body consultant-list">
+                                                                    <h6 class="media-heading main-color-2"><a class="main-color-2" href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.profile.pk %}">{{ courseconsultant.last_name }} {{ courseconsultant.profile.salutation }}</a></h6>
+                                                                    <span class="student-lecturer">MARA签证律师</span>
+                                                                    <h6 class="student-require"><i class="fa fa-eye"></i> 1000</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>{%  endfor %}
+                                                    </div>
+                                                </div><!--/event-speaker-->
+                                            </div><!--/event-detail-->
+                                        </div><!--/single-event-detail--> 
+                                    </div>
+                				</article>
+                			</div><!--/content-->
+                            <div id="sidebar" class="col-md-3 normal-sidebar">
+                                <div class="row">
+                                    <div id="course-search-widget-2" class=" col-md-12  widget course_search_widget">
+                                        <div class=" widget-inner">
+                                            <h2 class="widget-title maincolor2">Search</h2>        
+                                            <form role="search" method="get" id="searchform" class="u-course-search-form" action="#">
+                                                <div class="input-group">
+                                                    <input type="text" value="" name="s" id="s" placeholder="SEARCH" class="form-control" />
+                                                    <input type="hidden" name="post_type" value="u_course" />
+                                                    <input type="hidden" name="u_course_cat" class="u-course-search-cat" value="" />
+                                                    <span class="input-group-btn">
+                                                        <button type="submit" id="searchsubmit" class="btn btn-default u-course-search-submit" ><i class="fa fa-search"></i></button>
+                                                    </span>
+                                                </div>
+                                                <h2 class="widget-title maincolor2 widget-title-study">All Areas of Study</h2>    
+                                                <ul class="widget-ul-sidebar">
+                                                    <li><a href="#" data-value="">All</a></li>
+                                                    <li><a href="#" data-value="course-autumn-2014">Civil Engineering</a></li>
+                                                    <li><a href="#" data-value="bachelor"> Computer Sciences</a></li>
+                                                    <li><a href="#" data-value="course">Business</a></li>
+                                                    <li><a href="#" data-value="study-2">Mechanical Engineering</a></li>                
+                                                    <li><a href="#" data-value="study-2">Arts and Music</a></li>                
+                                                    <li><a href="#" data-value="study-2">Medical Sciences</a></li>                
+                                                    <li><a href="#" data-value="study-2">Electrical Engineering</a></li>                
+                                                    <li><a href="#" data-value="study-2">Architecture</a></li>                
+                                                </ul>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div id="advanced-recent-posts-2" class=" col-md-12 border widget advanced_recent_posts_widget">
+                                        <div class=" widget-inner">
+                                            <div class="uni-lastest">
+                                                <h2 class="widget-title maincolor2">Latest post</h2>
+                                                <div class="item">
+                                                    <div class="thumb item-thumbnail">
+                                                        <a href="#" title="Your Career Starts Here">
+                                                            <div class="item-thumbnail">
+                                                                <img width="80" height="80" src="{% static "images/iStock_000027500935_Large-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image" alt="iStock_000027500935_Large"  sizes="(max-width: 80px) 100vw, 80px" />
+                                                                <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                                <div class="thumbnail-hoverlay-cross"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="u-details item-content">
+                                                        <h5>
+                                                            <a href="#" title="Your Career Starts Here" class="main-color-1-hover">Your Career Starts Here</a>
+                                                        </h5>
+                                                        <span>June 3, 2014</span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="thumb item-thumbnail">
+                                                        <a href="#" title="Spark Of Genius">
+                                                            <div class="item-thumbnail">
+                                                                <img width="80" height="80" src="{% static "images/University-blog-001-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image" alt="University-blog-001" sizes="(max-width: 80px) 100vw, 80px" />
+                                                                <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                                <div class="thumbnail-hoverlay-cross"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="u-details item-content">
+                                                        <h5>
+                                                            <a href="#" title="Spark Of Genius" class="main-color-1-hover">Spark Of Genius</a>
+                                                        </h5>
+                                                        <span>June 3, 2014</span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="advanced-latest-course-4" class=" col-md-12  widget course_listing_widget">
+                                        <div class=" widget-inner">
+                                            <div class="uni-lastest">
+                                                <h2 class="widget-title maincolor2">Courses List</h2>
+                                                <div class="item">
+                                                    <div class="thumb item-thumbnail">
+                                                        <a href="#" title="Chemical Engineering">
+                                                            <div class="item-thumbnail">
+                                                                <img width="80" height="80" src="{% static "images/002-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image" alt="002"  sizes="(max-width: 80px) 100vw, 80px" />
+                                                                <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                                <div class="thumbnail-hoverlay-cross"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="u-details item-content">
+                                                        <h5>
+                                                            <a href="#" title="Chemical Engineering" class="main-color-1-hover">Chemical Engineering</a>
+                                                        </h5><span>December 25, 2015</span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="thumb item-thumbnail">
+                                                        <a href="#" title="Information System">
+                                                            <div class="item-thumbnail">
+                                                                <img width="80" height="80" src="{% static "images/university-course-001-80x80.jpg" %}" class="attachment-thumb_80x80 size-thumb_80x80 wp-post-image"  sizes="(max-width: 80px) 100vw, 80px" />
+                                                                <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                                <div class="thumbnail-hoverlay-cross"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="u-details item-content">
+                                                        <h5>
+                                                            <a href="http://university.cactusthemes.com/course/information-system-course/" title="Information System" class="main-color-1-hover">Information System</a>
+                                                        </h5><span>March 11, 2015</span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--#sidebar-->
+                        </div><!--/row-->
+                    </div><!--/content-pad-3x-->
+                </div><!--/container-->
+            </div><!--/body-->
+    {% endblock %}
+
+{% block extra_body %}
+{%  include "_mobile.html" %}
+{% endblock %}

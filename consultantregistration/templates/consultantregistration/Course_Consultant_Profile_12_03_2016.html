@@ -1,0 +1,80 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% url "course_chat" as course_chat_url %}
+            <h2>{% blocktrans %}<b></b>{% endblocktrans %}</h2>
+        <div class="container">
+            <p class="lead text-center">
+                {% blocktrans %}
+                <b>{{ teacher }}老师简介及博客 <br>Mr {{ teacher }}'s Profile and Blog</b>
+                    <p class="text-center"><b>居住城市 City of Residence <br> {{  location }}</b></p>
+                {% endblocktrans %}
+            </p>
+        </div>
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            {% endif %}
+        </div>
+    </section>
+    <section>
+        <div class="container">
+        <table id="example" class="table table-condensed table-striped" width="100%">
+            <col style="width:15%">
+            <col style="width:25%">
+            <col style="width:35%">
+            <col style="width:25%">
+        <thead>
+            <tr>
+                <th><p>{% blocktrans %} <b>资质信息<br> Registration Details</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>学历背景<br> Academic Qualifications</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>前几行业经验<br> Prior Work Experience</b>{% endblocktrans %}</p></th>
+                <th> <p>{% blocktrans %} <b>居住城市<br> Previous Places</b>{% endblocktrans %}</p></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ regdetails }}</td>
+                <td>{{ acadetails }}</td>
+                <td>{{ workdetails }}</td>
+                <td>{{  lived }}</td>
+
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </section>
+        <section class="jumbotron">
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <b><a href="{% url "coursesearch:country" %}"><i class="fa fa-globe fa-3x"></i><br>
+                     国家 <br>Country</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-building fa-3x"></i><br>
+                    学校创新<br>College Innovation</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-newspaper-o fa-3x"></i><br>
+                    老师介绍<br>College News <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "consultantregistration:consultant_list" %}"><i class="fa fa-user fa-3x"></i><br>
+                    老师介绍<br>Teacher Profile <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

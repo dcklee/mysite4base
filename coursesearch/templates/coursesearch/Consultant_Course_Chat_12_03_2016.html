@@ -1,0 +1,138 @@
+{% extends "site_base.html" %}
+{% load pinax_blog_tags %}
+
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% url "indexform" as student_account_sign_up_url %}
+            <h2><b><a href ="{%  url  "coursesearch:course" studyarea courseid %}">{{ course }}</a></b></h2>
+            <p>
+            {{ educationinstitution }}
+            </p>
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            {% endif %}
+        </div>
+    </section>
+        <section>
+    </section>
+    <section>
+        <div class="container">
+        <table id="example" class="table table-condensed table-striped">
+        <thead>
+            <tr>
+            <!-- following line is for showcasing purposes only -->
+                <th><p>{% if aos_section %}<a href="{% url "blog_section" aos_section.slug %}">{%  endif %}<b>{{ courseconsultanti }} 老师博客 {{ courseconsultanti }}'s Blog</b></a></p></th>
+                <th><p>简介 Profile</p></th>
+                <th><p>信息 Details</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="5"><img src="{{ courseconsultantphoto.url }}" width='100' height='110'></i><p> {{ consultantoutlook }}
+        <p>最新博客</p>
+    {% if aospost_list %}
+        <div class="post-list">
+            {% for post in aospost_list %}
+                <div class="post">
+                    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+                    {% include "pinax/blog/dateline.html" %}
+                    <div class="teaser">{{ post.teaser_html|safe }}</div>
+                    <p class="more"><a href="{{ post.get_absolute_url }}" class="post-link">继续看...</a></p>
+                </div>
+            {% endfor %}
+        </div>
+        {% include "pagination/builtin_pagination_reverse.html" %}
+    {% else %}
+        <p class="alert alert-info lead">老师还没更新博客！.</p>
+    {% endif %}
+
+                </td>
+                <td>居住城市 City of Residence</td><td>{{ location}}</td>
+            </tr>
+            <tr><td>资质信息 Registration Details</td><td>{{ regdetails }}</td></tr>
+            <tr><td>学历背景 Academic Qualifications </td><td>{{ acadetails }}</td></tr>
+            <tr><td>前几行业经验 Prior Work Experience</td><td>{{ workdetails }}</td></tr>
+            <tr><td>居住城市 Previous Places Lived </td><td>{{ lived }}</td></tr>
+
+        </tbody>
+        </table>
+        </div>
+    </section>
+        <section class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                        <p>{% blocktrans %}<b>Rolling Webchat<br>Technology tentatively supplied by www.k53.com</b>{% endblocktrans %}</p>
+                </div>
+                <div class="col=-md-4"><p><img src="{{ consultantassistantphoto }}" width='100' height='110'><b>Enlingo 留学老师小秘书 Enlingo Assistant {{ consultantassistant }}</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section>
+        <div class="container">
+        <p>{% blocktrans %} <a href="{{ student_account_sign_up_url }}" class="btn btn-primary"><b>老师帮我申请!</b></a>{% endblocktrans %}</p>
+            <p>
+                {% blocktrans %}
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+    <section class="jumbotron">
+        <div class="container">
+            <div class="consultant-columns">
+                {%  for courseconsultant in courseconsultantlist %}
+                <div>
+                    <a href="{% url 'coursesearch:courseconsultant' studyarea courseid courseconsultant.profile.pk %}"><img src="{{ courseconsultant.profile.profile_image.url }}" width='100' height='110'></i><br>
+                    <b>{{ courseconsultant.last_name }} 老师 <br>Mr {{ courseconsultant.last_name }}</b> <br>75 同学咨询过他</a>
+                </div>
+                {% empty %}
+                <div>
+                    <i></i><br>
+                    <b><br></b> <br>
+                </div>
+                {%  endfor %}
+            </div>
+        </div>
+    </section>
+        <section>
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <b><a href="{% url "coursesearch:country" %}"><i class="fa fa-globe fa-3x"></i><br>
+                     国家 <br>Country</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-building fa-3x"></i><br>
+                    学校创新<br>College Innovation</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "blog" %}"><i class="fa fa-newspaper-o fa-3x"></i><br>
+                    老师介绍<br>College News <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+                <div>
+                    <b><a href="{% url "consultantregistration:consultant_list" %}"><i class="fa fa-user fa-3x"></i><br>
+                    老师介绍<br>Teacher Profile <br>80老师顾问在线<br>1200同学现在看中</a></b>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <p class="lead text-center">
+                {% blocktrans %}
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+{% endblock %}

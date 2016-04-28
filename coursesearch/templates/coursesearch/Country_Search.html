@@ -1,0 +1,247 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+
+{% block body_class %}archive post-type-archive post-type-archive-u_member full-width custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div class="page-heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <h1>Search</h1>
+                        </div>
+                        <div class="pathway col-md-4 col-sm-4 hidden-xs text-right">
+                            <div class="breadcrumbs">
+                                <a href="#" rel="v:url" property="v:title">Home</a> \ <span class="current">Search Result</span>
+                            </div><!-- .breadcrumbs -->                
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/page-heading-->  
+            <div id="body">
+	            <div class="container">
+    	            <div class="content-pad-3x">
+                        <div class="row">
+                            <div id="content" class="col-md-12">
+
+                                <div class="courses-filter">
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">Country : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">China</span>
+                                                <span>US</span>
+                                                <span>Canada</span>
+                                                <span>Rusia</span>
+                                                <span>Japan</span>
+                                                <span>England</span>
+                                                <span>France</span>
+                                                <span>Germany</span>
+                                                <span>Korea</span>
+                                                <span>Viet Nam</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>Australia</span>
+                                                <span>Spane</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">State/Province : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span> Province</span>
+                                                <span class="active"> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                                <span> Province</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>Province</span>
+                                                <span>Province</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">City :</div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span class="active"> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                                <span> City</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span> City</span>
+                                                <span> City</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">Education Institute : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">Education Institute 1</span>
+                                                <span>Education Institute 2</span>
+                                                <span>Education Institute 3</span>
+                                                <span>Education Institute 4</span>
+                                                <span>Education Institute 5</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>Education Institute 6</span>
+                                                <span>Education Institute 7</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">Area of Study : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">Area of Study 1</span>
+                                                <span>Area of Study 2</span>
+                                                <span>Area of Study 3</span>
+                                                <span>Area of Study 4</span>
+                                                <span>Area of Study 5</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>Area of Study 6</span>
+                                                <span>Area of Study 7</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">Course Name : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span>Course Name 1</span>
+                                                <span>Course Name 2</span>
+                                                <span>Course Name 3</span>
+                                                <span class="active">Course Name 4</span>
+                                                <span>Course Name 5</span>
+                                            </div>
+                                            <div class="course-option-add" style="display: none;">
+                                                <span>Course Name 6</span>
+                                                <span>Course Name 7</span>
+                                            </div>
+                                        </div>
+                                        <div class="course-more">More<span class="text-arrow"></span></div>
+                                    </div>
+                                    <div class="courses-filter-part">
+                                        <div class="course-label">Certificate Type : </div>
+                                        <div class="course-option">
+                                            <div class="course-option-main">
+                                                <span class="active">Type</span>
+                                                <span>Type</span>
+                                                <span>Type</span>
+                                                <span>Type</span>
+                                                <span>Type</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="courses-filter-part courses-filter-part-last">
+                                        <div class="course-label">Course Start Date : </div>
+                                        <div class="course-option">
+                                            <input type="text" id="calendar"/>
+                                        </div>
+                                    </div>
+                                </div> <!-- end filter -->
+                                <div class="courses-list course-model-table">
+                                    <h1 class="course-list-title">Search result:</h1>
+                                    <div class="wrap-field"><strong>Country : </strong>USA</div>
+                                    <div class="wrap-field "><strong>City : </strong>LA</div>
+                                    <div class="wrap-field wrap-field-last"><strong>Area of Study : </strong>Health Sciences</div>
+                                    <table class="table course-list-table">
+                                        <thead class="main-color-1-bg dark-div">
+                                            <tr>
+                                                <th>Course ID</th>
+                                                <th>Course Name</th>
+                                                <th>Education Institution Name</th>
+                                                <th>Campus</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                          
+                                            <tr>
+                                              <td>1</td>
+                                              <td><a href="#">MA-045</a></td>
+                                              <td><a href="#">Chemical Engineering</a></td>
+                                              <td>8 Weeks</td>
+                                            </tr>                      
+                                            <tr>
+                                              <td>1</td>
+                                              <td><a href="#">MA-045</a></td>
+                                              <td><a href="#">Chemical Engineering</a></td>
+                                              <td>8 Weeks</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--/content-->
+                        </div><!--/row-->
+                    </div><!--/content-pad-->
+                </div><!--/container-->
+            </div><!--/body-->
+    {% endblock %}
+
+{% block extra_body %}
+
+    {%  include "_mobile.html" %}
+
+
+            <!-- For Date Picker -->
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.common.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.rtl.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.dataviz.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.dataviz.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/date-picker/kendo.mobile.all.min.css" %}">
+
+    <script type='text/javascript' src="{% static "js/date-picker/kendo.all.min.js" %}"></script>
+    <script type='text/javascript' src="{% static "js/date-picker/angular.min.js" %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/datepicker.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/wp-embed.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/learndash_template_script.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/date-picker/js_composer_front.min.js' %}"></script>
+
+{% endblock %}

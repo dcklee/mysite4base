@@ -1,0 +1,65 @@
+{% extends "userpanel/userpanel_site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block body_class %}flat{% endblock %}
+{% block body_extra_attributes %}data-color="blue"{% endblock %}
+
+{% block body %}
+
+				<div id="breadcrumb">
+					<a href="#" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Home</a>
+                    <a href="#" title="postmanager" class="tip-bottom"></i> Post Manager</a>
+					<a href="#" class="current"> Customer Package Details</a>
+				</div>
+				<div class="container-fluid">
+					<br />
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="widget-box">
+								<div class="widget-title"><span class="icon"><i class="fa fa-comment"></i></span><h5>Edit Package Details</h5><span title="" class="label label-info tip-left"></span></div>
+								<div class="widget-content padding">
+									<div class="row">
+                                            <form id="signup_form" method="post" action="{% url 'userpanel:customer-package-details-edit' %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                                                {% csrf_token %}
+                                                {{ form|bootstrap }}
+                                                {% if redirect_field_value %}
+                                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                                {% endif %}
+                                                <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
+                                            </form>
+                                        <div class="col-md-4">
+                                            {% include "account/_signup_sidebar.html" %}
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+{#						<div class="col-xs-12">#}
+{#							<div class="widget-box widget-calendar">#}
+{#								<div class="widget-title"><span class="icon"><i class="fa fa-calendar"></i></span><h5>Calendar</h5></div>#}
+{#								<div class="widget-content nopadding">#}
+{#									<div class="calendar"></div>#}
+{#								</div>#}
+{#							</div>#}
+{#						</div>#}
+					</div>
+				</div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}

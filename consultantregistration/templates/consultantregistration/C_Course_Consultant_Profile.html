@@ -1,0 +1,119 @@
+{% extends "site_base.html" %}
+{% load bootstrap3 %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留学老师{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% url "course_chat" as course_chat_url %}
+            <h2><a href="{%  url "coursesearch:courseconsultant" studyarea courseid consultantid %}"> <b>{{ course }}<br></b></a></h2>
+            <p>{{ educationinstitution }}
+                {% blocktrans %}
+                {% endblocktrans %}
+            </p>
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            {% endif %}
+        </div>
+    </section>
+        <section>
+        <div class="container">
+            <p class="lead text-center">
+                {% blocktrans %}
+                <b>{{ teacher }}老师简介及博客 <br>Mr {{ teacher }}'s Profile and Blog</b>
+                    <p class="text-center"><b>居住城市 City of Residence <br> {{  location }}</b></p>
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+        <table id="example" class="table table-condensed table-striped" width="100%">
+            <col style="width:15%">
+            <col style="width:25%">
+            <col style="width:35%">
+            <col style="width:25%">
+        <thead>
+            <tr>
+                <th><p>{% blocktrans %} <b>资质信息<br> Registration Details</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>学历背景<br> Academic Qualifications</b>{% endblocktrans %}</p></th>
+                <th><p>{% blocktrans %} <b>前几行业经验<br> Prior Work Experience</b>{% endblocktrans %}</p></th>
+                <th> <p>{% blocktrans %} <b>居住城市<br> Previous Places</b>{% endblocktrans %}</p></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ regdetails }}</td>
+                <td>{{ acadetails }}</td>
+                <td>{{ workdetails }}</td>
+                <td>{{  lived }}</td>
+
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </section>
+    <section class="jumbotron">
+        <div class="container">
+            <div class="consultant-columns">
+            {%  for courseconsultant in courseconsultantlist %}
+                <div>
+                    <b><a href="{% url 'coursesearch:r_course_consultant_profile' studyarea courseid courseconsultant.profile.pk %}">
+                    <i class="fa fa-xing fa-3x"></i><br>
+                     {{ courseconsultant.last_name }} 老师 <br>Mr {{ courseconsultant.last_name }} <br>75 同学咨询过他</a></b>
+                </div>
+            {% empty %}
+                <div>
+                    <i></i><br>
+                    <b> <br></b> <br>
+                </div>
+            {%  endfor %}
+            </div>
+        </div>
+    </section>
+        <section>
+        <div class="container">
+            <div class="footer-columns">
+                <div>
+                    <i class="fa fa-globe fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>国家<br>Country</b>
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-building fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>学校创新<br>College Innovation</b>
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-newspaper-o fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>老师介绍<br>College News</b> <br>80老师顾问在线<br>1200同学现在看中
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-user fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>老师介绍<br>Teacher Profile</b> <br>80老师顾问在线<br>1200同学现在看中
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

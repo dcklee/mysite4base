@@ -1,0 +1,48 @@
+{% extends "userpanel/userpanel_site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Log out" %}{% endblock %}
+{% block body_class %}flat{% endblock %}
+{% block body_extra_attributes %}data-color="blue"{% endblock %}
+
+{% block body %}
+				<div id="breadcrumb">
+					<a href="#" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Home</a>
+					<a href="#" class="current">Logout</a>
+				</div>
+				<div class="container-fluid">
+					<br />
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="widget-box">
+								<div class="widget-content padding">
+                                    <form method="POST" action="{% url "account_logout" %}">
+                                        <fieldset>
+                                            <legend>{% trans "Logout" %}</legend>
+                                            {% csrf_token %}
+                                            <p>{% trans "Are you sure you want to log out?" %}</p>
+                                            <button type="submit" class="btn btn-primary">{% trans "Log out" %}</button>
+                                        </fieldset>
+                                    </form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					</div>
+                </div>
+{% endblock %}
+
+{%  block footer %}
+    <div class="footer">
+        <div class="container">
+            Copyright © 2016 <a href="http://www.enlingo.com/" title="Enlingo">Enlingo</a>
+        </div>
+    </div>
+
+{%  endblock %}

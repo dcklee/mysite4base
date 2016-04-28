@@ -1,0 +1,166 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+
+{% block extra_head %}
+    <!-- subscription Wizard CSS stylesheet - clashes with app.min.css-->
+<link rel="icon" type="image/png" href="{% static "images/favicon.ico" %}">
+<link href="{% static "assets/css/gsdk-base.css" %}" rel="stylesheet" />{% endblock %}
+    <!-- end of custom CSS stylesheet page inclusion -->
+{% block topbar_base %}{% endblock %}
+{% block body_base %}
+    <!-- Custom Header Subscription Page -->
+    <div id="pageloader" class="dark-div" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:99999; background:#179bd7;">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+<div class="image-container set-full-height" style="background-image: url('{% static 'images/wizard-city.jpg' %}')">
+    <!--   Creative Tim Branding   -->
+    <a href="{%  url "home" %}">
+         <div class="logo-container">
+            <div class="logo">
+                <img src="{% static 'images/inverse_logo_chinese.png' %}" alt="Enlingo Theme"/>
+            </div>
+            <div class="brand">
+
+            </div>
+        </div>
+    </a>
+            <!--   Big container   -->
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <!--      Wizard container        -->
+                <div class="wizard-container">
+                    <div class="card wizard-card ct-wizard-blue" id="wizardProfile">
+                    <form id="myForm" class="form" data-stripe-key="{{ PINAX_STRIPE_PUBLIC_KEY }}" action="{% url "recharge_credits_processing" rechargeidentifier %}" method="post" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                    <!--        You can switch "ct-wizard-azzure"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                                                <div class="wizard-header">
+                                <h3>
+                                   <b>RECHARGE PACK</b> <br>
+                                </h3>
+                            </div>
+                            <ul>
+                                <li><a href="#order" data-toggle="tab">Order Confirmation</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="order">
+                                    <h4 class="info-text">Order Summary</h4>
+                                    <div class="row">
+                                        <div class="col-sm-5 col-sm-offset-1">
+                                          <div class="form-group">
+                                              <label><b>Recharge Pack</b></label><br>
+                                              <label>{{ rechargedescription }}</label>
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                             <div class="form-group">
+                                                <label><b>Recharge Amount</b></label><br>
+                                                 <label>{{ rechargeamount }}</label>
+                                              </div>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-footer">
+                                    <div class="pull-right">
+                                        <script src="https://checkout.stripe.com/checkout.js"></script>
+                                        <input type='submit' id="customButton"  onclick="this.disabled=true;" class='btn btn-finish btn-fill btn-primary btn-wd btn-sm trigger' name='finish' value='Recharge' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- wizard container -->
+            </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+{% endblock %}
+
+{%  block footer %}
+    <div class="footer">
+        <div class="container">
+            Copyright © 2016 <a href="http://www.enlingo.com/" title="Enlingo">Enlingo</a>
+        </div>
+    </div>
+</div>
+
+{%  endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+<script type="text/javascript">
+
+    $('#myForm').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    var handler = StripeCheckout.configure({
+    key: 'pk_test_i5Sbgm8vVklVN5lLOFSIMfmC',
+    image: '/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token, args) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+        var $form = $("form[data-stripe-key]");
+      // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token.id));
+        $form.append($('<input type="hidden" name="stripeBillingName" />').val(args['billing_name']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressLine1" />').val(args['billing_address_line1']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressZip" />').val(args['billing_address_zip']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressCity" />').val(args['billing_address_city']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressState1" />').val(args['billing_address_state']));
+        $form.append($('<input type="hidden" name="stripeBillingAddressCountry" />').val(args['billing_address_country']));
+      // and re-submit
+        $form.get(0).submit();
+    }
+    });
+
+  $('#customButton').on('click', function(e) {
+      $( "#pageloader" ).show();
+    // Open Checkout with further options
+    handler.open({
+      name: 'Enlingo',
+      description: '{{ rechargedescription }}',
+      zipCode: true,
+      billingAddress: true,
+      currency: '{{ rechargecurrency }}',
+      amount: {{ stripeamount|floatformat:'0' }},
+      email: "{{ request.user.email }}",
+      panelLabel: "Recharge"
+
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
+    <script>
+        $( "#pageloader" ).hide();
+
+        $( document ).ajaxStart(function() {
+            $( "#customButton" ).click(function() {
+});
+});
+    </script>
+
+{% endblock %}

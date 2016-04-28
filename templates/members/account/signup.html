@@ -1,0 +1,300 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}singleColor{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active1 %}active{% endblock %}
+        {% block index_or_subpage_component %}
+            <div class="wrap two-cols">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 text">
+                        <div class="text-center">
+                        <h2>China's Largest Social Media <strong>Education & Visa Services</strong> Platform</h2>
+                        </div>
+                        <table class="table-condensed table-borderless">
+                            <thead><tr><th>&nbsp;</th><th></th></tr></thead>
+                            <tbody>
+                            <tr>
+                                <td><b>RMA/Migration Lawyer</b></td><td>Young & Dynamic Student Visa Client Follower Base</td>
+                            </tr>
+                             <tr>
+                                <td><b>Education Consultant</b></td><td>Direct Student Presence</td>
+                            </tr>
+                             <tr>
+                                <td><b>Tertiary, VET, ELICOS & College Institutes</b></td><td>Dynamic Branding Showcase for Offshore Students</td>
+                            </tr>
+                            </tbody>
+                        </table>
+					</div>
+					{% if not user.is_authenticated %}<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4">
+						<!-- Form -->
+
+                        {% url "account_login" as login_url %}
+            <form id="signup_form" method="post" action="{% url "consultant_account_signup" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <div class="col-xs-12 i">
+                    <button type="submit" class="btn btn-lg btn-yellow btn-effect">Create my free account</button>
+                </div>
+            </form>
+            <p class="login-signup">
+                <small>
+                    {% trans "Already have an account?" %}  <strong><a href="{% urlnext 'account_login' %}">{% trans "Log in" %}</a></strong>
+                </small>
+            </p>
+                     </div>
+                        {%  else %}<div  class="memberManager col-xs-12 col-md-5 col-md-offset-1 col-lg-4">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 i">
+                                        <div class="c text-center">
+                                            <div id="noheadermargin" class="wrap">
+                                                <img src="{% static "tmp/team-1.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+                                                <div class="info">
+                                                    <h3 id="memberh3" class="name">John Doe</h3>
+                                                    <h4 class="position">{% user_display request.user %} Member Manager</h4>
+                                                </div>
+                                            </div>
+                                            <div class="more">
+                                                <p id="memberdescription">Residence: Shanghai<br>Alumni: Hong Kong University<br>Background: Biological Sciences</p>
+                                                <div class="socials">
+                                                    <a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                                    <a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                                                    <a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>{% endif %}
+				</div>
+			</div>
+        {% endblock %}
+{% block body_base %}
+	<!-- Features -->
+	<section class="section features">
+		<div class="container">
+			<header class="text-center">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+						<h2> In 2015, Chinese Outbound Students total <strong>749,500</strong> globally. Reach them first.</h2>
+						<p>
+							Investment, business, spouse, skilled migration. These decisions fundamentally start with students looking to study in Australia before they step foot into the country.. Students in Asia today rely more on <b>social media</b> advice then website and traditional advertising.
+							combined, with peer feedback a premium. Use social media to enchance your and your agency's online profile now. Start your broadcast today. <br><b><a href="{%  url "pricing" %}" title="pricing" class="btn btn-yellow">Subscribe</a></b>
+						</p>
+					</div>
+				</div>
+
+			</header>
+			<div class="row text-center">
+				<div class="col-sm-4 i">
+					<span class="sprite icon icon-responsive"></span>
+					<h3>
+						<a href="#" title="#">Social Media = Trust = Results</a>
+					</h3>
+					<p>As you tweet posts from your Enlingo Post Manager, Enlingo will translate and broadcast them on our Chinese platforms reaching millions of Chinese students. <b>Enlingo</b> will keep a track of what posts your potential clients really liked and report back to you personally.</p>
+				</div>
+				<div class="col-sm-4 i">
+					<span class="sprite icon icon-technologies"></span>
+					<h3>
+						<a href="#" title="#">Educational Service &amp; Visa Focus</a>
+					</h3>
+					<p>"Sydney's world class 3D printing studios open in June 2016, want to tag along?" Distinguish and highlight your posts around what the client is first looking for, advice on course majors and college events.</p>
+				</div>
+				<div class="col-sm-4 i">
+					<span class="sprite icon icon-animations"></span>
+					<h3>
+						<a href="#" title="#">Personal Assistant</a>
+					</h3>
+					<p>The client wants to contact you! Great, but they want to know about the nitty gritty, and their English is limited. Your Enlingo bilingual personal assistants is instantly on hand to help manage your client.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Functions -->
+	<section class="section gray functions">
+		<div class="container">
+			<header class="text-center">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+						<h2>Enlingo <strong>Post Manager</strong></h2>
+						<p>Your profile is built and broadcast to millions of outbound students on the Enlingo platform. Clients reach you via our Area of Study专业搜索 Coursesearch Engine Weibo微博 referrals, Wechat微信, and peer to peer P2P referrals.</p>
+					</div>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<div class="row js-screens-filter">
+                        <div class="col-sm-15 i">
+							<a href="#tab-blog-page" aria-controls="tab-blog-page" role="tab" data-toggle="tab">
+								<span class="sprite icon icon-blog"></span>
+							</a>
+							<a href="#tab-blog-page" aria-controls="tab-blog-page" role="tab" data-toggle="tab" class="hoverExtend active">Weibo Social</a>
+						</div>
+						<div class="col-sm-15 i">
+							<a href="#tab-about-us" aria-controls="tab-about-us" role="tab" data-toggle="tab">
+								<span class="sprite icon icon-about"></span>
+							</a>
+							<a href="#tab-about-us" aria-controls="tab-about-us" role="tab" data-toggle="tab" class="hoverExtend">Wechat Social</a>
+						</div>
+                        <div class="col-sm-15 i">
+							<a href="#tab-login" aria-controls="tab-login" role="tab" data-toggle="tab">
+								<span class="sprite icon icon-login"></span>
+							</a>
+							<a href="#tab-login" aria-controls="tab-login" role="tab" data-toggle="tab" class="hoverExtend">Member Profile</a>
+						</div>
+						<div class="col-sm-15 i">
+							<a href="#tab-pricing-tables" aria-controls="tab-pricing-tables" role="tab" data-toggle="tab">
+								<span class="sprite icon icon-pricing-tables"></span>
+							</a>
+							<a href="#tab-pricing-tables" aria-controls="tab-pricing-tables" role="tab" data-toggle="tab" class="hoverExtend">Memberships &amp; Prices</a>
+						</div>
+						<div class="col-sm-15 i">
+							<a href="#tab-contact" aria-controls="tab-contact" role="tab" data-toggle="tab">
+								<span class="sprite icon icon-contact"></span>
+							</a>
+							<a href="#tab-contact" aria-controls="tab-contact" role="tab" data-toggle="tab" class="hoverExtend">Contact</a>
+						</div>
+					</div>
+
+					<div class="tab-content notebook">
+						<!-- Notebook -->
+						<img src="{% static "img/macbook.png" %}" alt="#" width="968" height="510" class="img-responsive">
+
+						<!-- Images -->
+						<div role="tabpanel" class="tab-pane fade image in active" id="tab-about-us">
+							<img src="{% static "tmp/about-us.jpg" %}" alt="#" width="667" height="417" class="img-responsive">
+						</div>
+						<div role="tabpanel" class="tab-pane fade image"  id="tab-pricing-tables">
+							<img src="{% static "tmp/pricing-tables.jpg" %}" alt="#" width="667" height="417" class="img-responsive">
+						</div>
+						<div role="tabpanel" class="tab-pane fade image" id="tab-blog-page">
+							<img src="{% static "tmp/blog.jpg" %}" alt="#" width="667" height="417" class="img-responsive">
+						</div>
+						<div role="tabpanel" class="tab-pane fade image" id="tab-contact">
+							<img src="{% static "tmp/contact.jpg" %}" alt="#" width="667" height="417" class="img-responsive">
+						</div>
+						<div role="tabpanel" class="tab-pane fade image" id="tab-login">
+							<img src="{% static "tmp/login.jpg" %}" alt="#" width="667" height="417" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<div class="section testimonials">
+		<div class="container">
+			<header class="text-center">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+						<h2><strong>Member</strong> Feedback</h2>
+					</div>
+				</div>
+			</header>
+
+			<div class="row">
+				<!-- User testimonials -->
+				<div class="col-xs-12 col-sm-7 userTestimonials">
+					<div class="js-testimonials-carousel">
+						<div class="item">
+							<div class="col-xs-10 col-xs-offset-1">
+								<img src='{% static "tmp/80x80.jpg" %}' alt="#" width="80" height="80" class="image">
+								<h3>M Leigh</h3>
+								<h4>– Sydney RMA –</h4>
+								<p>I have seen my agency's profile grow right in front my my eyes, all via my mobile phone. The rich user interaction with my tweets, posts and original content have been incredible.
+								</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-xs-10 col-xs-offset-1">
+								<img src="{% static "tmp/80x80.jpg" %}" alt="#" width="80" height="80" class="image">
+								<h3>N Natal</h3>
+								<h4>– Melbourne Education Agent –</h4>
+								<p> Along with our existing overseas agency network, Enlingo really opens us to current and future growth in our largest potential market, China.</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-xs-10 col-xs-offset-1">
+								<img src="{% static "tmp/80x80.jpg" %}" alt="#" width="80" height="80" class="image">
+								<h3>M Zhu</h3>
+								<h4>College Owner</h4>
+								<p>I am from China originally, so I understand the Chinese need to get referrals from trusted sources. Enlingo builds that trust by giving me and my staff the opportunity to show our college's experience via Chinese social media.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Twitter -->
+				<div class="col-xs-12 col-sm-4 col-sm-offset-1 tweets js-tweets">
+					<div class="item">
+						<div class="i">
+							<p>Update, <span class="green"><strong>@zhuzhu</strong></span> Please post this! <span class="green"><strong>@Enlingo</strong></span> 2017 Sydney University intake open.</p>
+							<span class="time">Posted 3 days ago</span>
+						</div>
+						<div class="i">
+							<p>Cheers <span class="green"><strong>@Enlingo</strong></span> Someone just referred an applicant to us, they say it was an Enlingo Wechat referral.</p>
+							<span class="time">Posted 8 days ago</span>
+						</div>
+						<div class="i">
+							<p>TOP <span class="green"><strong>@jamesparson11</strong></span>: Making a new <span class="green"><strong>@Enlingo</strong></span> connection? <span class="green"><strong>@jimmy_packer_2</strong></span></p>
+							<span class="time">Posted 10 days ago</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="i">
+							<p>Amazing <span class="green"><strong>@Enlingo</strong></span> An ex 573 client just got work under a 457!<span class="green"><strong>@Enlingo</strong></span> Sydney Uni Grad</p>
+							<span class="time">Posted 13 days ago</span>
+						</div>
+						<div class="i">
+							<p>Cheers <span class="green"><strong>@jura_mol</strong></span> it's exciting to see people getting the most out of it!</p>
+							<span class="time">Posted 22 days ago</span>
+						</div>
+						<div class="i">
+							<p>TOP <span class="green"><strong>@Enlingo</strong></span> <span class="green"><strong>@molingyu</strong></span> My UWS contact will submit your application soon.</p>
+							<span class="time">Posted 1 month ago</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="i">
+							<p>Amazing <span class="green"><strong>@zhihu</strong></span> Yes, 422 is a working holiday visa. You will need to apply for a 573 to study in Australia as an undergrad..</p>
+							<span class="time">Posted 1 month ago</span>
+						</div>
+						<div class="i">
+							<p>Cheers <span class="green"><strong>@2398432.qq.com</strong></span> Before being an RMA, I studied Mechanical Engineering @ Monash. The 3D printing lab does do metals prototyping</p>
+							<span class="time">Posted 2 months ago</span>
+						</div>
+						<div class="i">
+							<p>TOP <span class="green"><strong>@jojodamo</strong></span> Just overturned a student visa cancellation for a 574. I can help look into your case.</p>
+							<span class="time">Posted 6 months ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}
+
+
+

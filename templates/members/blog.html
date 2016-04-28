@@ -1,0 +1,165 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active4 %}active{% endblock %}
+{% block index_or_subpage_component %}
+			<div class="text-center">
+				<h2 class="subpageTitle">News</h2>
+			</div>
+{% endblock %}
+{% block body_base %}
+
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Enlingo Updates to our <strong>members</strong>. Catch up on member news and <strong>Posting Strategies</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Blog posts -->
+	<div class="section gray latestPosts">
+		<div class="container">
+			<h2 class="text-center">Latest <strong>News</strong></h2>
+
+			<div class="listing row js-latestPosts">
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-1.jpg" %}" alt="#" width="370" height="280" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">Access your account from mobile devices with maximum security</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">25th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-2.jpg" %}" alt="#" width="370" height="280" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">This is the Blog Title with some more text</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">29th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-3.jpg" %}" alt="#" width="370" height="370" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">This is the Blog Title with some more text and further description to make it even longer than previous posts</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">29th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-4.jpg" %}" alt="#" width="370" height="370" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">This is the Blog Title with some more text and further</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">29th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-5.jpg" %}" alt="#" width="370" height="210" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">Access your account from mobile devices with maximum security</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">25th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-6.jpg" %}" alt="#" width="370" height="210" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">Access your account from mobile devices with maximum security</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">25th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="detail.html" title="#">
+							<img src="{% static "tmp/blog-7.jpg" %}" alt="#" width="370" height="210" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="detail.html" title="#">This is the short Blog Title</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">25th January 2015</div>
+								<div class="author">By: <a href="detail.html" title="#">Mark Doe</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+					<a href="#" title="#" class="btn btn-lg btn-red btn-effect">+ 10 more posts...</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

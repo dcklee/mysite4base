@@ -1,0 +1,375 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+
+{% block head_title %}Enlingo留西洋网{% endblock %}
+
+{% block body_class %}page page-id-1091 page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php full-width template-front-page custom-background-empty wpb-js-composer js-comp-ver-4.9 vc_responsive no-js{% endblock %}
+
+{% block body_base %}
+    {% include "_messages.html" %}
+            <div id="body">
+                <div class="row"> <!-- equates to first row of block body -->
+                    <div class="containt">
+                        <div id="content" class="col-md-12" role="main">
+                            <article class="single-page-content">
+                                <div id="slider_1" class="header-bg-rev header-content-scroller">
+                                    <div class="cactus-rev-slider-default">
+                                        <div id="menu-left-overlay">
+                                            <section class="un-post-scroller un-post-scroller-9650 " data-delay="0">
+                                                <div class="hideT">
+                                                    <ul id="nav" class="ul1">
+                                                        <li><a href="#">找海外留学申请顾问</a>
+                                                            <ul class="ul11">
+                                                                <li><a href="#">学习科目</a>
+                                                                    <ul class="ul2">{% for area in areaofstudy %}<!-- start of all areas study records --> {% cycle 'start' '' '' '' '' '' as slidestart silent %} <!-- start of four courses per carousel counter -->{% cycle  '' '' '' '' '' 'end' as slideend silent %} <!-- end of carousel four limit counter -->
+                                                                        <li><a href="#">{{ area.name }}</a></li>
+                                                                        {%  if slideend %}<li><a href="#">More...</a></li>{%  endif %}{%  endfor %}
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">教育机构 </a>
+                                                                    <ul class="ul2">
+                                                                        <li><a href="#">悉尼大学</a></li>
+                                                                        <li><a href="#">西南威尔士大学</a></li>
+                                                                        <li><a href="#">TAFE NSW</a></li>
+                                                                        <li><a href="#">西悉尼大学</a></li>
+                                                                        <li><a href="#">莫纳什大学</a></li>
+                                                                        <li><a href="#">麦格理大学</a></li>
+                                                                        <li><a href="#">悉尼科技大学</a></li>
+                                                                        <li><a href="#">迪肯大学</a></li>
+                                                                        <li><a href="#">更多...</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">课程</a>
+                                                                    <ul class="ul2">
+                                                                        <li><a href="#">B. Information System</a></li>
+                                                                        <li><a href="#">M. Chemical Engineering</a></li>
+                                                                        <li><a href="#">B. Mechanical Engineering</a></li>
+                                                                        <li><a href="#">B. Software Engineering</a></li>
+                                                                        <li><a href="#">M. Information Technology</a></li>
+                                                                        <li><a href="#">B. Arts</a></li>
+                                                                        <li><a href="#">B. Physics</a></li>
+                                                                        <li><a href="#">M. Economics</a></li>
+                                                                        <li><a href="#">更多...</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">州/省、市</a>
+                                                                    <ul class="ul2">
+                                                                        <li><a href="#">西南威尔士，悉尼</a></li>
+                                                                        <li><a href="#">维多利亚，墨尔本</a></li>
+                                                                        <li><a href="#">南澳，阿德莱德</a></li>
+                                                                        <li><a href="#">昆士兰，布里斯班</a></li>
+                                                                        <li><a href="#">加州，洛杉矶</a></li>
+                                                                        <li><a href="#">加州，旧金山</a></li>
+                                                                        <li><a href="#">麻城，波士顿</a></li>
+                                                                        <li><a href="#">伦敦</a></li>
+                                                                        <li><a href="#">更多...</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">登记机关  （MARA，移民联盟，英国议会， 执法援助局，美国国际招生协会）</a>
+                                                                    <ul class="ul2">
+                                                                        <li><a href="#">MARA </a></li>
+                                                                        <li><a href="#">AIRC </a></li>
+                                                                        <li><a href="#">British Council </a></li>
+                                                                        <li><a href="#">IEAA </a></li>
+                                                                        <li><a href="#">更多...</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">签证申请服务</a>
+                                                            <ul class="ul11">
+                                                                <li><a href="#">大洋洲</a>
+                                                                    <ul class="ul2">
+                                                                        <li><input type="text" placeholder="search" class="app-search"></li>
+                                                                        <li><a href="#">澳大利亚</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">澳大利亚</a></li>
+                                                                                <li><a href="#">新西兰</a></li>
+                                                                                <li><a href="#"></a></li>
+                                                                                <li><a href="#">布里斯班</a></li>
+                                                                                <li><a href="#">奥克兰</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><a href="#">新西兰</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">洛杉矶</a></li>
+                                                                                <li><a href="#">旧金山</a></li>
+                                                                                <li><a href="#">XSLT</a></li>
+                                                                                <li><a href="#">Ajax</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><a href="#">昆斯兰</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">PHP</a></li>
+                                                                                <li><a href="#">MySQL</a></li>
+                                                                                <li><a href="#">XSLT</a></li>
+                                                                                <li><a href="#">Ajax</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><a href="#">南澳</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">PHP</a></li>
+                                                                                <li><a href="#">MySQL</a></li>
+                                                                                <li><a href="#">XSLT</a></li>
+                                                                                <li><a href="#">Ajax</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">加美</a>
+                                                                    <ul class="ul2">
+                                                                        <li><input type="text" placeholder="search" class="app-search"></li>
+                                                                        <li><a href="#">美国</a>
+                                                                            <!--<ul class="ul3">
+                                                                                <li><a href="#">PHP</a></li>
+                                                                                <li><a href="#">MySQL</a></li>
+                                                                                <li><a href="#">XSLT</a></li>
+                                                                                <li><a href="#">Ajax</a></li>
+                                                                            </ul>-->
+                                                                        </li>
+                                                                        <li><a href="#">加拿大</a>
+                                                                            <!--<ul class="ul3">
+                                                                                <li><a href="#">PHP</a></li>
+                                                                                <li><a href="#">MySQL</a></li>
+                                                                                <li><a href="#">XSLT</a></li>
+                                                                                <li><a href="#">Ajax</a></li>
+                                                                            </ul> -->
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">欧洲</a>
+                                                                    <ul class="ul2">
+                                                                        <li><input type="text" placeholder="search" class="app-search"></li>
+                                                                        <li><a href="#">申根</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">爱尔兰</a></li>
+                                                                                <li><a href="#">法国</a></li>
+                                                                                <li><a href="#">德国</a></li>
+                                                                                <li><a href="#">意大利</a></li>
+                                                                                <li><a href="#">西班牙</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><a href="#">其他</a>
+                                                                            <ul class="ul3">
+                                                                                <li><a href="#">希腊</a></li>
+                                                                                <li><a href="#">塞浦路斯</a></li>
+                                                                                <li><a href="#">保加利亚</a></li>
+                                                                                <li><a href="#">尔罗斯</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><a href="#">英国</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">亚洲</a>
+                                                                    <ul class="ul2">
+                                                                        <li><input type="text" placeholder="search" class="app-search"></li>
+                                                                        <li><a href="#">日本</a>
+                                                                        </li>
+                                                                        <li><a href="#">新加坡</a>
+                                                                        </li>
+                                                                        <li><a href="#">香港</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">南美</a>
+                                                                    <ul class="ul2">
+                                                                        <li><input type="text" placeholder="search" class="app-search"></li>
+                                                                        <li><a href="#">巴西</a>
+                                                                        </li>
+                                                                        <li><a href="#">古巴</a>
+                                                                        </li>
+                                                                        <li><a href="#">阿根廷</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="floatArea">
+                                                                <ol>
+                                                                    <li>
+                                                                        <i class="i1"></i>
+                                                                        <a target='_blank' href="#"><strong>留学学校</strong>
+                                                                        <em>451</em>个国家和地区</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="i2"></i>
+                                                                        <a target='_blank' href="#"><strong>学校导师</strong>
+                                                                        <em>14599</em>个老师及顾问</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="i3"></i>
+                                                                        <a target='_blank' href="#">
+                                                                            <strong>签证顾问</strong>MARA，AIRC，BC注册
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="i4"></i>
+                                                                        <a target='_blank' href="#">
+                                                                            <strong>专业文员</strong>24小时必有回答
+                                                                        </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </section><!--/u-post-carousel-->
+                                        </div>
+                                        <div class="tp-bgimg defaultimg">
+                                            <div class="floatleft floatright apply">
+                                                <h3>我校会计毕业生招聘成功率达成96.9%。<br>我们留学生如何更成功？</h3>
+                                                <p>Susan Wagner 导师<br>工商管理<br>莫纳什大学墨尔本</p>
+                                                <h6>点击申请</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="left_banner">
+                                        <div class="staticlogo"><a href="{% url "blog" %}"><img src="{% static 'images/education_institute_campaign.png' %}" width="auto" height="auto" alt="List Now"></a></div>
+                                        <div style="width: 100%; height: 4%"></div>
+                                        <div class="staticlogo"><a href="//member.enlingo.com"><img src="{% static 'images/List_Here.png' %}" width="auto" height="auto" alt="List Now"></a></div>
+                                    </div>
+                                </div>
+                                <!------END BANNER ------>
+                            </article>
+                        </div><!--/content-->
+                    </div>
+                </div><!--/row-->
+                <!-- <div class="u_row u_full_row">
+                </div><!--/u_row-->
+                <div class="u_row u_full_row">
+                    <div class="containt">
+                        <div id="logocontent" class="col-md-4 container" style="padding-right: 0;">
+                            <div class="vc_row wpb_row vc_row-fluid vc_custom_1406016129790 vc_row-has-fill">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <section class="testimonials testimonials-5372 " data-delay=0>
+                                                <div class="section-inner">
+                                                    <div class="testimonial-carousel owl-carousel is-carousel single-carousel"  >
+                                                        <div class="carousel-item testimonial-item-2246">
+                                                            <div class="testimonial-item text-center">
+                                                                <div class="media professor">
+                                                                    <div class="pull-left">
+                                                                        <img src="{% static 'images/AIRC.png' %}" width="auto" height="77px" alt="Amanda Doe">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/carousel-item-->
+                                                        <div class="carousel-item testimonial-item-2840">
+                                                            <div class="testimonial-item text-center">
+                                                                <div class="media professor">
+                                                                    <div class="pull-left">
+                                                                        <img src="{% static 'images/BC.png' %}" width="auto" height="77px" alt="JOHN DOE">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--/carousel-item-->
+                                                        <div class="carousel-item testimonial-item-981">
+                                                            <div class="testimonial-item text-center">
+                                                                <div class="media professor">
+                                                                    <div class="pull-left">
+                                                                        <img src="{% static 'images/ieaa.png' %}" width="auto" height="77px" alt="VICKY BRIE">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/carousel-item-->
+                                                    </div>
+                                                </div>
+                                            </section><!--/testimonial-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="study" class="col-md-8 container">
+                            <div class="vc_row wpb_row vc_row-fluid vc_custom_1406016129790 vc_row-has-fill" style="background-color: #ffffff !important;">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <section class="testimonials testimonials-5372 " data-delay=0 style="background-color: #ffffff !important;">
+                                                <div class="section-inner csT">
+                                                    <div class="row">
+                                                        <div class = "col-sm-4 col-xs-12 chartT">
+                                                            <i class="fa fa-university iconT" style="font-size:32px"></i>
+                                                            <div class="cntT"><font><font>搜索海外学校及课程</font></font>
+                                                            </div>
+                                                            <div class="icon-right"><i class="fa fa-angle-right"></i></div>
+                                                        </div>
+                                                        <div class = "col-sm-4 col-xs-12 chartT">
+                                                            <i class="fa fa-users iconT" style="font-size:32px"></i>
+                                                            <div  class="cntT"><font><font>找顾问</font></font></div>
+                                                            <div class="icon-right"><i class="fa fa-angle-right"></i></div>
+                                                        </div>
+                                                        <div class = "col-sm-4 col-xs-12 chartT">
+                                                            <i class="fa fa-pencil-square-o iconT" style="font-size:32px"></i>
+                                                            <div  class="cntT"><font><font>申请学习或学生签证</font></font></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div><!--/u_row-->
+
+                <div class="u_row u_full_row dark-div u_paralax">
+                    <div class="container">
+                       <div class="vc_row wpb_row vc_row-fluid vc_custom_1434467418925 vc_row-has-fill area_study_t">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="row vc_column-inner cstRow-for-mobile ">
+                                    <div class="wpb_wrapper">
+                                        <section class="un-post-carousel un-post-carousel-2379 slide-home-page" data-delay=0>
+                                            <div class="section-inner">
+                                                <div id="carousel-aos" class="container carousel slide area-of-study-for-desktop" data-ride="carousel" data-interval="false">
+                                                    <div class="container cstContainer">
+                                                        <h1 class="text-center"><font><font>学习科目</font></font></h1>
+                                                        <p></p>
+                                                    </div>
+                                                    <div class="container custome-container carousel-inner" role="listbox">
+                                                        <div class="carousel-inner cs-carousel-inner">{% for area in areaofstudy %} <!-- start of all areas study records --> {% cycle 'start' '' '' '' as slidestart silent %} <!-- start of four courses per carousel counter -->{% cycle  '' '' '' 'end' as slideend silent %} <!-- end of carousel four limit counter --> {%  if slidestart %} <!-- slidestarted flag -->
+                                                            <div class="item {% if forloop.first %}active{% else %}{%  endif %} study-columns"><!-- checks and adds active -->{% endif %} <!-- end of first loop check -->
+                                                                <div class="col-stdudy">
+                                                                    <div class="">
+                                                                        <a href="{%  url "coursesearch:areastudy" area.pk %}">
+                                                                        <i class="{{ area.fontlogo }}"></i><br>
+                                                                        <b><font><font>{{ area.name }}</font></font><br></b> <br><font><font> 100 位导师与顾问</font></font><br><font><font><i class="fa fa-eye"></i> 123</font></font></a>
+                                                                    </div>
+                                                                </div>{%  if slideend or forloop.last %} <!-- If last loop, appears here -->
+                                                            </div>{%  endif %}{%  endfor %} <!-- end of all areas of study records -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- Carousel nav -->
+                                                    <a class="left carousel-control" href="#carousel-aos" role="button" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#carousel-aos" role="button" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	 <!-- equates to last row of block body -->
+            </div><!--/body-->
+{% endblock %}
+
+{% block extra_body %}
+{%  include "_mobile.html" %}
+{% endblock %}

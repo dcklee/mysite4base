@@ -1,0 +1,139 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} | {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+        {% block viewport %}
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+        {% endblock %}
+
+        {% block styles %}{% endblock %}
+
+        {% block extra_head_base %}
+            {% block extra_head %}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}" {% block body_extra_attributes %}{% endblock %}>
+        <a name="top" style="height:0; position:absolute; top:0;" id="top-anchor"></a>
+        <div id="pageloader" class="dark-div" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:99999; background:#179bd7;">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+        <div id="body-wrap">
+            <div id="wrap">
+                {% block topbar_base %}<header>
+                    <div id="top-nav" class="dark-div nav-style-1">
+                    <nav class="navbar navbar-inverse main-color-1-bg" role="navigation">
+                        <div class="container">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="top-menu">
+                                <button style="display: none!important;" type="button" class="mobile-menu-toggle visible-xs">
+                                    <span class="sr-only">Menu</span>
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <button type="button" class="mobile-menu-toggle2 visible-xs">
+                                    <span class="sr-only">menu</span>
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-right search-toggle collapsed" data-toggle="collapse" data-target="#nav-search" href="#"><i class="fa fa-search"></i></a>
+                                <div class="navbar-right topnav-sidebar">
+                                    {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
+                                </div>
+                                <div id="nav-search" class="collapse dark-div">
+                                    <div class="container">
+                                        <form action="#">
+                                            <div class="input-group">
+                                                <input type="text" name="s" class="form-control search-field" placeholder="Search Here" autocomplete="off">
+                                                <span class="input-group-btn">
+                                                    <button type="submit"><i class="fa fa-search fa-4x"></i>&nbsp;</button>
+                                                </span>
+                                                <span class="input-group-btn hidden-xs">
+                                                    <button type="button" data-toggle="collapse" data-target="#nav-search">&nbsp;<i class="fa fa-times fa-2x"></i></button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                    </nav>
+                </div><!--/top-nap-->
+                <div id="main-nav" class="dark-div nav-style-1">
+                    <nav class="navbar navbar-inverse main-color-2-bg" role="navigation">
+                        <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <a class="logo" href="{% url "home" %}" title="Enlingo Theme">
+                                    <img src="{% static 'images/inverse_logo_chinese.png' %}" alt="Enlingo Theme"/>
+                                </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="main-menu hidden-xs" data-spy="affix" data-offset-top="500">
+                                <ul class="nav navbar-nav navbar-right">
+	                                <li id="nav-menu-item-1268" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children parent dropdown">
+                                        <a href="{% url "home" %}" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown">
+                                            <i class="fa fa-home"></i>  主页 <span class="menu-description">All Variations</span>
+                                        </a>
+                                    </li>
+                                    <li id="nav-menu-item-1439" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent dropdown">
+                                        <a href="{% url "blog" %}" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown"><i class="fa fa-bookmark"></i>最新教育机构和行业新闻
+                                        </a>
+                                    </li>
+                                    <li id="nav-menu-item-1313" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent dropdown">
+                                        <a href="{% url "blog" %}" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown"><i class="fa fa-graduation-cap"></i>教育机构创新项目 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </a> <!-- tab stops are temporary stop gap to align nav-menu-item-1313 -->
+                                    </li>
+                                    <li id="nav-menu-item-1269" class="main-menu-item menu-item-depth-0 sub-menu-left menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent dropdown">
+                                        <a href="#" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown"><i class="fa fa-file-text"></i>
+                                        <p style="margin: 0;font-weight: 800;font-size: 15px;">400-041-7515</p>
+                                        <i style="display: inline-block;" class="fa fa-phone"></i>
+                                        <span>欢迎来电我们！</span>
+                                    </li>
+                                </ul>
+                                <a href="#top" class="sticky-gototop main-color-1-hover"><i class="fa fa-angle-up"></i></a>
+					       </div><!-- /.navbar-collapse -->
+                        </div>
+                    </nav>
+                </div><!-- #main-nav -->
+                <div id="slider" class="header-bg-img header-content-0">
+                </div><!--/slider-->
+		        <style type="text/css" scoped="scoped">
+		        </style>
+                        </header> <!-- 08/03/2016 Header all Cut Out from HTML 2.1 Template, next step body_base -->
+                    {% endblock %}
+
+                    {% block body_base %}
+                                {% include "_messages.html" %}
+                                {% block body %}
+                                {% endblock %}
+                    {% endblock %}
+
+                    {% block footer_base %}
+                        <!--<hr /> -->
+                        <footer class="dark-div main-color-2-bg">
+                                {% block footer %}{% endblock %}
+                        </footer>
+                    {% endblock %}
+            </div><!--wrap-->
+        </div><!--/body-wrap-->
+
+
+        {% block scripts %}{% endblock %}
+
+        {% block theme_script %}
+            <script src="{% static "pinax/js/theme.js" %}"></script>
+        {% endblock %}
+
+        {% block extra_body_base %}
+            {% block extra_body %}{% endblock %}
+        {% endblock %}
+    </body>
+</html>

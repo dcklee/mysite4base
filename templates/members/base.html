@@ -1,0 +1,123 @@
+{% load static from staticfiles %}
+{% load account_tags %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} | {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+        {% block viewport %}
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+        {% endblock %}
+
+        {% block styles %}{% endblock %}
+        <!-- Modernizr -->
+        <script type='text/javascript' src='{% static "assets/js/modernizr-2.6.2-respond-1.1.0.min.js" %}'></script>
+
+    	<!-- Google fonts -->
+	<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+        {% block extra_head_base %}
+            {% block extra_head %}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}" {% block body_extra_attributes %}{% endblock %}>
+ 	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+    {% block topbar_base %}
+        <!-- Header -->
+	<header id="header" class="{% block main_sub %}{% endblock %}" data-0="{% block data1_value %}{% endblock %}" data-400="{% block data2_value %}{% endblock %}">
+		<div class="container">
+			<div class="navbar" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 class="logo">
+					                        <a class="logo" href="{%  url "home" %}" title="Enlingo Theme">
+                                    <img src="{% static 'images/inverse_logo_chinese.png' %}" alt="Enlingo Theme"/>
+                                </a>
+					</h1>
+				</div>
+
+				<nav class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="sub {% block active1 %}{% endblock %}">
+							<a href="{%  url "home" %}" title="Home">Home</a>
+							<ul>
+								<li><a href="index.html" title="Gradient">Gradient</a></li>
+								<li><a href="index-color.html" title="Single color">Single color</a></li>
+								<li><a href="index-video.html" title="Video">Video</a></li>
+								<li><a href="index-image.html" title="Image">Image</a></li>
+								<li><a href="index-cols.html" title="Two columns">Two columns</a></li>
+								<li><a href="index-full-gradient.html" title="Fullscreen gradient">Fullscreen gradient</a></li>
+								<li><a href="index-full-color.html" title="Fullscreen single color">Fullscreen single color</a></li>
+								<li><a href="index-full-video.html" title="Fullscreen video">Fullscreen video</a></li>
+								<li><a href="index-full-image.html" title="Fullscreen image">Fullscreen image</a></li>
+								<li><a href="index-full-cols.html" title="Fullscreen two columns">Fullscreen two columns</a></li>
+							</ul>
+						</li>
+						<li class="sub {% block active2 %}{% endblock %}">
+							<a href="{%  url "about" %}" title="Products">Products</a>
+							<ul>
+								<li><a href="icons.html" title="Credits">Enlingo Social Media Packages</a></li>
+                                <li><a href="icons.html" title="Credits">Commission Sharing Sales Program</a></li>
+								<li><a href="landing.html" title="FAQs">FAQs</a></li>
+							</ul>
+						</li>
+						<li class="sub {% block active3 %}{% endblock %}">
+                            <a href="" title="Pricing">Purchase</a>
+                            <ul>
+								<li><a href="{%  url "customer_packages" %}" title="customer_packages">Customer Starter Packages</a></li>
+								<li><a href="{%  url "recharge_credits" %}" title="recharge_credits">Recharge Credits</a></li>
+							</ul>
+                        </li>
+						<li class="{% block active4 %}{% endblock %}"><a href="{%  url "news" %}" title="Blog">News</a></li>
+						<li class="{% block active5 %}{% endblock %}"><a href="{%  url "contact" %}" title="Contact">Contact</a></li>
+                    {% if not user.is_authenticated %}
+						<li class="login"><a href="{% url 'account_login' %}" title="Login"><i class="icon fa fa-lock"></i> Login</a></li>
+                    {%  else %}
+                        <li class="login"><a href="{% url 'userpanel:userpanel_main' %}" title="Userpanel"><i class="icon fa fa-user"></i>{% user_display request.user %}</a></li>
+					{%  endif %}
+                    </ul>
+				</nav>
+			</div>
+
+			{% block index_or_subpage_component %}{% endblock %}
+		</div>
+	</header>
+    {% endblock %}
+
+                    {% block body_base %}
+                                {% include "_messages.html" %}
+                                {% block body %}
+                                {% endblock %}
+                    {% endblock %}
+
+                    {% block footer_base %}
+                        <!--<hr /> -->
+                        <footer id="footer">
+                                {% block footer %}{% endblock %}
+                        </footer>
+                    {% endblock %}
+
+
+        {% block scripts %}{% endblock %}
+
+        {% block theme_script %}
+            <script src="{% static "pinax/js/theme.js" %}"></script>
+        {% endblock %}
+
+        {% block extra_body_base %}
+            {% block extra_body %}{% endblock %}
+        {% endblock %}
+    </body>
+</html>
