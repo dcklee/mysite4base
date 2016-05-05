@@ -48,6 +48,7 @@ class ConsultantRegistrationDetailsAdmin(admin.ModelAdmin):
                                                     'registration_qualifications',
                                                     'association',
                                                     'academic_qualifications',
+                                                    'position',
                                                     'prior_work_position',
                                                     'prior_work_company_name',
                                                     'cities_lived_worked_in'

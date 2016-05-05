@@ -68,9 +68,9 @@
 						<li class="sub {% block active2 %}{% endblock %}">
 							<a href="{%  url "about" %}" title="Products">Products</a>
 							<ul>
-								<li><a href="icons.html" title="Credits">Enlingo Social Media Packages</a></li>
-                                <li><a href="icons.html" title="Credits">Commission Sharing Sales Program</a></li>
-								<li><a href="landing.html" title="FAQs">FAQs</a></li>
+								<li><a href="{% url "social_media_packages" %}" title="Credits">Enlingo Social Media Packages</a></li>
+                                <li><a href="{% url "sales_commissions_program" %}" title="Credits">Commission Sharing Sales Program</a></li>
+								<li><a href="{%  url "faq" %}" title="FAQs">FAQs</a></li>
 							</ul>
 						</li>
 						<li class="sub {% block active3 %}{% endblock %}">
