@@ -18,7 +18,7 @@ from . import forms
 from consultantregistration.models import ConsultantRegistrationDetails, EnlingoPackageCustomer, EnlingoPackageCustomerBillingDetails, EnlingoPackageMember
 from pinax.invitations.models import InvitationStat
 from django.contrib import auth, messages
-from django.contrib.sites.models import get_current_site
+#from django.contrib.sites.models import get_current_site
 from django.contrib.auth.tokens import default_token_generator
 
 from account import signals
