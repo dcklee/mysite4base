@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='areaofstudy',
             name='fontlogo',
-            field=models.CharField(default=1, max_length=20),
+            field=models.CharField(max_length=30, default=1),
             preserve_default=False,
         ),
     ]

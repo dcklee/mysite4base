@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='enlingocreditrecharge',
             name='currency',
-            field=models.CharField(default='AUD', choices=[('AUD', 'Australian Dollar'), ('CNY', 'Renminbi'), ('USD', 'US Dollar'), ('EUR', 'Euro'), ('GBP', 'Pound Sterling'), ('HKD', 'HK Dollar'), ('SGD', 'Singapore Dollar')], max_length=3),
+            field=models.CharField(choices=[('AUD', 'Australian Dollar'), ('CNY', 'Renminbi'), ('USD', 'US Dollar'), ('EUR', 'Euro'), ('GBP', 'Pound Sterling'), ('HKD', 'HK Dollar'), ('SGD', 'Singapore Dollar')], default='AUD', max_length=3),
             preserve_default=False,
         ),
     ]

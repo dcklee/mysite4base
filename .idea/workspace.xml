@@ -2,16 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b27c10f2-b4e1-41c1-9dca-64f30115259f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/sales_commissions_program.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/social_media_packages.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/members/detail.html" afterPath="$PROJECT_DIR$/templates/members/faq.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultantregistration/admin.py" afterPath="$PROJECT_DIR$/consultantregistration/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultantregistration/templates/consultantregistration/Course_Consultant_Profile.html" afterPath="$PROJECT_DIR$/consultantregistration/templates/consultantregistration/Course_Consultant_Profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite4base/member_settings_dev.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite4base/student_settings_dev.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite4base/wsgi3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite4base/wsgi4.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0013_enlingopackageadmin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0014_auto_20160405_1807.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0015_remove_enlingopackageadmin_rechargehistory.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0016_auto_20160405_2149.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0017_remove_enlingopackageadmin_autorecharge.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0018_enlingopackageadmin_autorecharge.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0019_auto_20160405_2158.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0020_enlingopackageadmin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0021_auto_20160405_2312.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0022_auto_20160405_2320.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0023_auto_20160406_0008.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0024_auto_20160406_1549.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0025_auto_20160406_1607.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0026_auto_20160406_1942.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0027_auto_20160409_1401.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0028_enlingopackagecustomer_schemeregister.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0029_enlingopackagecustomer_customerlogo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0030_auto_20160410_1357.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0031_auto_20160410_2116.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0032_auto_20160410_2128.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0033_auto_20160410_2158.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0034_auto_20160410_2208.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0035_auto_20160410_2229.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0036_auto_20160410_2233.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0037_auto_20160410_2255.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0038_auto_20160410_2259.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0039_auto_20160411_0947.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0040_auto_20160412_1346.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0041_auto_20160412_1534.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0042_auto_20160412_1544.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0043_remove_enlingopackagecustomer_education_institute.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0044_enlingopackagecustomer_education_institute.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0045_enlingopackagecustomerpurchasehistory.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultantregistration/migrations/0046_auto_20160418_1024.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coursesearch/migrations/0004_auto_20151203_1052.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coursesearch/migrations/0005_educationinstitute_country.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/roles/migrations/0003_auto_20160411_0947.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/roles/migrations/0004_profile_courses.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/roles/migrations/0005_auto_20160412_1123.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/roles/migrations/0006_auto_20160412_1129.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/roles/migrations/0007_remove_profile_courses.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coursesearch/migrations/0003_areaofstudy_fontlogo.py" afterPath="$PROJECT_DIR$/coursesearch/migrations/0003_areaofstudy_fontlogo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/memberpackage/migrations/0006_enlingocreditrecharge_currency.py" afterPath="$PROJECT_DIR$/memberpackage/migrations/0006_enlingocreditrecharge_currency.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/member_settings.py" afterPath="$PROJECT_DIR$/mysite4base/member_settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/member_urls.py" afterPath="$PROJECT_DIR$/mysite4base/member_urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/about.html" afterPath="$PROJECT_DIR$/templates/members/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/base.html" afterPath="$PROJECT_DIR$/templates/members/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/index.html" afterPath="$PROJECT_DIR$/templates/members/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/settings.py" afterPath="$PROJECT_DIR$/mysite4base/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/student_settings.py" afterPath="$PROJECT_DIR$/mysite4base/student_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/student_urls.py" afterPath="$PROJECT_DIR$/mysite4base/student_urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/wsgi.py" afterPath="$PROJECT_DIR$/mysite4base/wsgi.py" />
     </list>
     <ignored path="mysite4base.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +83,18 @@
     <favorites_list name="mysite4base" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,9 +107,17 @@
         <option value="$PROJECT_DIR$/templates/members/index.html" />
         <option value="$PROJECT_DIR$/templates/members/about.html" />
         <option value="$PROJECT_DIR$/templates/members/base.html" />
-        <option value="$PROJECT_DIR$/mysite4base/member_urls.py" />
         <option value="$PROJECT_DIR$/templates/members/faq.html" />
         <option value="$PROJECT_DIR$/templates/members/social_media_packages.html" />
+        <option value="$PROJECT_DIR$/mysite4base/student_urls.py" />
+        <option value="$PROJECT_DIR$/mysite4base/member_urls.py" />
+        <option value="$PROJECT_DIR$/mysite4base/wsgi3.py" />
+        <option value="$PROJECT_DIR$/mysite4base/wsgi4.py" />
+        <option value="$PROJECT_DIR$/mysite4base/member_settings_dev.py" />
+        <option value="$PROJECT_DIR$/mysite4base/member_settings.py" />
+        <option value="$PROJECT_DIR$/mysite4base/settings.py" />
+        <option value="$PROJECT_DIR$/mysite4base/student_settings.py" />
+        <option value="$PROJECT_DIR$/mysite4base/student_settings_dev.py" />
       </list>
     </option>
   </component>
@@ -65,6 +132,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1456" />
     <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -92,7 +178,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,48 +264,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consultantregistration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consultantregistration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="consultantregistration" />
+              <option name="myItemId" value="members" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userpanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun_oss_custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,12 +316,13 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates\members" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\mysite4base" />
       <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates\members" />
       <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates\members" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.mysite4base">
@@ -514,10 +601,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -544,15 +631,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/members/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3819">
-          <caret line="201" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/members/social_media_packages.html">
+    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -560,11 +639,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3819">
+          <caret line="201" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/social_media_packages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/members/faq.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="89" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -572,9 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-524">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-326">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,15 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="56" column="91" selection-start-line="56" selection-start-column="91" selection-end-line="56" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite4base/member_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,15 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="162" column="204" selection-start-line="162" selection-start-column="204" selection-end-line="162" selection-end-column="229" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
           <caret line="201" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,6 +735,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="89" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/userpanel/member_group_manager_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/student_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/member_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+          <folding>
+            <element signature="e#620#652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/wsgi3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/wsgi2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/wsgi4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aliyun_oss_custom/templatetags/aliyunthumbnail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/member_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-422">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/member_settings_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/student_settings_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/student_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultantregistration/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultantregistration/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
         </state>
       </provider>

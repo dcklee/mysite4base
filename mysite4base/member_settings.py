@@ -1,6 +1,9 @@
 from .settings import *
 
 SITE_ID = 1
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+ALLOWED_HOSTS = ['student.qsvisa.com','member.qsvisa.com','enlingo.com','enlingo.com.au','member.enlingo.com','member.enlingo.com.au','www.enlingo.com','www.enlingo.com.au']
 
 ROOT_URLCONF = 'mysite4base.member_urls'
 
@@ -23,10 +26,32 @@ TEMPLATES = [
     },
 ]
 
-#SITE_ID = int(os.environ.get("SITE_ID", 1))
+WSGI_APPLICATION = 'mysite4base.wsgi2.application'
+
+#HTTPS Settings
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'
+
 # Pinax Stripe Keys
-PINAX_STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "pk_test_i5Sbgm8vVklVN5lLOFSIMfmC")
-PINAX_STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_MmMyDilC57nL8GRnLSvOoNQx")
+PINAX_STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+PINAX_STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 
 #Pinax Stripe Invoice Email
 PINAX_STRIPE_INVOICE_FROM_EMAIL = "accounts@enlingo.com"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("DB_IP"),
+        'PORT': os.environ.get("DB_PORT")
+    }
+}

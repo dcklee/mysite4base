@@ -1,12 +1,18 @@
 from .settings import *
 
 SITE_ID = 2
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+ALLOWED_HOSTS = ['student.qsvisa.com','member.qsvisa.com','enlingo.com','enlingo.com.au','member.enlingo.com','member.enlingo.com.au','www.enlingo.com','www.enlingo.com.au']
+
 
 ROOT_URLCONF = 'mysite4base.student_urls'
 
 # Aliyun_OSS_Image_Service for thumbnails
 
 ALIYUN_OSS_THUMBNAILS_URL = "//thumbnail.qsvisa.com/"
+
+WSGI_APPLICATION = 'mysite4base.wsgi.application'
 
 FILER_STORAGES = {
     'public': {
@@ -45,4 +51,15 @@ FILER_STORAGES = {
             },
         },
     },
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
 }
