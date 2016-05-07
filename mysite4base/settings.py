@@ -33,9 +33,7 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-
 #Aliyun OSS
-#STATICFILES_STORAGE = 'aliyunstorage.backends.AliyunOssStorage'
 STATICFILES_STORAGE = 'aliyun_oss_custom.aliyun_oss_custom.StaticStorage'
 DEFAULT_FILE_STORAGE = 'aliyunstorage.backends.AliyunOssStorage'
 THUMBNAIL_DEFAULT_STORAGE = 'aliyunstorage.backends.AliyunOssStorage'
@@ -50,25 +48,24 @@ ALIYUN_OSS_CUSTOM_DOMAIN = '%s.%s' % (ALIYUN_OSS_BUCKET_NAME, ALIYUN_OSS_END_POI
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-#MEDIA_ROOT = os.path.join(BASE_DIR, "site_media", "media")
 MEDIA_ROOT = "site_media/media/"
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-#MEDIA_URL = "/site_media/media/"
-MEDIA_URL = "//static.qsvisa.com/"
+# MEDIA_URL = "//static.qsvisa.com/"
+MEDIA_URL = "//%s/" % (ALIYUN_OSS_CUSTOM_DOMAIN)
+
 # Absolute path to the directory static files should be collected to.
 # Don"t put anything in this directory yourself; store your static files
 # in apps" "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = "site_media/static/"
-STATIC_URL = "/%s/%s/" % (ALIYUN_OSS_CUSTOM_DOMAIN, 'site_media/static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-# STATIC_URL = "/site_media/static/"
-#STATIC_URL = "https://%s/" % ALIYUN_OSS_CUSTOM_DOMAIN
-#STATIC_URL = "/site_media/static/"
+STATIC_URL = "//%s/%s/" % (ALIYUN_OSS_CUSTOM_DOMAIN, 'site_media/static')
+
 # Additional locations of static files
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static", "dist"),
@@ -80,16 +77,6 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@aowz(3xqaw4_2^g&(3*@y_em&z6^&s4h*e4q(lhf9&90-n(-l'
-#SECRET_KEY = os.environ.get["SECRET_KEY"]
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -107,16 +94,6 @@ INSTALLED_APPS = (
     'django_countries',
     'django.contrib.humanize',
 
-    #haystack search
-    'haystack',
-
-    #elasticsearch
-    'elasticsearch',
-
-    #roles
-    #'rolepermissions',
-    'roles',
-
     #Pinax Account
     'pinax_theme_bootstrap',
     'bootstrapform',
@@ -130,6 +107,15 @@ INSTALLED_APPS = (
     'coursesearch',
     'consultantregistration',
     'studentapply',
+
+    #haystack search
+    'haystack',
+
+    #elasticsearch
+    'elasticsearch',
+
+    #roles
+    'roles',
 
     #Workflow
     'viewflow',
@@ -161,7 +147,7 @@ INSTALLED_APPS = (
 
     #Pinax Invitations
     'pinax.invitations',
-    'eldarion.ajax',
+    #'eldarion.ajax',
 
     #Django Filer
     'easy_thumbnails',
@@ -206,28 +192,11 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'mysite4base.wsgi.application'
-
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # "NAME": 'enlingotest',
-        # "USER": "enlingo",
-        # "PASSWORD": "Enlingo123",
-        # "HOST": "112.74.102.212",
-        # "PORT": "5432"
-        'NAME': 'Enlingo02',
-        'USER': 'postgres',
-        'PASSWORD': 'Enlingo123',
-        'HOST': '',
-        'PORT': '5432'
-    }
-}
 
 #EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -257,7 +226,7 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
 ACCOUNT_USE_AUTH_AUTHENTICATE = True
 
 AUTHENTICATION_BACKENDS = [
-   #"account.auth_backends.UsernameAuthenticationBackend",
+#   "account.auth_backends.UsernameAuthenticationBackend",
    "account.auth_backends.EmailAuthenticationBackend",
     'django.contrib.auth.backends.ModelBackend', # default
     "guardian.backends.ObjectPermissionBackend",
@@ -287,6 +256,7 @@ HAYSTACK_CONNECTIONS = {
         'INDEX_NAME': 'haystack',
     },
 }
+
 # SITE_ID for django.contrib.sites, deprecated for enlingo.com as using two wsgi.py modules to represent two subdomains: enlingo.com - student_settings
 # member.enlingo.com - member_settings
 
