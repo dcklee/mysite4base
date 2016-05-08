@@ -183,7 +183,10 @@ class MemberPost(ListView):
     def get_context_data(self, **kwargs):
         context = super(MemberPost, self).get_context_data(**kwargs)
         memberposts = Post.objects.filter(author = self.request.user)
-        credits = EnlingoPackageCustomer.objects.get(enlingopackagemember__member=self.request.user.profile).creditbalance
+        try:
+            credits = EnlingoPackageCustomer.objects.get(enlingopackagemember__member=self.request.user.profile).creditbalance
+        except EnlingoPackageCustomer.DoesNotExist:
+            credits = "0"
         context['memberposts'] = memberposts
         context['creditbalance'] = credits
         return context
