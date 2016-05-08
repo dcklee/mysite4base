@@ -57,8 +57,8 @@ class AreaStudyView(generic.ListView):
         return context
 
     def get_queryset(self):
-        self.areaofstudy2 = get_object_or_404(AreaOfStudy, pk=self.kwargs.get('studyarea'))._get_pk_val
-        return Course.objects.filter(areaofstudy=self.areaofstudy2)
+        self.areaofstudy = get_object_or_404(AreaOfStudy, pk=self.kwargs.get('studyarea'))
+        return Course.objects.filter(areaofstudy=self.areaofstudy)
 
 class CourseDetailView(generic.DetailView):
 
@@ -72,32 +72,13 @@ class CourseDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
 
         context = super(CourseDetailView, self).get_context_data(**kwargs)
-        # following two django querysets return all related consultant user objects to Course instance
-        courseconsultants1 = CourseConsultantRelationship.objects.filter(course_rep=self.course)
-        courseconsultants = User.objects.filter(profile__consultantcourse=courseconsultants1)[:4]
-#        consultantuser = []
-#        courseconsultantlist=[]
-
-#        function returns all attached consultant user objects to Course instance
-#        superceded by above django querysets, simpler, quicker, foolrpoof
-#         def getconsultantlist(self):
-#             for consultant in courseconsultants:
-#                 consultant = User.objects.get(pk=consultant.pk)
-#                 consultantuser.append(consultant)
-#             return consultantuser
-#          for consultantu in consultantuser:
-#             userlist = User.objects.get(pk = consultantu)
-#             courseconsultantlist.append(userlist)
-#          return courseconsultantlist
-
-        context['courseconsultantlist'] = courseconsultants
+        # following two django querysets return all related consultant profile objects to Course instance
+        course = get_object_or_404(Course, pk=self.kwargs.get('course1'), areaofstudy=self.kwargs.get('studyarea'))
+        courseconsultants = CourseConsultantRelationship.objects.filter(course_rep=course.pk)
+        context['courseconsultants'] = courseconsultants
         context['course1'] = self.kwargs.get('course1')
         context['studyarea'] = self.kwargs.get('studyarea')
         return context
-
-    def get_queryset(self):
-        self.course = get_object_or_404(Course, pk=self.kwargs.get('course1'), areaofstudy=self.kwargs.get('studyarea'))._get_pk_val
-        return Course.objects.filter(pk=self.course)
 
 class CourseConsultantChatView(generic.DetailView):
 #    model = CourseConsultantRelationship
