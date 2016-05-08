@@ -61,14 +61,14 @@
                                             <div class="event-detail">
                                                 <div class="event-speaker">
                                                     <h5 class="normal-text">老师顾问</h5>
-                                                    <div class="row"> {%  for courseconsultant in courseconsultantlist %}
+                                                    <div class="row"> {%  for courseconsultant in courseconsultants %}
                                                         <div class="col-md-6 col-sm-6">
                                                             <div class="media professor">
                                                                 <div class="pull-left">
-                                                                    <a href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.profile.pk %}" class="main-color-2"><img width="60" height="60" src="{%  locate_image_location courseconsultant.profile whq="@50w_50h_100Q" %}" class="attachment-thumb_50x50 size-thumb_50x50 wp-post-image" alt="U-member-2"  sizes="(max-width: 50px) 100vw, 50px"></a>
+                                                                    <a href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.consultant.user.pk %}" class="main-color-2"><img width="60" height="60" src="{%  locate_image_location courseconsultant.consultant whq="@50w_50h_100Q" %}" class="attachment-thumb_50x50 size-thumb_50x50 wp-post-image" alt="U-member-2"  sizes="(max-width: 50px) 100vw, 50px"></a>
                                                                 </div>
                                                                 <div class="media-body consultant-list">
-                                                                    <h6 class="media-heading main-color-2"><a class="main-color-2" href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.profile.pk %}">{{ courseconsultant.last_name }} {{ courseconsultant.profile.salutation }}</a></h6>
+                                                                    <h6 class="media-heading main-color-2"><a class="main-color-2" href="{% url 'coursesearch:courseconsultant' studyarea course1 courseconsultant.consultant.pk %}">{{ courseconsultant.consultant.user.last_name }} {{ courseconsultant.consultant.salutation }}</a></h6>
                                                                     <span class="student-lecturer">MARA签证律师</span>
                                                                     <h6 class="student-require"><i class="fa fa-eye"></i> 1000</h6>
                                                                 </div>
@@ -203,5 +203,5 @@
     {% endblock %}
 
 {% block extra_body %}
-{%  include "_mobile.html" %}
+{% include "_mobile.html" %}
 {% endblock %}
