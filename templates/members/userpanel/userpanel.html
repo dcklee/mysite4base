@@ -22,7 +22,7 @@
 							<ul class="quick-actions">
                                 {% if perms.blog.add_post %}<li>
 									<a href="{% url 'userpanel:post-add' %}">
-										<i class="icon-cal"></i>
+										<i class="icon-enlingopost"></i>
 										Create Post
 									</a>
 								</li>{% endif %}
@@ -39,8 +39,8 @@
 {#									</a>#}
 {#								</li>#}
 								<li>
-									<a href="http://student.qsvisa.com/consultant_profile/{{ request.user.profile.pk }}">
-										<i class="icon-people"></i>
+									<a href="http://www.enlingo.com/consultant_profile/{{ request.user.profile.pk }}">
+										<i class="icon-client"></i>
 										Enlingo Profile
 									</a>
 								</li>
@@ -52,7 +52,7 @@
 {#								</li>#}
 								<li>
 									<a href="#">
-										<i class="icon-piechart"></i>
+										<i class="icon-graph"></i>
 										Statistics
 									</a>
 								</li>
