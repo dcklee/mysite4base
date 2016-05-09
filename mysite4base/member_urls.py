@@ -40,6 +40,8 @@ urlpatterns = [
     url(r"^rechargecreditsprocessing/(?P<rechargeid>[0-9]+)/$", CreditRecharge.as_view(), name="recharge_credits_processing"),
     url(r'subscribe/(?P<package>[0-9]+)/$', EnlingoPremiumMember.as_view(), name="subscription_wizard"),
     url(r"^memberhome/", MemberHome.as_view(), name="memberhome"),
+    url(r"^company/", TemplateView.as_view(template_name="company.html"), name="company"),
+    url(r"^management/", TemplateView.as_view(template_name="management.html"), name="management"),
     url(r"^userpanel/", include('userpanel.urls', namespace="userpanel")),
     url(r"^news/", TemplateView.as_view(template_name="blog.html"), name="news"),
     url(r"^contact/", TemplateView.as_view(template_name="contact.html"), name="contact"),
