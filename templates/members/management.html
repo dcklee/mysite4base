@@ -1,0 +1,169 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active2 %}active{% endblock %}
+{% block index_or_subpage_component %}
+			<div class="text-center">
+				<h2 class="subpageTitle">Management Team</h2>
+			</div>
+{% endblock %}
+
+{% block body_base %}
+
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Enlingo has over 30 years of <strong>bilingual</strong> brand and media technology experience. Founded in Sydney, Australia, with satellite offices in Shanghai & Hong Kong, Enlingo continues to deliver more to the <strong>international education B2C community</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    	<!-- Meet our team -->
+	<div class="section ourTeam">
+		<div class="container">
+			<header class="text-center">
+				<h2>Meet <strong>Our Team</strong></h2>
+			</header>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/joanne.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Joanne Zhang</h3>
+								<h4 class="position">Managing Director</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/crystal.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Crystal Zhang Gordon</h3>
+								<h4 class="position">CFO</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/damien.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Damien Lee</h3>
+								<h4 class="position">Architect Developer</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 i">
+					<div class="c text-center">
+						<div class="wrap">
+							<img src="{% static "tmp/jae.jpg" %}" alt="#" width="270" height="270" class="img-responsive">
+							<div class="info">
+								<h3 class="name">Jae Ahn</h3>
+								<h4 class="position">COO</h4>
+							</div>
+						</div>
+						<div class="more">
+							<p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+							<div class="socials">
+								<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Features -->
+	<section class="section gray aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-pull-1 col-lg-4 col-lg-pull-1 i image pull-right">
+					<img src="{% static "tmp/zhihu_social.png" %}" alt="#" width="300" height="295" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2>The Enlingo International Education Service and Technology Standard</h2>
+					<p>Our team embody over 20 years of experience in international education and visa regulations. Combining this service experience with our inhouse developed SocialBOT<sup>&reg;</sup> technology platform and social media partner alliances help your agency, college or university better represent the international education and visa experience for outbound students.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats -->
+	<div class="section stats">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-projects"></span>
+							<div class="num js-count" data-to="10102" data-speed="3000">10,112</div>
+							<h2>Social Media Algorithms</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-hours"></span>
+							<div class="num js-count" data-to="925685" data-speed="3000">925,685</div>
+							<h2>Online Social Views</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-done"></span>
+							<div class="num js-count" data-to="40000" data-speed="3000">40,000</div>
+							<h2>Posts</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-diary"></span>
+							<div class="num"><span class="js-count" data-to="2000" data-speed="3000">2000</span>+</div>
+							<h2>Consultants</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
