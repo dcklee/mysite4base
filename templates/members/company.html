@@ -1,0 +1,108 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active2 %}active{% endblock %}
+{% block index_or_subpage_component %}
+			<div class="text-center">
+				<h2 class="subpageTitle">Company</h2>
+			</div>
+{% endblock %}
+
+{% block body_base %}
+
+	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Enlingo has over 30 years of <strong>bilingual</strong> brand and media technology experience. Founded in Sydney, Australia, with satellite offices in Shanghai & Hong Kong, Enlingo continues to deliver more to the <strong>international education B2C community</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Features -->
+	<section class="section gray aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-pull-1 col-lg-4 col-lg-pull-1 i image pull-right">
+					<img src="{% static "tmp/zhihu_social.png" %}" alt="#" width="300" height="295" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2>Enlingo Social Media <strong>Technology</strong></h2>
+					<p> At the core of our company (Asiascript Pty Ltd) lies our SocialBOT<sup>&reg;</sup> technology. From our roots as a Sydney based internet technology firm, we believe Australia is well placed to grow the next phase of international education, visa services and edutech. In 2016, the Australian government launched <a href="http://www.austrade.gov.au/Australian/Education/Services/australian-international-education-2025">AIE 2025</a> which cements our company vision.  </p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Features -->
+	<section class="section aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 i image">
+					<img src="{% static "img/feature-icon-2.png" %}" alt="#" width="207" height="208" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2><strong>Enlingo </strong> International Student and Visa Big Data Repository</h2>
+					<p>Our company has one of the world's largest repository of big data analytics around outbound students. We share our knowledgebase to our members via free newsletters and upcoming intelligence reports.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Features -->
+	<section class="section gray aboutFeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-4 col-md-pull-1 col-lg-4 col-lg-pull-1 i image pull-right">
+					<img src="{% static "tmp/social_identity.png" %}" alt="#" width="200" height="223" class="img-responsive">
+				</div>
+				<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-1 i text">
+					<h2>Enlingo Social Identity</h2>
+					<p>We are well regarded in PR China social media rankings. Unlike traditional Search Engine Optimisation (SEO) rankings, social media rankings are currently enjoying a huge rapid growth in popularity due to better and more diverse identity and service management as human posts and feedback help differentiate each organisation, no matter their size.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats -->
+	<div class="section stats">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-projects"></span>
+							<div class="num js-count" data-to="10102" data-speed="3000">10,112</div>
+							<h2>Social Media Algorithms</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-hours"></span>
+							<div class="num js-count" data-to="925685" data-speed="3000">925,685</div>
+							<h2>Online Social Views</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-done"></span>
+							<div class="num js-count" data-to="40000" data-speed="3000">40,000</div>
+							<h2>Posts</h2>
+						</div>
+						<div class="col-xs-12 col-sm-3 i">
+							<span class="sprite icon icon-diary"></span>
+							<div class="num"><span class="js-count" data-to="2000" data-speed="3000">2000</span>+</div>
+							<h2>Consultants</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
