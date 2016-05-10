@@ -203,7 +203,7 @@ class EnlingoPremiumMember(CustomerMixin, PaymentsContextMixin,SuccessMessageMix
     success_message = "Payment Successful"
 
       # check to ensure enlingo premium_member user cannot re-subscribe
-    @method_decorator(login_required(login_url='/account/login'))
+    @method_decorator(login_required(login_url='account_login'))
     def dispatch(self, request, *args, **kwargs):
         member = User.objects.get(pk=self.request.user.pk)
         user_group_check = member.groups.filter(name="premium_member") # Need to softcode group keyword for adminsite administration
@@ -332,7 +332,7 @@ class CreditRecharge(CustomerMixin, PaymentsContextMixin, SuccessMessageMixin, F
         super(CreditRecharge, self).__init__(*args, **kwargs)
 
     # check to ensure enlingo premium_member user cannot re-subscribe
-    @method_decorator(login_required(login_url='/account/login'))
+    @method_decorator(login_required(login_url='account_login'))
     def dispatch(self, request, *args, **kwargs):
         member = User.objects.get(pk=self.request.user.pk)
         user_group_check = member.groups.filter(
