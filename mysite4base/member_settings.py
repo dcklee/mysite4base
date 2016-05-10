@@ -43,7 +43,7 @@ PINAX_STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 PINAX_STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 
 #Pinax Stripe Invoice Email
-PINAX_STRIPE_INVOICE_FROM_EMAIL = "accounts@enlingo.com"
+PINAX_STRIPE_INVOICE_FROM_EMAIL = "member.support@enlingo.com"
 
 DATABASES = {
     'default': {
