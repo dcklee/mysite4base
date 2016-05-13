@@ -2,8 +2,9 @@
 {% load account_tags %}
 {% load humanize %}
 {% load guardian_tags %}
+{% load i18n %}
 
-<!DOCTYPE html>
+<!DOCTYPE html>{% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="utf-8" />

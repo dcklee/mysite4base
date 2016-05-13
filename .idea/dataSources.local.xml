@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Django default" uuid="c83bc1a2-ff6b-408f-8a80-398ec76276fb">
-      <user-name>enlingo</user-name>
+      <user-name>postgres</user-name>
       <user-password>dfefdfc4dfc6dfc3dfc4dfcddfc5df9bdf98df99</user-password>
       <schema-pattern>Enlingo02.pg_catalog Enlingo02.public</schema-pattern>
       <default-schemas>Enlingo02.public</default-schemas>
