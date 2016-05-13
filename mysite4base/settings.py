@@ -217,9 +217,12 @@ AWS_SES_REGION_ENDPOINT = 'email.us-west-2.amazonaws.com'
 #AWS_SES_ACCESS_KEY_ID = 'AKIAIXAU6CD6KL4SOKLA'
 #AWS_SES_SECRET_ACCESS_KEY = os.environ['AWS_SES_SECRET_ACCESS_KEY']
 
+#Emailbackend settings
 #EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django_ses.SESBackend'
+DEFAULT_FROM_EMAIL = "member.support@enlingo.com"
+SERVER_EMAIL="hbzz.hwb@163.com"
 
 #account module settings
 ACCOUNT_OPEN_SIGNUP = True
