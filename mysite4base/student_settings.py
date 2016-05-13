@@ -1,5 +1,10 @@
 from .settings import *
 
+# This is defined here as a do-nothing function because we can't import
+# django.utils.translation -- that module depends on the settings.
+def gettext_noop(s):
+    return s
+
 SITE_ID = 2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -13,6 +18,14 @@ ROOT_URLCONF = 'mysite4base.student_urls'
 ALIYUN_OSS_THUMBNAILS_URL = "//thumbnail.qsvisa.com/"
 
 WSGI_APPLICATION = 'mysite4base.wsgi.application'
+
+LANGUAGES = [
+    ('zh-hans', gettext_noop('Simplified Chinese')),
+    ('zh-hant', gettext_noop('Traditional Chinese')),
+]
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, "templates", "locale"),
+)
 
 FILER_STORAGES = {
     'public': {
