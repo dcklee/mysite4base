@@ -39,7 +39,7 @@ DEFAULT_FILE_STORAGE = 'aliyunstorage.backends.AliyunOssStorage'
 THUMBNAIL_DEFAULT_STORAGE = 'aliyunstorage.backends.AliyunOssStorage'
 
 ALIYUN_OSS_KEY_ID = "OOH5rOr11Q1c9oJA"
-ALIYUN_OSS_KEY_SECRET = "w3Ya4HxR86AqGbjqPuV4Lxf9AyJmyW"  # your aliyun access key id & scret
+ALIYUN_OSS_KEY_SECRET = os.environ['ALIYUN_OSS_KEY_SECRET']  # your aliyun access key id & scret
 ALIYUN_OSS_END_POINT = "oss-cn-shenzhen.aliyuncs.com" #your aliyun oss endpoint
 #ALIYUN_OSS_END_POINT = "oss-cn-shenzhen-internal.aliyuncs.com"
 ALIYUN_OSS_BUCKET_NAME = "enlingo"  # your bucket name
@@ -156,11 +156,21 @@ INSTALLED_APPS = (
 
     #Aliyun Storage
     'aliyunstorage',
-    'aliyun_oss_custom'
+    'aliyun_oss_custom',
+
+    #ckeditor
+    'ckeditor',
+    'ckeditor_uploader',
+
+    #django-newsletter
+    'django_extensions',
+    'sorl.thumbnail',
+    'newsletter',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -198,23 +208,18 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# AWS
+
+AWS_ACCESS_KEY_ID = 'AKIAIXAU6CD6KL4SOKLA'
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_SES_REGION_HOME = 'us-west-2'
+AWS_SES_REGION_ENDPOINT = 'email.us-west-2.amazonaws.com'
+#AWS_SES_ACCESS_KEY_ID = 'AKIAIXAU6CD6KL4SOKLA'
+#AWS_SES_SECRET_ACCESS_KEY = os.environ['AWS_SES_SECRET_ACCESS_KEY']
+
 #EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.misk.com'
-EMAIL_HOST_USER = 'damien.lee@businessmit.com'
-EMAIL_HOST_PASSWORD = 'damien255'
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = "member@enlingo.com"
-
-#rolepermission settings
-
-#ROLEPERMISSIONS_MODULE = "mysite4base.roles"
-
-#User Model Profile Extension Module
-
-#AUTH_USER_MODEL = 'Roles.UserProfile'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django_ses.SESBackend'
 
 #account module settings
 ACCOUNT_OPEN_SIGNUP = True
@@ -267,3 +272,11 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
+
+#ckeditor settings
+CKEDITOR_JQUERY_URL = 'ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+#Django-newsletter settings
+NEWSLETTER_CONFIRM_EMAIL = False
+NEWSLETTER_RICHTEXT_WIDGET = 'ckeditor.widgets.CKEditorWidget'

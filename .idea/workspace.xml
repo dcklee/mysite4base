@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c10f2-b4e1-41c1-9dca-64f30115259f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mysite4base.iml" afterPath="$PROJECT_DIR$/.idea/mysite4base.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/member_urls.py" afterPath="$PROJECT_DIR$/mysite4base/member_urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite4base/settings.py" afterPath="$PROJECT_DIR$/mysite4base/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/base.html" afterPath="$PROJECT_DIR$/templates/members/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/members/userpanel/userpanel_base.html" afterPath="$PROJECT_DIR$/templates/members/userpanel/userpanel_base.html" />
     </list>
     <ignored path="mysite4base.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -707,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462795782241</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update i18n template tag support to ensure HTML template language encoding is properly displayed (broke before).">
+      <created>1463108970263</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1463108970263</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,7 +751,8 @@
     <MESSAGE value="Remove Django 1.8 get_current_site import" />
     <MESSAGE value="Update Media&#10;" />
     <MESSAGE value="Add company, management and contact html templateview URL links." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add company, management and contact html templateview URL links." />
+    <MESSAGE value="Update i18n template tag support to ensure HTML template language encoding is properly displayed (broke before)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update i18n template tag support to ensure HTML template language encoding is properly displayed (broke before)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
