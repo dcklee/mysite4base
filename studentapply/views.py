@@ -23,8 +23,6 @@ from account.mixins import LoginRequiredMixin
 from account.models import SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
 from account.utils import default_redirect, get_form_data
 
-from rolepermissions.shortcuts import get_user_role
-
 from .forms import StudentApplyPersonalInformation, StudentApplyEducationInformation
 # Create your views here.
 
