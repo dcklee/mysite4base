@@ -2,13 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 16:34+0800\n"
+"POT-Creation-Date: 2016-05-14 21:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,90 +14,203 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/404.html:5
-msgid "Not Found"
-msgstr "页面不存在"
-
-#: templates/404.html:9
-msgid "Page not found"
-msgstr "页面不存在"
-
-#: templates/404.html:10
-msgid "We're sorry but that page could not be found."
-msgstr "抱歉，我们无法为您找到合适的页面。"
-
-#: templates/500.html:5
-msgid "Server Error"
-msgstr "服务器不给力，出错了"
-
-#: templates/500.html:9
-msgid "Something went wrong"
-msgstr "服务器出了差错"
-
-#: templates/500.html:10
-msgid ""
-"We're sorry but a server error has occurred. We've been notified and will "
-"look into it as soon as possible."
-msgstr "很抱歉服务器发生了错误，我们已经悉知并将尽快查明原因。"
-
-#: templates/_account_bar.html:13 templates/account/base.html:13
+#: .\templates\_account_bar.html:16
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
-#: templates/_account_bar.html:15
+#: .\templates\_account_bar.html:18
 msgid "Admin"
-msgstr "管理"
+msgstr ""
 
-#: templates/_account_bar.html:19 templates/account/logout.html:6
-#: templates/account/logout.html.py:12 templates/account/logout.html:16
+#: .\templates\_account_bar.html:20 .\templates\members\account\logout.html:9
+#: .\templates\members\account\logout.html:29
 msgid "Log out"
-msgstr "注销"
+msgstr ""
 
-#: templates/_account_bar.html:24 templates/account/login.html:7
-#: templates/account/login.html.py:20
+#: .\templates\_account_bar.html:22 .\templates\members\account\signup.html:51
 msgid "Log in"
-msgstr "登录"
+msgstr ""
 
-#: templates/_account_bar.html:26 templates/account/signup.html:7
-#: templates/account/signup.html.py:13 templates/account/signup.html:19
-#: templates/account/signup_closed.html:6
+#: .\templates\_account_bar.html:24
 msgid "Sign up"
-msgstr "注册"
+msgstr ""
 
-#: templates/account/base.html:10
+#: .\templates\homepage04_12_2015.html:20
+#: .\templates\homepage04_12_2015.html:33
+msgid "Enlingo 留学老师  今天老师博客"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:22
+msgid ""
+"\n"
+"                 Enlingo matches Chinese Outbound Students to the largest "
+"International Education and Visa Agent network globally.<br>留学老师让中国留"
+"学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的"
+"留学与签证专业人士。\n"
+"                 "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:28
+#, python-format
+msgid ""
+"<a href=\"%(login_url)s\" class=\"btn btn-default\">Log In</a> <br>or<br> <a "
+"href=\"%(signup_url)s\" class=\"btn btn-primary\">Sign Up</a>"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:35
+msgid ""
+"\n"
+"                Enlingo matches Chinese Outbound Students to the largest "
+"International Education and Visa Agent network globally.<br>留学老师让中国留"
+"学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的"
+"留学与签证专业人士。\n"
+"                "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:54
+msgid "专业范围"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:98
+msgid ""
+"\n"
+"                    <b>国家<br>Country</b>\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:104
+msgid ""
+"\n"
+"                    <b>学校创新<br>College Innovation</b>\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:110
+msgid ""
+"\n"
+"                    <b>老师介绍<br>College News</b> <br>80老师顾问在线"
+"<br>1200同学现在看中\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:116
+msgid ""
+"\n"
+"                    <b>老师介绍<br>Teacher Profile</b> <br>80老师顾问在线"
+"<br>1200同学现在看中\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:126
+msgid ""
+"\n"
+"                "
+msgstr ""
+
+#: .\templates\homepageold.html:13
+msgid "Welcome to<br>pinax-project-account"
+msgstr ""
+
+#: .\templates\homepageold.html:15
+msgid ""
+"\n"
+"                In addition to what is provided by the \"zero\" project, "
+"this project\n"
+"                provides thorough integration with django-user-accounts, "
+"adding\n"
+"                comprehensive account management functionality. It is a "
+"foundation\n"
+"                suitable for most sites that have user accounts.\n"
+"                "
+msgstr ""
+
+#: .\templates\homepageold.html:25
+#, python-format
+msgid ""
+"You can <a href=\"%(login_url)s\" class=\"btn btn-default\">Log In</a> or <a "
+"href=\"%(signup_url)s\" class=\"btn btn-primary\">Sign Up</a> to try out the "
+"site."
+msgstr ""
+
+#: .\templates\homepageold.html:31
+msgid "What is Pinax?"
+msgstr ""
+
+#: .\templates\homepageold.html:33
+msgid ""
+"\n"
+"                <b>Pinax</b> is an open-source platform based on Django and\n"
+"                intended to provide a starting point for websites. It takes\n"
+"                care of the things that many sites have in common, so you "
+"can\n"
+"                focus on what makes your site different.\n"
+"                "
+msgstr ""
+
+#: .\templates\homepageold.html:43
+msgid ""
+"\n"
+"                    <b>Starter projects</b> provide project layout,\n"
+"                    scaffolding, already integrated components and\n"
+"                    ready-to-go code.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:51
+msgid ""
+"\n"
+"                    <b>Reusable apps</b> provide common\n"
+"                    infrastructure, back-end functionality,\n"
+"                    and user-facing components.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:59
+msgid ""
+"\n"
+"                    <b>Themes</b> provide default templates and\n"
+"                    stylesheets for quick prototyping and easy "
+"customization.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:70
+msgid ""
+"\n"
+"                See <a href=\"http://pinaxproject.com/\">pinaxproject.com</"
+"a>\n"
+"                for more information.\n"
+"                "
+msgstr ""
+
+#: .\templates\members\account\delete.html:8
+#: .\templates\members\account\password_change.html:8
+#: .\templates\members\account\settings.html:8
+#: .\templates\members\account\settings.html:40
 msgid "Account"
-msgstr "帐户"
+msgstr ""
 
-#: templates/account/base.html:16 templates/account/password_change.html:9
-#: templates/account/password_change.html:15
-msgid "Change password"
-msgstr "修改密码"
+#: .\templates\members\account\delete.html:44
+msgid "Delete My Account"
+msgstr ""
 
-#: templates/account/base.html:19
-msgid "Delete account"
-msgstr "删除帐号"
-
-#: templates/account/email_confirm.html:6
-#: templates/account/email_confirm.html:12
+#: .\templates\members\account\email_confirm.html:5
+#: .\templates\members\account\email_confirm.html:11
 msgid "Confirm Email"
-msgstr "确认电子邮件地址"
+msgstr ""
 
-#: templates/account/email_confirm.html:15
+#: .\templates\members\account\email_confirm.html:14
+#, python-format
 msgid "Confirm email address <b>%(email)s</b>?"
-msgstr "确认电子邮件地址<b>%(email)</b>正确？"
+msgstr ""
 
-#: templates/account/email_confirm.html:16
+#: .\templates\members\account\email_confirm.html:15
 msgid "Confirm"
-msgstr "确定"
+msgstr ""
 
-#: templates/account/email_confirmation_sent.html:6
-#: templates/account/email_confirmation_sent.html:9
-msgid "Confirm your email address"
-msgstr "确认您的电子邮件地址"
-
-#: templates/account/email_confirmation_sent.html:11
+#: .\templates\members\account\email_confirmation_sent.html:24
 #, python-format
 msgid ""
 "We have sent you an email to <b>%(email)s</b> for verification. Follow the "
@@ -107,168 +218,136 @@ msgid ""
 "within a few minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
 "\">%(THEME_CONTACT_EMAIL)s</a>."
 msgstr ""
-"我们已经发送了一封电子邮件到<b>%(email)s</b>进行验证，请按照提供的链接完成最"
-"后的注册过程。如果您在几分钟内没有收到我们的邮件，请联系我们：<a href="
-"\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>。"
 
-#: templates/account/email_confirmed.html:6
-#: templates/account/email_confirmed.html:9
+#: .\templates\members\account\email_confirmation_sent.html:25
+msgid "Go back"
+msgstr ""
+
+#: .\templates\members\account\email_confirmed.html:5
+#: .\templates\members\account\email_confirmed.html:8
 msgid "Email confirmed"
-msgstr "电子邮件已经确认"
+msgstr ""
 
-#: templates/account/email_confirmed.html:10
+#: .\templates\members\account\email_confirmed.html:9
 #, python-format
 msgid "You have confirmed <b>%(email)s</b>"
-msgstr "您已经确认了<b>%(email)s</b>"
+msgstr ""
 
-#: templates/account/login.html:13
-msgid "Log in to an existing account"
-msgstr "登录到已有帐号"
+#: .\templates\members\account\logout.html:26
+msgid "Logout"
+msgstr ""
 
-#: templates/account/login.html:19
-msgid "Forgot your password?"
-msgstr "忘记了密码？"
-
-#: templates/account/logout.html:15
+#: .\templates\members\account\logout.html:28
 msgid "Are you sure you want to log out?"
-msgstr "您确定要注销离开吗？"
+msgstr ""
 
-#: templates/account/password_change.html:19
-#: templates/account/password_reset_token.html:17
+#: .\templates\members\account\password_change.html:43
+msgid "Change password"
+msgstr ""
+
+#: .\templates\members\account\password_change.html:47
+#: .\templates\members\account\password_reset_token.html:16
+#: .\templates\members\account\settings.html:43
 msgid "Save"
-msgstr "保存"
+msgstr ""
 
-#: templates/account/password_reset.html:8
-#: templates/account/password_reset.html:16
+#: .\templates\members\account\password_reset.html:7
+#: .\templates\members\account\password_reset.html:15
 msgid "Password reset"
-msgstr "密码重置"
+msgstr ""
 
-#: templates/account/password_reset.html:17
+#: .\templates\members\account\password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll send you "
 "an email allowing you to reset it."
 msgstr ""
-"忘记了您的密码？请在下面输入您的电子邮件地址，我们将发送一封电子邮件到您的邮"
-"箱让您进行重置"
 
-#: templates/account/password_reset.html:23
+#: .\templates\members\account\password_reset.html:22
 msgid "Reset my password"
-msgstr "重置我的密码"
+msgstr ""
 
-#: templates/account/password_reset.html:30
+#: .\templates\members\account\password_reset.html:29
 #, python-format
 msgid ""
 "If you have any trouble resetting your password, contact us at <a href="
 "\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
 msgstr ""
-"如果您在重置密码时有任何困难，请联系我们：<a href=\"mailto:"
-"%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>。"
 
-#: templates/account/password_reset_sent.html:7
-#: templates/account/password_reset_sent.html:10
+#: .\templates\members\account\password_reset_sent.html:6
+#: .\templates\members\account\password_reset_sent.html:9
 msgid "Password reset sent"
-msgstr "密码重置邮件已送出"
+msgstr ""
 
-#: templates/account/password_reset_sent.html:12
+#: .\templates\members\account\password_reset_sent.html:11
 #, python-format
 msgid ""
 "We have sent you an email. If you do not receive it within a few minutes, "
 "try resending or contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
 "%(THEME_CONTACT_EMAIL)s</a>."
 msgstr ""
-"我们已经发送出一封密码重置的电子邮件。如果您在几分钟内没有收到我们的邮件，请"
-"联系我们：<a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
-"%(THEME_CONTACT_EMAIL)s</a>。"
 
-#: templates/account/password_reset_sent.html:21
+#: .\templates\members\account\password_reset_sent.html:20
 msgid "Resend"
-msgstr "重新发送"
+msgstr ""
 
-#: templates/account/password_reset_sent.html:26
+#: .\templates\members\account\password_reset_sent.html:25
 #, python-format
 msgid ""
 "We have resent the password email. If you do not receive it within a few "
 "minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
 "%(THEME_CONTACT_EMAIL)s</a>."
 msgstr ""
-"我们已经重新发送了密码重置邮件。如果您在几分钟内没有收到我们的邮件，请联系我"
-"们：<a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>。"
 
-#: templates/account/password_reset_token.html:7
-#: templates/account/password_reset_token.html:13
+#: .\templates\members\account\password_reset_token.html:6
+#: .\templates\members\account\password_reset_token.html:12
 msgid "Set your new password"
-msgstr "设置您的新密码"
+msgstr ""
 
-#: templates/account/password_reset_token_fail.html:6
-#: templates/account/password_reset_token_fail.html:9
+#: .\templates\members\account\password_reset_token_fail.html:5
+#: .\templates\members\account\password_reset_token_fail.html:8
 msgid "Bad token"
-msgstr "错误的验证码"
+msgstr ""
 
-#: templates/account/password_reset_token_fail.html:11
+#: .\templates\members\account\password_reset_token_fail.html:10
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a <a href=\"%(url)s\">new password reset</a>."
 msgstr ""
-"您请求的密码重置链接是无效的，很可能是因为它已经被使用过了，请重新申请<a "
-"href=\"%(url)s\">密码重置</a>。"
 
-#: templates/account/signup_closed.html:9
-msgid "This site is in private beta"
-msgstr "网站目前在内测中"
-
-#: templates/account/signup_closed.html:10
-msgid "If you have signup code you can enter it below."
-msgstr "如果您有注册码可以在下面输入。"
-
-#: templates/account/email/email_confirmation_message.txt:1
-msgid ""
-"A user on %(site_name)s has created an account using this email address.\n"
-"\n"
-"To confirm this email address, go to %(activate_url)s\n"
-"\n"
-"If you did not sign up for this site, you can ignore this message.\n"
+#: .\templates\members\account\signup.html:51
+msgid "Already have an account?"
 msgstr ""
-"您刚在%(site_name)s上创建了一个帐号，确认当前电子邮件地址请前往：%(activate_url)s\n"
-"\n"
-"如果您没有在网站上进行注册，请忽略此邮件。\n"
 
-#: templates/account/email/email_confirmation_subject.txt:1
-#, python-format
-msgid "Confirm email address for %(site_name)s"
-msgstr "确认在%(site_name)s上的邮件地址"
-
-#: templates/account/email/password_reset.txt:1
-#, python-format
-msgid ""
-"You're receiving this email because you or someone else has requested a "
-"password for your user account at %(site_name)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password.\n"
-"\n"
-"%(password_reset_url)s\n"
+#: .\templates\members\userpanel\blog\post_add.html:33
+#: .\templates\members\userpanel\blog\post_edit.html:34
+msgid "Post"
 msgstr ""
-"收到这封邮件是因为您本人或者其他人请求对%(site_name)s上的帐号进行密码重置。\n"
-"如果您没有请求密码重置，可以放心的忽略此邮件。点击下面的链接重置您的密码：\n"
-"\n"
-"%(password_reset_url)s\n"
 
+#: .\templates\members\userpanel\blog\post_delete.html:27
+msgid "Please confirm you will delete post."
+msgstr ""
 
-#: templates/account/email/password_reset_subject.txt:1
-#, python-format
-msgid "[%(site_name)s] Password reset"
-msgstr "[%(site_name)s] 密码重置"
+#: .\templates\members\userpanel\blog\post_delete.html:31
+msgid "Delete My Post"
+msgstr ""
 
-#: templates/pagination/builtin_pagination.html:10
-#: templates/pagination/builtin_pagination.html:13
-#: templates/pagination/django_pagination_pagination.html:9
-#: templates/pagination/django_pagination_pagination.html:12
-msgid "Previous"
-msgstr "前一页"
+#: .\templates\members\userpanel\customer_billing_details_edit.html:34
+#: .\templates\members\userpanel\customer_package_details_edit.html:34
+#: .\templates\members\userpanel\member_group_manager_deactivate.html:35
+#: .\templates\members\userpanel\member_professional_details_edit.html:34
+#: .\templates\members\userpanel\member_profile_edit.html:35
+msgid "Update"
+msgstr ""
 
-#: templates/pagination/builtin_pagination.html:19
-#: templates/pagination/builtin_pagination.html:21
-#: templates/pagination/django_pagination_pagination.html:22
-#: templates/pagination/django_pagination_pagination.html:24
-msgid "Next"
-msgstr "下一页"
+#: .\templates\pinax\invitations\_invite_form.html:15
+msgid "Invite"
+msgstr ""
+
+#: .\templates\pinax\invitations\_invite_form.html:21
+msgid "You do not have any invitations currrently."
+msgstr ""
+
+#: .\templates\pinax\invitations\_invited.html:17
+msgid "You have not sent any invitations yet."
+msgstr ""

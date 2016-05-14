@@ -1,0 +1,639 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-14 21:16+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\consultantregistration\models.py:28
+msgid "Enlingo Member Course Service Professional"
+msgstr ""
+
+#: .\consultantregistration\models.py:29
+msgid "Enlingo Member Course Service Professionals"
+msgstr ""
+
+#: .\consultantregistration\models.py:34
+msgid "Enlingo Package Member Member Manager"
+msgstr ""
+
+#: .\consultantregistration\models.py:35
+msgid "Enlingo Package Member Member Managers"
+msgstr ""
+
+#: .\consultantregistration\models.py:47 .\consultantregistration\models.py:48
+msgid "Enlingo Member Profile Details"
+msgstr ""
+
+#: .\consultantregistration\models.py:66
+msgid "Enlingo Package Customer"
+msgstr ""
+
+#: .\consultantregistration\models.py:67
+msgid "Enlingo Package Customers"
+msgstr ""
+
+#: .\consultantregistration\models.py:75 .\roles\models.py:105
+msgid "phone"
+msgstr ""
+
+#: .\consultantregistration\models.py:76 .\roles\models.py:106
+msgid "address"
+msgstr ""
+
+#: .\consultantregistration\models.py:77 .\roles\models.py:107
+msgid "address cont'd"
+msgstr ""
+
+#: .\consultantregistration\models.py:78 .\roles\models.py:108
+msgid "city"
+msgstr ""
+
+#: .\consultantregistration\models.py:79 .\roles\models.py:109
+msgid "state"
+msgstr ""
+
+#: .\consultantregistration\models.py:80 .\roles\models.py:110
+msgid "postcode"
+msgstr ""
+
+#: .\consultantregistration\models.py:95 .\consultantregistration\models.py:96
+msgid "Enlingo Package Customer Billing Details"
+msgstr ""
+
+#: .\consultantregistration\models.py:110
+msgid "Enlingo Package Member"
+msgstr ""
+
+#: .\consultantregistration\models.py:111
+msgid "Enlingo Package Members"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:24
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:18
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:87
+#: .\coursesearch\templates\coursesearch\Consultant_Course_Chat_12_03_2016.html:86
+#: .\coursesearch\templates\coursesearch\Consultant_Course_Chat_12_03_2016.html:133
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:122
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:17
+#: .\templates\homepage04_12_2015.html:126
+msgid ""
+"\n"
+"                "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:36
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:18
+#, python-format
+msgid ""
+"\n"
+"                <b>%(teacher)s老师简介及博客 <br>Mr %(teacher)s's Profile "
+"and Blog</b>\n"
+"                    <p class=\"text-center\"><b>居住城市 City of Residence "
+"<br> %(location)s</b></p>\n"
+"                "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:52
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:39
+msgid " <b>资质信息<br> Registration Details</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:53
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:40
+msgid " <b>学历背景<br> Academic Qualifications</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:54
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:41
+msgid " <b>前几行业经验<br> Prior Work Experience</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:55
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:42
+msgid " <b>居住城市<br> Previous Places</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:94
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:86
+#: .\templates\homepage04_12_2015.html:98
+msgid ""
+"\n"
+"                    <b>国家<br>Country</b>\n"
+"                    "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:100
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:92
+#: .\templates\homepage04_12_2015.html:104
+msgid ""
+"\n"
+"                    <b>学校创新<br>College Innovation</b>\n"
+"                    "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:106
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:98
+#: .\templates\homepage04_12_2015.html:110
+msgid ""
+"\n"
+"                    <b>老师介绍<br>College News</b> <br>80老师顾问在线"
+"<br>1200同学现在看中\n"
+"                    "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\C_Course_Consultant_Profile.html:112
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:104
+#: .\templates\homepage04_12_2015.html:116
+msgid ""
+"\n"
+"                    <b>老师介绍<br>Teacher Profile</b> <br>80老师顾问在线"
+"<br>1200同学现在看中\n"
+"                    "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\Consultant_Profile_List_12_03_2016.html:21
+msgid " "
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\Consultant_Profile_List_12_03_2016.html:22
+msgid " <b>老师 Consultant</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\Consultant_Profile_List_12_03_2016.html:23
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:37
+#: .\coursesearch\templates\coursesearch\Country_Search_11_03_2016.html:22
+msgid " <b>城市 City</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\Consultant_Profile_List_12_03_2016.html:24
+msgid " <b>资质 Registration Qualifications</b>"
+msgstr ""
+
+#: .\consultantregistration\templates\consultantregistration\Course_Consultant_Profile_12_03_2016.html:15
+msgid "<b></b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:36
+#: .\coursesearch\templates\coursesearch\Country_Search_11_03_2016.html:21
+msgid " <b>专业 学校 Institution</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:38
+#: .\coursesearch\templates\coursesearch\Country_Search_11_03_2016.html:23
+msgid " <b>课程 Course Name</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\AreaOfStudy_Business_11_03_2016.html:39
+#: .\coursesearch\templates\coursesearch\Country_Search_11_03_2016.html:24
+msgid " <b>老师日记</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Consultant_Course_Chat_12_03_2016.html:75
+msgid ""
+"<b>Rolling Webchat<br>Technology tentatively supplied by www.k53.com</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Consultant_Course_Chat_12_03_2016.html:84
+#, python-format
+msgid ""
+" <a href=\"%(student_account_sign_up_url)s\" class=\"btn btn-primary\"><b>老"
+"师帮我申请!</b></a>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:39
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:39
+msgid " <b>专业编号 Course Code</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:40
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:40
+msgid " <b>专业开学 Course Start Date</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:41
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:41
+msgid " <b>申请截止 Application Deadline</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:42
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:42
+msgid " <b>专科部门 Faculty Name</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:61
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:43
+msgid " <b>学费 Fees</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:62
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:44
+msgid " <b>学期期间 Duration</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:63
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:45
+msgid " <b>2016 课程内容 2016 Course Structure</b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:64
+msgid " <b></b>"
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Details_12_03_2016.html:89
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:73
+msgid ""
+"\n"
+"                    <b><br></b> <br>\n"
+"                    "
+msgstr ""
+
+#: .\coursesearch\templates\coursesearch\Course_Consultant_Detailscopy.html:23
+#, python-format
+msgid ""
+"<a href=\"%(login_url)s\" class=\"btn btn-default\">Log In</a> or <a href="
+"\"%(signup_url)s\" class=\"btn btn-primary\">Sign Up</a>"
+msgstr ""
+
+#: .\mysite4base\student_settings_dev.py:18
+msgid "Simplified Chinese"
+msgstr ""
+
+#: .\mysite4base\student_settings_dev.py:19
+msgid "English"
+msgstr ""
+
+#: .\roles\models.py:112
+msgid "User Role"
+msgstr ""
+
+#: .\roles\views.py:25
+#, python-brace-format
+msgid "Welcome back {username} to your Post Manager."
+msgstr ""
+
+#: .\templates\_account_bar.html:16
+msgid "Settings"
+msgstr ""
+
+#: .\templates\_account_bar.html:18
+msgid "Admin"
+msgstr ""
+
+#: .\templates\_account_bar.html:20 .\templates\members\account\logout.html:9
+#: .\templates\members\account\logout.html:29
+msgid "Log out"
+msgstr ""
+
+#: .\templates\_account_bar.html:22 .\templates\members\account\signup.html:51
+msgid "Log in"
+msgstr ""
+
+#: .\templates\_account_bar.html:24
+msgid "Sign up"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:20
+#: .\templates\homepage04_12_2015.html:33
+msgid "Enlingo 留学老师  今天老师博客"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:22
+msgid ""
+"\n"
+"                 Enlingo matches Chinese Outbound Students to the largest "
+"International Education and Visa Agent network globally.<br>留学老师让中国留"
+"学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的"
+"留学与签证专业人士。\n"
+"                 "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:28
+#, python-format
+msgid ""
+"<a href=\"%(login_url)s\" class=\"btn btn-default\">Log In</a> <br>or<br> <a "
+"href=\"%(signup_url)s\" class=\"btn btn-primary\">Sign Up</a>"
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:35
+msgid ""
+"\n"
+"                Enlingo matches Chinese Outbound Students to the largest "
+"International Education and Visa Agent network globally.<br>留学老师让中国留"
+"学生找最佳出国留学的专业顾问，完全免费。我们合伙联盟拥有全世界最大，最专业的"
+"留学与签证专业人士。\n"
+"                "
+msgstr ""
+
+#: .\templates\homepage04_12_2015.html:54
+msgid "专业范围"
+msgstr ""
+
+#: .\templates\homepageold.html:13
+msgid "Welcome to<br>pinax-project-account"
+msgstr ""
+
+#: .\templates\homepageold.html:15
+msgid ""
+"\n"
+"                In addition to what is provided by the \"zero\" project, "
+"this project\n"
+"                provides thorough integration with django-user-accounts, "
+"adding\n"
+"                comprehensive account management functionality. It is a "
+"foundation\n"
+"                suitable for most sites that have user accounts.\n"
+"                "
+msgstr ""
+
+#: .\templates\homepageold.html:25
+#, python-format
+msgid ""
+"You can <a href=\"%(login_url)s\" class=\"btn btn-default\">Log In</a> or <a "
+"href=\"%(signup_url)s\" class=\"btn btn-primary\">Sign Up</a> to try out the "
+"site."
+msgstr ""
+
+#: .\templates\homepageold.html:31
+msgid "What is Pinax?"
+msgstr ""
+
+#: .\templates\homepageold.html:33
+msgid ""
+"\n"
+"                <b>Pinax</b> is an open-source platform based on Django and\n"
+"                intended to provide a starting point for websites. It takes\n"
+"                care of the things that many sites have in common, so you "
+"can\n"
+"                focus on what makes your site different.\n"
+"                "
+msgstr ""
+
+#: .\templates\homepageold.html:43
+msgid ""
+"\n"
+"                    <b>Starter projects</b> provide project layout,\n"
+"                    scaffolding, already integrated components and\n"
+"                    ready-to-go code.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:51
+msgid ""
+"\n"
+"                    <b>Reusable apps</b> provide common\n"
+"                    infrastructure, back-end functionality,\n"
+"                    and user-facing components.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:59
+msgid ""
+"\n"
+"                    <b>Themes</b> provide default templates and\n"
+"                    stylesheets for quick prototyping and easy "
+"customization.\n"
+"                    "
+msgstr ""
+
+#: .\templates\homepageold.html:70
+msgid ""
+"\n"
+"                See <a href=\"http://pinaxproject.com/\">pinaxproject.com</"
+"a>\n"
+"                for more information.\n"
+"                "
+msgstr ""
+
+#: .\templates\members\account\delete.html:8
+#: .\templates\members\account\password_change.html:8
+#: .\templates\members\account\settings.html:8
+#: .\templates\members\account\settings.html:40
+msgid "Account"
+msgstr ""
+
+#: .\templates\members\account\delete.html:44
+msgid "Delete My Account"
+msgstr ""
+
+#: .\templates\members\account\email_confirm.html:5
+#: .\templates\members\account\email_confirm.html:11
+msgid "Confirm Email"
+msgstr ""
+
+#: .\templates\members\account\email_confirm.html:14
+#, python-format
+msgid "Confirm email address <b>%(email)s</b>?"
+msgstr ""
+
+#: .\templates\members\account\email_confirm.html:15
+msgid "Confirm"
+msgstr ""
+
+#: .\templates\members\account\email_confirmation_sent.html:24
+#, python-format
+msgid ""
+"We have sent you an email to <b>%(email)s</b> for verification. Follow the "
+"link provided to finalize the signup process. If you do not receive it "
+"within a few minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: .\templates\members\account\email_confirmation_sent.html:25
+msgid "Go back"
+msgstr ""
+
+#: .\templates\members\account\email_confirmed.html:5
+#: .\templates\members\account\email_confirmed.html:8
+msgid "Email confirmed"
+msgstr ""
+
+#: .\templates\members\account\email_confirmed.html:9
+#, python-format
+msgid "You have confirmed <b>%(email)s</b>"
+msgstr ""
+
+#: .\templates\members\account\logout.html:26
+msgid "Logout"
+msgstr ""
+
+#: .\templates\members\account\logout.html:28
+msgid "Are you sure you want to log out?"
+msgstr ""
+
+#: .\templates\members\account\password_change.html:43
+msgid "Change password"
+msgstr ""
+
+#: .\templates\members\account\password_change.html:47
+#: .\templates\members\account\password_reset_token.html:16
+#: .\templates\members\account\settings.html:43
+msgid "Save"
+msgstr ""
+
+#: .\templates\members\account\password_reset.html:7
+#: .\templates\members\account\password_reset.html:15
+msgid "Password reset"
+msgstr ""
+
+#: .\templates\members\account\password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+
+#: .\templates\members\account\password_reset.html:22
+msgid "Reset my password"
+msgstr ""
+
+#: .\templates\members\account\password_reset.html:29
+#, python-format
+msgid ""
+"If you have any trouble resetting your password, contact us at <a href="
+"\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: .\templates\members\account\password_reset_sent.html:6
+#: .\templates\members\account\password_reset_sent.html:9
+msgid "Password reset sent"
+msgstr ""
+
+#: .\templates\members\account\password_reset_sent.html:11
+#, python-format
+msgid ""
+"We have sent you an email. If you do not receive it within a few minutes, "
+"try resending or contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: .\templates\members\account\password_reset_sent.html:20
+msgid "Resend"
+msgstr ""
+
+#: .\templates\members\account\password_reset_sent.html:25
+#, python-format
+msgid ""
+"We have resent the password email. If you do not receive it within a few "
+"minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: .\templates\members\account\password_reset_token.html:6
+#: .\templates\members\account\password_reset_token.html:12
+msgid "Set your new password"
+msgstr ""
+
+#: .\templates\members\account\password_reset_token_fail.html:5
+#: .\templates\members\account\password_reset_token_fail.html:8
+msgid "Bad token"
+msgstr ""
+
+#: .\templates\members\account\password_reset_token_fail.html:10
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(url)s\">new password reset</a>."
+msgstr ""
+
+#: .\templates\members\account\signup.html:51
+msgid "Already have an account?"
+msgstr ""
+
+#: .\templates\members\userpanel\blog\post_add.html:33
+#: .\templates\members\userpanel\blog\post_edit.html:34
+msgid "Post"
+msgstr ""
+
+#: .\templates\members\userpanel\blog\post_delete.html:27
+msgid "Please confirm you will delete post."
+msgstr ""
+
+#: .\templates\members\userpanel\blog\post_delete.html:31
+msgid "Delete My Post"
+msgstr ""
+
+#: .\templates\members\userpanel\customer_billing_details_edit.html:34
+#: .\templates\members\userpanel\customer_package_details_edit.html:34
+#: .\templates\members\userpanel\member_group_manager_deactivate.html:35
+#: .\templates\members\userpanel\member_professional_details_edit.html:34
+#: .\templates\members\userpanel\member_profile_edit.html:35
+msgid "Update"
+msgstr ""
+
+#: .\templates\pinax\invitations\_invite_form.html:15
+msgid "Invite"
+msgstr ""
+
+#: .\templates\pinax\invitations\_invite_form.html:21
+msgid "You do not have any invitations currrently."
+msgstr ""
+
+#: .\templates\pinax\invitations\_invited.html:17
+msgid "You have not sent any invitations yet."
+msgstr ""
+
+#: .\userpanel\forms.py:39
+msgid "Title"
+msgstr ""
+
+#: .\userpanel\forms.py:44
+msgid "Slug"
+msgstr ""
+
+#: .\userpanel\forms.py:48
+msgid "Teaser"
+msgstr ""
+
+#: .\userpanel\forms.py:52
+msgid "Content"
+msgstr ""
+
+#: .\userpanel\forms.py:56
+msgid "Description"
+msgstr ""
+
+#: .\userpanel\forms.py:63
+msgid "Checking this will send out a tweet for this post"
+msgstr ""
+
+#: .\userpanel\forms.py:64
+msgid "Can tweet?"
+msgstr ""
+
+#: .\userpanel\forms.py:178
+msgid "Surname"
+msgstr ""
+
+#: .\userpanel\forms.py:184
+msgid "First Name"
+msgstr ""
+
+#: .\userpanel\views.py:160
+#, python-brace-format
+msgid "Confirmation email sent to {email}."
+msgstr ""
+
+#: .\userpanel\views.py:164
+#, python-brace-format
+msgid "The code {code} is invalid."
+msgstr ""
+
+#: .\userpanel\views.py:395
+msgid "Profile settings updated"
+msgstr ""
+
+#: .\userpanel\views.py:463
+msgid "Details updated"
+msgstr ""
