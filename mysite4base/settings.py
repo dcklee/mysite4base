@@ -197,6 +197,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'account.context_processors.account',
                 'django.core.context_processors.request',
+                'django.core.context_processors.i18n',
                 'pinax_theme_bootstrap.context_processors.theme',
             ],
         },
