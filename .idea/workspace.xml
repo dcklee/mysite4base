@@ -4,8 +4,42 @@
     <list default="true" id="b27c10f2-b4e1-41c1-9dca-64f30115259f" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_messages.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/_messages.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/locale/zh_CN/LC_MESSAGES/django.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/locale/zh_CN/LC_MESSAGES/django.po" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/message/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/message/preview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/newsletter/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/submission/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/subscription/change_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/subscription/confirmimportform.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/admin/newsletter/subscription/importform.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/common.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/message.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/message_subject.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/subscribe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/subscribe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/subscribe_subject.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/unsubscribe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/unsubscribe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/unsubscribe_subject.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/update.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/update.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/message/update_subject.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/newsletter_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/newsletter_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/submission_archive.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_activate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_subscribe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_subscribe_activated.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_subscribe_email_sent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_subscribe_user.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_unsubscribe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_unsubscribe_activated.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_unsubscribe_email_sent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_unsubscribe_user.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_update.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_update_activated.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/newsletter/subscription_update_email_sent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/members/widget/image.html" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/templates/locale/zh_hans/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/templates/locale/zh_Hans/LC_MESSAGES/django.mo" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/templates/locale/zh_hans/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/templates/locale/zh_Hans/LC_MESSAGES/django.po" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -63,7 +97,6 @@
         <option value="$PROJECT_DIR$/templates/members/userpanel/userpanel_base.html" />
         <option value="$PROJECT_DIR$/mysite4base/member_urls.py" />
         <option value="C:/Python34/myenv/Lib/site-packages/account/locale/zh_CN/LC_MESSAGES/django.po" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/locale/zh_hans/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/locale/zh-hans/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/locale/zh_HANS/LC_MESSAGES/django.po" />
@@ -71,9 +104,13 @@
         <option value="$PROJECT_DIR$/studentapply/views.py" />
         <option value="$PROJECT_DIR$/mysite4base/student_settings.py" />
         <option value="$PROJECT_DIR$/templates/_account_bar.html" />
-        <option value="$PROJECT_DIR$/mysite4base/settings.py" />
         <option value="$PROJECT_DIR$/templates/locale/zh_Hans/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/mysite4base/student_settings_dev.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/mysite4base/settings.py" />
+        <option value="$PROJECT_DIR$/templates/members/newsletter/message/subscribe.html" />
+        <option value="$USER_HOME$/Downloads/newsletter-email-template/newsletter.html" />
+        <option value="$PROJECT_DIR$/templates/members/newsletter/message/message.html" />
       </list>
     </option>
   </component>
@@ -133,7 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,79 +211,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.4.4 virtualenv at C:\Python34\myenv &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pinax_theme_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.4.4 virtualenv at C:\Python34\myenv &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pinax_theme_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zh_CN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LC_MESSAGES" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite4base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.4.4 virtualenv at C:\Python34\myenv &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pinax_theme_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locale" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,6 +222,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="members" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="members" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newsletter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite4base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="members" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newsletter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,7 +367,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,17 +391,18 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="949" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/themeforest-474864-market-responsive-newsletter-with-template-builder/marketTheme/version1/all_inline.html" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates\members" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\templates" />
       <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\templates\members" />
+      <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\templates" />
       <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\aliyun_oss_custom\locale" />
       <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\aliyun_oss_custom" />
       <recent name="C:\Users\dckle\Documents\GitHub\mysite4base\studentapply" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damien lee\Documents\GitHub\mysite4base\templates\members" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.mysite4base">
@@ -789,7 +825,21 @@
       <option name="project" value="LOCAL" />
       <updated>1463233168088</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update to fix zh_Hans translations for www.enlingo.com">
+      <created>1463294949985</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1463294949985</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update to fix zh_Hans translations for www.enlingo.com">
+      <created>1463322973966</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1463322973966</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -836,67 +886,14 @@
     <MESSAGE value="Include django-newsletter and ckeditors apps for enlingo newsletters." />
     <MESSAGE value="update for www.enlingo.com where language encoding = &quot;zh-hans&quot;" />
     <MESSAGE value="Remove reference to rolepermissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove reference to rolepermissions" />
+    <MESSAGE value="update to fix zh_Hans translations for www.enlingo.com" />
+    <option name="LAST_COMMIT_MESSAGE" value="update to fix zh_Hans translations for www.enlingo.com" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python34/myenv/Lib/site-packages/pinax_theme_bootstrap/templates/account/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python34/myenv/Lib/site-packages/pinax_theme_bootstrap/locale/zh_CN/LC_MESSAGES/django.mo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python34/myenv/Lib/site-packages/pinax_theme_bootstrap/locale/fr/LC_MESSAGES/django.mo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python34/myenv/Lib/site-packages/pinax_theme_bootstrap/locale/fr/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aliyun_oss_custom/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/locale/zh_Hans/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/memberpackage/locale/zh_hans/LC_MESSAGES/django.po" />
-    <entry file="file://$PROJECT_DIR$/roles/locale/zh_hans/LC_MESSAGES/django.po" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studentapply/locale/zh_hans/LC_MESSAGES/django.po" />
-    <entry file="file://$PROJECT_DIR$/coursesearch/locale/zh-hans/LC_MESSAGES/django.po" />
     <entry file="file://$PROJECT_DIR$/coursesearch/locale/zh_Hans/LC_MESSAGES/django.po" />
     <entry file="file://$PROJECT_DIR$/aliyun_oss_custom/locale/zh_Hans/LC_MESSAGES/django.po" />
     <entry file="file://C:/Python34/myenv/Lib/site-packages/account/templatetags/__init__.py">
@@ -910,23 +907,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/locale/zh_CN/LC_MESSAGES/django.po" />
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/myenv/Lib/site-packages/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="249" column="43" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,9 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1033,7 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,7 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="112" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="439" column="17" selection-start-line="439" selection-start-column="15" selection-end-line="439" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="66" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,7 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,15 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,7 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="273" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1129,7 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,7 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1109,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1295">
           <caret line="393" column="19" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/myenv/Lib/site-packages/newsletter/templates/newsletter/newsletter_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/myenv/Lib/site-packages/newsletter/templates/newsletter/submission_archive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/myenv/Lib/site-packages/newsletter/templates/newsletter/message/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/newsletter/message/message.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/admin/newsletter/message/preview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/myenv/Lib/site-packages/mailer/models.py" />
+    <entry file="file://$PROJECT_DIR$/mysite4base/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="167" column="17" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/newsletter/message/subscribe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/newsletter-email-template/newsletter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="209" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/themeforest-474864-market-responsive-newsletter-with-template-builder/marketTheme/version1/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1456346099000" expanded="false" signature="10618:10630" placeholder="..." />
+            <marker date="1456346099000" expanded="true" signature="10631:10802" placeholder="..." />
+            <marker date="1456346099000" expanded="false" signature="10758:10784" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/themeforest-474864-market-responsive-newsletter-with-template-builder/marketTheme/version1/all_inline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#50;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#52;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#52;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#52;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#53;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#53;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#105;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1456346099000" expanded="false" signature="18604:18616" placeholder="..." />
+            <marker date="1456346099000" expanded="true" signature="18617:18788" placeholder="..." />
+            <marker date="1456346099000" expanded="false" signature="18744:18770" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/members/newsletter/message/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4028">
+          <caret line="212" column="8" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
