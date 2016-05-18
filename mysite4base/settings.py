@@ -317,6 +317,8 @@ CKEDITOR_CONFIGS = {
 
             ]},
         ],
+        'removePlugins': 'stylesheetparser',
+        'allowedContent': True,
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,
