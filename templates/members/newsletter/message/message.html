@@ -5,7 +5,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--[if !mso]><!-- --><meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ newsletter.title }}: {{ message.title }}</title>
 
 </head>
@@ -207,8 +206,18 @@
 
 	}
 
-
 </style>
+
+<table class="bodytbl" width="100%" cellpadding="0" cellspacing="0" style="margin:0;padding:0;width:100%!important;-webkit-text-size-adjust:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#FAFAFA;color:#787878;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0">
+<td align="center" style="border-collapse:collapse;color:#787878;line-height:24px;padding:0">
+		<table width="600" cellpadding="0" cellspacing="0" class="wrap" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;background-color:#FAFAFA;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr height="20" style="padding:0">
+<td width="600" align="left" valign="bottom" style="border-collapse:collapse;color:#787878;line-height:24px;padding:0">
+				<div class="preheader" style="line-height:0px;font-size:0px;height:0px;display:none !important;visibility:hidden;text-indent:-9999px"><!-- PREHEADER --></div> <div class="small" style="font-size:10px;color:#787878;line-height:15px;text-transform:uppercase;word-spacing:-1px;margin-bottom:4px;margin-top:6px">
+<span>This line will show up in the preview email clients</span><a name="top" style="color:#00A9E0;text-decoration:none;padding:2px 0px"></a>
+</div> <div class="small" style="font-size:10px;color:#787878;line-height:15px;text-transform:uppercase;word-spacing:-1px;margin-bottom:4px;margin-top:6px"><span>Trouble seeing something? <a href="http://{{ site.domain }}{{ submission.get_absolute_url }}" style="color:#00A9E0;text-decoration:none;padding:2px 0px">view it online</a></span></div>
+			</td>
+		</tr></table>
+
     {% for article in message.articles.all %}
         {% thumbnail article.image "200x200" as image %}
             <img src="http://{{ site.domain }}{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}">
@@ -220,5 +229,36 @@
             <a href="{{ article.url }}">Read more</a>
         {% endif %}
     {% endfor %}
+    <!-- Footer start --><table width="600" cellpadding="0" cellspacing="0" class="wrap line" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;background-color:#FAFAFA;border-bottom:1px solid #AAAAAA;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0"><td width="600" height="39" style="border-collapse:collapse;color:#787878;line-height:24px;padding:0"> </td></tr></table>
+    <table width="600" cellpadding="0" cellspacing="0" class="wrap" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;background-color:#FAFAFA;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0"><td style="border-collapse:collapse;color:#787878;line-height:24px;padding:0"></td></tr></table>
+    <table width="600" cellpadding="0" cellspacing="0" class="wrap" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;background-color:#FAFAFA;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0">
+    <td width="600" valign="top" align="center" style="border-collapse:collapse;color:#787878;line-height:24px;padding:0">
+                    <table cellpadding="0" cellspacing="0" class="o-fix" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;font-family:Helvetica,Arial,sans-serif;font-size:14px">
+    <tr style="padding:0">
+    <!-- CONTENT start --><td width="600" valign="top" align="left" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;line-height:24px;padding:0">
+                            <table cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0">
+    <td width="394" class="small" align="left" valign="top" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;line-height:15px;padding:0;font-size:10px;text-transform:uppercase;word-spacing:-1px;margin-bottom:4px;margin-top:6px">
+                                    <div><span>You have received this email because you have subscribed to <a href="https://member.enlingo.com" style="color:#00A9E0;text-decoration:none;padding:2px 0px">EduSocial Post</a> as {{ request.user.email }}.<br>If you no longer wish to receive emails please <a href="http://{{ site.domain }}{% url "newsletter_unsubscribe_request" newsletter.slug %}" style="color:#00A9E0;text-decoration:none;padding:2px 0px">unsubscribe</a></span></div>
+                                    <div><span>© 2016 Enlingo, All rights reserved</span></div>
+                                </td>
+                            </tr></table>
+    <table cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;font-family:Helvetica,Arial,sans-serif;font-size:14px"><tr style="padding:0">
+    <td width="187" class="small social" align="right" valign="top" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;line-height:15px;padding:0;font-size:10px;text-transform:uppercase;word-spacing:-1px;margin-bottom:4px;margin-top:6px">
+                                    <div>
+                                        <a href="https://twitter.com" style="color:#00A9E0;text-decoration:none;padding:2px 0px"><img src="img/twitter.png" alt="" width="32" height="32" border="0" style="max-width:100%;max-height:32px;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;image-rendering:optimizeQuality;display:inline;border:none;margin:0"></a>
+                                        <a href="http://www.linkedin.com" style="color:#00A9E0;text-decoration:none;padding:2px 0px"><img src="img/facebook.png" alt="" width="32" height="32" border="0" style="max-width:100%;max-height:32px;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;image-rendering:optimizeQuality;display:inline;border:none;margin:0"></a>
+                                    </div>
+                                </td>
+                            </tr></table>
+    </td>
+            <!-- CONTENT end -->
+                    </tr>
+    <tr class="m-0" style="padding:0"><td height="24" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#787878;line-height:24px;padding:0"> </td></tr>
+    </table>
+    </td>
+            </tr></table>
+    <!-- Footer end -->
+    </td>
+    </tr></table>
 </body>
 </html>

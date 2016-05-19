@@ -175,17 +175,17 @@
                                             <div class="member-item col-md-4">
                                                 <div class="member-item-inner">
                                                     <div class="item-thumbnail">
-                                                        <a href="{%  url "consultantregistration:course_consultant_profile" consultant.pk  %}" title="Danny Awesome">
-                                                            <img width="360" height="360" src="{%  locate_image_location consultant whq="@300w_300h_2e" %}" class="attachment-thumb_526x526 size-thumb_526x526 wp-post-image" alt="U-member-1"  sizes="(max-width: 360px) 100vw, 360px" />
+                                                        <a href="{%  url "consultantregistration:course_consultant_profile" consultant.pk  %}" title="consultant">
+                                                            <img width="360" height="360" src="{%  locate_image_location consultant whq="@360w_360h_2e" %}" class="attachment-thumb_526x526 size-thumb_526x526 wp-post-image" alt="U-member-1"  sizes="(max-width: 360px) 100vw, 360px" />
                                                         </a>
                                                     </div>
                                                     <div class="item-content">
                                                         <h3 class="item-title">
                                                             <a href="{%  url "consultantregistration:course_consultant_profile" consultant.pk  %}" title="title" class="main-color-1-hover">{{consultant.salutation}} {{consultant.user.first_name}} {{ consultant.user.last_name }}</a>
                                                         </h3>
-                                                        <h4 class="small-text">{{ consultant.consultantregistrationdetails.position }}</h4>
-                                                        <p>居住城市 : {{ consultant.consultantregistrationdetails.location }}</p>
-                                                        <p>专业注册详细信息:{{ consultant.consultantregistrationdetails.registration_qualifications }}</p>
+                                                        <h4 class="small-text">职位：{{ consultant.consultantregistrationdetails.position }}</h4>
+                                                        <p>居住城市：{{ consultant.consultantregistrationdetails.location }}</p>
+                                                        <p>专业注册详细信息：{{ consultant.consultantregistrationdetails.registration_qualifications }}</p>
                                                         <p>科目学习博客</p>
                                                         <a href="javascript:void(0)">URL</a>
                                                         <p style="text-align: right;"><span class="fa fa-eye"></span> 250</p>
