@@ -112,8 +112,8 @@
     });
 
     var handler = StripeCheckout.configure({
-    key: 'pk_test_i5Sbgm8vVklVN5lLOFSIMfmC',
-    image: '/img/documentation/checkout/marketplace.png',
+    key: '{{ PINAX_STRIPE_PUBLIC_KEY }}',
+    image: 'https://enlingo.oss-cn-shenzhen.aliyuncs.com/site_media/static/images/weibo_icon.png',
     locale: 'auto',
     token: function(token, args) {
       // Use the token to create the charge with a server-side script.
