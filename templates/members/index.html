@@ -48,7 +48,7 @@
 									<div class="input">
 										<input id="id_{{  form.username.name }}" name="{{  form.username.name }}" type="text" class="form-control input-field">
 										<label class="input-label" for="id_username">
-											<span class="input-label-content">{% if form.username.errors %}{% for error in form.username.errors %}{{  error }}{% endfor %}{% else %}Username {% endif %}</span>
+											<span class="input-label-content">{% if form.username.errors %}{% for error in form.username.errors %}A username is required.{% endfor %}{% else %}Username {% endif %}</span>
 										</label>
 									</div>
 								</div>
@@ -56,7 +56,7 @@
 									<div class="input">
 										<input id="id_{{  form.password.name }}" name="{{  form.password.name }}" type="password" class="form-control input-field">
 										<label class="input-label" for="id_password">
-											<span class="input-label-content">{% if form.password.errors %}{% for error in form.password.errors %}{{  error }}{% endfor %}{%  else  %}Password{% endif %}</span>
+											<span class="input-label-content">{% if form.password.errors %}{% for error in form.password.errors %}A password is required.{% endfor %}{%  else  %}Password{% endif %}</span>
 										</label>
 									</div>
 								</div>
@@ -64,7 +64,7 @@
 									<div class="input">
 										<input id="id_{{  form.password_confirm.name }}" name="{{  form.password_confirm.name }}" type="password" class="form-control input-field">
 										<label class="input-label" for="id_password_confirm">
-											<span class="input-label-content">{% if form.password_confirm.errors %}{% for error in form.password_confirm.errors %}{{  error }}{% endfor %}{% else %}Password &nbsp;(Again){% endif %}</span>
+											<span class="input-label-content">{% if form.password_confirm.errors %}{% for error in form.password_confirm.errors %}A password is required.{% endfor %}{% else %}Password &nbsp;(Again){% endif %}</span>
 										</label>
 									</div>
 								</div>
@@ -72,7 +72,7 @@
 									<div class="input">
 										<input id="id_{{  form.email.name }}" name="{{  form.email.name }}" type="email" class="form-control input-field" value="{{ form.email.value|default_if_none:"" }}">
 										<label class="input-label" for="id_email">
-											<span class="input-label-content">{% if form.email.errors %}{% for error in form.email.errors %}{{  error }}{% endfor %}{% else %}Email Address {%  endif %}</span>
+											<span class="input-label-content">{% if form.email.errors %}{% for error in form.email.errors %}An email is required.{% endfor %}{% else %}Email Address {%  endif %}</span>
 										</label>
 									</div>
 								</div>
