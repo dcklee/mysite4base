@@ -53,11 +53,13 @@ urlpatterns = [
     url(r'^account/login/$', LoginView.as_view(), name="account_login"),
     url(r'^payments/', include("pinax.stripe.urls")),
 #    url(r'^account2/signup/$', views.SignupViewConsultantAssistant.as_view(), name="consultant_assistant_account_signup"), #placemarker for demo
-    url(r"^blog/", include("pinax.blog.urls")),
+    url(r"^blog/", include("pinax.blog.urls", namespace="pinax_blog")),
     url(r"^newsletter/", include('newsletter.urls')),
     url(r'^ckeditor/',include('ckeditor_uploader.urls')),
     url(r'^account/', include('account.urls')),
     url(r"^invites/", include("pinax.invitations.urls")),
+    #url(r"^notifications/", include("pinax.notifications.urls")),
+    url(r"^announcements/", include("pinax.announcements.urls", namespace="pinax_announcements")),
 ]
 #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
