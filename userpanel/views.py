@@ -11,11 +11,13 @@ from django.views.generic.base import TemplateResponseMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import FormView
 from django.views.generic.base import RedirectView
-from django.views.generic import TemplateView,DetailView, ListView
+from django.views.generic import View, TemplateView, DetailView, ListView
+from django.views.generic.detail import SingleObjectMixin
 
 from django.contrib.auth.models import User, Group
 from . import forms
 from consultantregistration.models import ConsultantRegistrationDetails, EnlingoPackageCustomer, EnlingoPackageCustomerBillingDetails, EnlingoPackageMember
+from coursesearch.models import EducationInstitute
 from pinax.invitations.models import InvitationStat
 from django.contrib import auth, messages
 #from django.contrib.sites.models import get_current_site
@@ -31,8 +33,8 @@ from account.models import AccountDeletion
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
-from pinax.blog.models import Post
-
+from pinax.blog.models import Post, Section
+from pinax.announcements.models import Announcement
 from pinax.stripe.models import Customer, Charge
 from pinax.stripe.actions import customers, charges, sources
 from pinax.stripe.mixins import CustomerMixin, PaymentsContextMixin
@@ -149,10 +151,20 @@ class PostDelete(SuccessMessageMixin, DeleteView):
             raise Http404
         return obj
 
-class MemberPost(ListView):
+class MemberPost(View):
+
+    def get(self, request, *args, **kwargs):
+        view = MemberPostPanel.as_view()
+        return view(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        view = EnlingoPostWeeklyQuizSave.as_view()
+        return view(request, *args, **kwargs)
+
+class MemberPostPanel(ListView):
 
     template_name = "userpanel/userpanel.html"
-    form_class = forms.MemberPostForm
+    #form_class = forms.EnlingoPostWeeklyQuiz
     identifier_field = "username"
     messages = {
         "email_confirmation_sent": {
@@ -167,10 +179,10 @@ class MemberPost(ListView):
     # check user has consultant access to access userpanel
     @method_decorator(permission_required('consultantregistration.add_consultantregistrationdetails', raise_exception=True))
     def dispatch(self, request, *args, **kwargs):
-        return super(MemberPost, self).dispatch(request, *args, **kwargs)
+        return super(MemberPostPanel, self).dispatch(request, *args, **kwargs)
 
     def __init__(self, **kwargs):
-        super(MemberPost, self).__init__(**kwargs)
+        super(MemberPostPanel, self).__init__(**kwargs)
 
     # Django login_required decorator superceded by Pinax Account Login_Required Mixin
     # @method_decorator(login_required(login_url='/account/login'))
@@ -181,8 +193,35 @@ class MemberPost(ListView):
     #     return super(MemberPost, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(MemberPost, self).get_context_data(**kwargs)
+        context = super(MemberPostPanel, self).get_context_data(**kwargs)
         memberposts = Post.objects.filter(author = self.request.user)
+        try:
+            credits = EnlingoPackageCustomer.objects.get(enlingopackagemember__member=self.request.user.profile).creditbalance
+        except EnlingoPackageCustomer.DoesNotExist:
+            credits = "0"
+        context['memberposts'] = memberposts
+        context['creditbalance'] = credits
+        context['form'] = forms.EnlingoPostWeeklyQuiz()
+        context['institutelist'] = EducationInstitute.objects.filter(country="AU") #temporarily hardcode country filter
+        return context
+
+    def get_queryset(self):
+        return Post.objects.filter(author=self.request.user)
+
+class EnlingoPostWeeklyQuizSave(SingleObjectMixin, FormView):
+    template_name = 'userpanel/userpanel.html'
+    form_class = forms.EnlingoPostWeeklyQuiz
+    success_url = reverse_lazy('userpanel:userpanel_main')
+
+    #userpanel.html post http header processing
+    def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return HttpResponseForbidden()
+        return super(EnlingoPostWeeklyQuizSave, self).post(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(EnlingoPostWeeklyQuizSave, self).get_context_data(**kwargs)
+        memberposts = self.get_queryset()
         try:
             credits = EnlingoPackageCustomer.objects.get(enlingopackagemember__member=self.request.user.profile).creditbalance
         except EnlingoPackageCustomer.DoesNotExist:
@@ -194,6 +233,29 @@ class MemberPost(ListView):
     def get_queryset(self):
         return Post.objects.filter(author=self.request.user)
 
+    def form_valid(self, form):
+        self.save_weekly_enlingo_post(form)
+        self.dismiss_weekly_enlingo_post(form)
+        if hasattr(auth, "update_session_auth_hash"):
+            auth.update_session_auth_hash(self.request, self.request.user)
+        return super(EnlingoPostWeeklyQuizSave, self).form_valid(form)
+
+    # Check and Update Weekly Enlingo Post
+    def save_weekly_enlingo_post(self, form):
+        section = Section.objects.get(name=form.cleaned_data['section'])
+        #Create Pinax Blog Post Instance
+        weeklyenlingopost = Post.objects.create(author=self.request.user,
+                                                section=section,
+                                                description=form.cleaned_data["description"],
+                                                title=form.cleaned_data["title"]
+                                                )
+        return weeklyenlingopost
+
+    def dismiss_weekly_enlingo_post(self, form):
+        if self.request.user.is_authenticated():
+            announcement = Announcement.objects.get(pk = form.cleaned_data['announcement_id'])
+            announcement.dismissals.create(user=self.request.user)
+            status = 200
 
 class EnlingoPremiumMember(CustomerMixin, PaymentsContextMixin,SuccessMessageMixin, FormView):
     template_name = "subscription_wizard.html"

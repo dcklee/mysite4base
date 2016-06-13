@@ -210,3 +210,13 @@ EnlingoPackageMemberDeactivateFormSet = formset_factory(EnlingoPackageMemberDeac
 class EnlingoRechargeCreditProcessing(forms.Form):
 
     email1 = forms.CharField(widget = forms.TextInput, required=False)
+
+class EnlingoPostWeeklyQuiz(forms.Form):
+    #Pinax Blog Section displayed as hidden "Area of Study" field in userpanel
+    section = forms.CharField(widget = forms.TextInput)
+    #Pinax Blog Title displayed as "Institution" Name field for data collection purposes
+    title = forms.CharField(widget = forms.TextInput)
+    #Pinax Blog Description displayed as "Post" field in userpanel
+    description = forms.CharField(widget=forms.TextInput)
+    #Pinax Announcements Announcement ID displayed as hidden "announcement_id" field in userpanel
+    announcement_id = forms.CharField(widget=forms.TextInput)
