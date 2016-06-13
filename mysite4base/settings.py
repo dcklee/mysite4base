@@ -166,6 +166,12 @@ INSTALLED_APPS = (
     'django_extensions',
     'sorl.thumbnail',
     'newsletter',
+
+#    #pinax-notifications
+#    'pinax.notifications',
+
+    #pinax-announcements
+    'pinax.announcements',
 )
 
 MIDDLEWARE_CLASSES = (
