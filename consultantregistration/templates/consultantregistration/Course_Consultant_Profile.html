@@ -69,29 +69,29 @@
                                     
                                     <h1 class="course-list-title">博客</h1>
                                     <div class="courses-list profile-table">
-                                        <div class="wrap-field wrap-field-last"><strong>博客更新: </strong>18/03/2016</div>
+                                        <div class="wrap-field wrap-field-last"><strong>博客更新: </strong>{{ current_enlingopost.published|date }}</div>
                                         <table class="table course-list-table">
                                             <thead class="main-color-1-bg dark-div">
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>博客</th>
                                                     <th>学习科目</th>
+                                                    <th>博客日期</th>
                                                     <th>观看</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            {%  for enlingopost in enlingoposts %}
+                                                {%  if enlingopost.published %}
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>MD 5</td>
-                                                    <td>Masters of Computer Science</td>
-                                                    <td>May 29, 2016</td>
+                                                    <td>{{ enlingopost.pk }}</td>
+                                                    <td>{{ enlingopost.content_html|safe }}</td>
+                                                    <td>{{ enlingopost.section }}</td>
+                                                    <td>{{ enlingopost.published }}</td>
+                                                    <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>abc</td>
-                                                    <td>Masters of Arts</td>
-                                                    <td>Jan 29, 2016</td>
-                                                </tr>
+                                                {%  endif %}
+                                            {%  endfor %}
                                             </tbody>
                                         </table>
                                     </div><!--/courses-list-->
