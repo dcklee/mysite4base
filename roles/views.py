@@ -94,7 +94,7 @@ class SignupViewConsultant(views.SignupView):
         super(SignupViewConsultant, self).after_signup(form)
 
     def update_profile(self, form):
-        Profile.objects.create(user=self.created_user, urole="C", profile_image="profile/whitespace.gif")
+        Profile.objects.create(user=self.created_user, urole="C", profile_image="site_media/media/profile/whitespace.gif")
         #profile = self.created_user.profile # replace with project reverse one to one profile attribute
         ConsultantRegistrationDetails.objects.create(consultant=self.created_user.profile)
         #user = User.objects.get(username=self.created_user.username)
