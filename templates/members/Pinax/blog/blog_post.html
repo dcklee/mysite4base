@@ -1,0 +1,88 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}blogHeader{% endblock %}
+{% block topbar_base %}
+	<!-- Blog header -->
+	<header class="blogHeader" style="background-image: url('{% static "tmp/bg_blog.jpg" %}');" data-top-bottom="background-position: 50% -130px;" data-bottom-top="background-position: 50% 130px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+					<a href="{%  url "home" %}" title="#" class="back btn-effect">
+						<span class="sprite icon"></span> Back
+					</a>
+					<h1>{{ post.title }}</h1>
+
+					<div class="info">
+						<div class="wrap">
+							<span class="sprite icon icon-calendar"></span>
+							<div class="articleInfo text-left">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">{{ post.published|date:"jS F Y" }}</div>
+								<div class="author">By: <a href="#" title="#">{{ post.author }}</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+{% endblock %}
+{% block extra_head %}
+    {{ block.super }}
+    <meta name="twitter:card" content="summary">
+    {% comment %}
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/62846141/pinaxproject_avatar.png">
+    {% endcomment %}
+    <meta property="og:title" content="{{ post.title }}">
+    {% if post.description %}
+        <meta name="description" content="{{ post.description }}">
+        <meta property="og:description" content="{{ post.description }}">
+    {% else %}
+        <meta name="description" content="{{ post.teaser_html|striptags }}">
+        <meta property="og:description" content="{{ post.teaser_html|striptags }}">
+    {% endif %}
+    {% if post.primary_image %}
+        <meta property="og:image" content="http://{{ SITE_DOMAIN }}{{ post.primary_image.image_path.url }}">
+    {% else %}
+        {% comment %}
+        <meta property="og:image" content="https://pbs.twimg.com/profile_images/62846141/pinaxproject_avatar.png">
+        {% endcomment %}
+    {% endif %}
+    <meta property="og:url" content="http://{{ SITE_DOMAIN }}{{ post.get_absolute_url }}">
+    <meta property="og:type" content="article">
+{% endblock %}
+{% block body_base %}
+	
+	<div class="blogContent">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 col-lg-2 authorInfoWrap">
+					<div class="authorInfo">
+						<img src="{% static "tmp/damien.jpg" %}" alt="#" width="168" height="168" class="img-responsive">
+						<div class="info">
+							<div class="div">Author: <a href="#" title="#" class="green"><strong>{{ post.author }}</strong></a></div>
+							<div>Commentator</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-9 col-lg-8 content">
+					<div class="rte">
+						<p>{{ post.description }}</p>
+					</div>
+				</div>
+				<!-- <div class="visible-sm col-sm-1 col-lg-2 text-center backtoTop"> -->
+				<div class="visible-lg text-center backtoTop js-backtoTop">
+					<span class="icon sprite"></span>
+					Back to top
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
