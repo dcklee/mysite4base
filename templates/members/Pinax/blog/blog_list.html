@@ -55,12 +55,12 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-sm-offset-4">
-					<a href="#" title="#" class="btn btn-lg btn-red btn-effect">+ 10 more posts...</a>
+					{% include "pagination/builtin_pagination_reverse.html" %}
 				</div>
 			</div>
 		</div>
 	</div>
-        {% include "pagination/builtin_pagination_reverse.html" %}
+
     {% else %}
         <p class="alert alert-info lead">No blog posts have been published.</p>
     {% endif %}

@@ -64,7 +64,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-3 col-lg-2 authorInfoWrap">
 					<div class="authorInfo">
-						<img src="{% static "tmp/damien.jpg" %}" alt="#" width="168" height="168" class="img-responsive">
+						<img src="{{ post.author.profile.profile_image.url }}" alt="{{ post.author }}" width="168" height="168" class="img-responsive">
 						<div class="info">
 							<div class="div">Author: <a href="#" title="#" class="green"><strong>{{ post.author }}</strong></a></div>
 							<div>Commentator</div>
@@ -72,7 +72,11 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-9 col-lg-8 content">
+                    <div class="intro">
+						<p>{{ post.teaser_html|safe }}</p>
+					</div>
 					<div class="rte">
+                        <img src="{{ post.primary_image.image_path.url }}" alt="#" width="770" height="580" class="img-responsive image">
 						<p>{{ post.description }}</p>
 					</div>
 				</div>
