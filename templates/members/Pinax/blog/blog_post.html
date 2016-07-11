@@ -48,7 +48,7 @@
         <meta property="og:description" content="{{ post.teaser_html|striptags }}">
     {% endif %}
     {% if post.primary_image %}
-        <meta property="og:image" content="http://{{ SITE_DOMAIN }}{{ post.primary_image.image_path.url }}">
+        <meta property="og:image" content="http:{{ post.primary_image.image_path.url }}">
     {% else %}
         {% comment %}
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/62846141/pinaxproject_avatar.png">
@@ -77,7 +77,7 @@
 					</div>
 					<div class="rte">
                         <img src="{{ post.primary_image.image_path.url }}" alt="#" width="770" height="580" class="img-responsive image">
-						<p>{{ post.description }}</p>
+						<p>{{ post.content_html|safe }}</p>
 					</div>
 				</div>
 				<!-- <div class="visible-sm col-sm-1 col-lg-2 text-center backtoTop"> -->
