@@ -64,7 +64,7 @@
                             <div class="tab-content">
                             <div class="tab-pane" id="about">
                               <div class="row">
-                                  <h4 class="info-text"> Personal & Account Details</h4>
+                                  <h4 class="info-text"> {%  if packageidentifier == 4 %}Institute Administrator Account Details {%  else %} Personal & Account Details {%  endif %}</h4>
                                   <div class="col-sm-4 col-sm-offset-1">
                                      <div class="picture-container">
                                           <div class="picture">
@@ -100,7 +100,16 @@
                                 <h4 class="info-text">Details </h4>
                                <div class="row">
                                     <div class="col-sm-5 col-sm-offset-1">
-                                      <div class="form-group">
+                                      <div class="form-group">{%  if packageidentifier == 4 %}
+                                          <label for="registrationqualifications">Institute Type</label>
+                                          <select id="registrationqualifications" name="registrationqualifications" class="form-control">
+                                            <option disabled="" selected="">- select -</option>
+                                            <option>Vocational Training</option>
+                                            <option>College </option>
+                                            <option>University</option>
+                                            <option>Other</option>
+                                          </select>
+                                          {%  else %}
                                           <label for="registrationqualifications">Registration Type</label>
                                           <select id="registrationqualifications" name="registrationqualifications" class="form-control">
                                             <option disabled="" selected="">- select -</option>
@@ -110,20 +119,27 @@
                                             <option>Education Institute</option>
                                             <option>Other</option>
                                           </select>
+                                          {%  endif %}
                                       </div>
-                                         <div class="form-group">
+                                         <div class="form-group">{%  if packageidentifier == 4 %}
+                                             <label>Institute Name</label>
+                                             <input name="companyname" type="text" class="form-control" placeholder="College...">
+
+                                         {%  else %}
                                             <label>Agency Name</label>
                                              <input name="companyname" type="text" class="form-control" placeholder="ABC Pty Ltd...">
-                                          </div>
+                                         {%  endif %}
+                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label>City</label>
                                              <input name="city" type="text" class="form-control" placeholder="Sydney...">
                                           </div>
-                                        <div class="choice" data-toggle="" title="Yes">
+                                        <div class="choice" data-toggle="" title="Yes">{%  if packageidentifier == 4 %}{% else %}
                                           <label>Register for Enlingo Commission Sharing Scheme?<small> (Your Enlingo Member Manager will contact you, we provide commission sharing for over 150 Australian intitutions)</small></label>
                                           <input name="schemeregister" type="checkbox" class="form">
+                                            {%  endif %}
                                        </div>
                                      </div>
                                 </div>
