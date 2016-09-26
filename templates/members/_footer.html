@@ -52,7 +52,7 @@
 	<div class="section businessTheme">
 		<div class="container text-center">
 			<h2>Enlingo</h2>
-			<a href="#" title="#" class="btn btn-lg btn-yellow btn-effect"><span>News</span></a>
+			<a href="{%  url "pinax_blog:blog" %}" title="News" class="btn btn-lg btn-yellow btn-effect"><span>News</span></a>
 		</div>
 	</div>
 
@@ -66,26 +66,35 @@
 							St Leonards, NSW<br />
 							Australia 2065<br />
 							+612 8006 2982<br />
-							<a href="#" title="#">member.support@enlingo.com</a>
+							<a href="mailto:member.support@enlingo.com" title="#">member.support@enlingo.com</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 i">
 						<h2>Newsletter</h2>
 						<p>Get the latest news via email:</p>
-						<form>
-							<input type="email" class="form-control">
-							<button type="submit" class="submit sprite"></button>
+                            {% if error %}
+                                <p>{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+
+                                {% comment %} Replace the the following dummy with a valid email address and remove this comment.
+
+                                <p>{% trans "If the error persists, please don't hesitate to contact us at the following email address:" %} <a href="mailto:info@foobar.com">info@foobar.com</a></p>
+
+                                {% endcomment %}
+                            {% else %}
+						<form enctype="multipart/form-data" method="post" action="{%  url "newsletter_subscribe_confirm" 'socialpost-updates' %}">
+                            {% csrf_token %}
+							<input type="email" class="form-control" name="email_field">
+							<button type="submit" id="id_submit" class="submit sprite" name="submit" value="{% trans "Subscribe" %}"></button>
 						</form>
+                            {% endif %}
 					</div>
 					<div class="col-xs-6 col-sm-3 i">
 						<h2>Follow</h2>
 						<p>Get close to us</p>
 
 						<div class="socials">
-							<a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-							<a href="#" title="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							<a href="https://twitter.com/EnlingoAust" title="EnlingoAust" class="twitter"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.linkedin.com/company/13189322?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A13189322%2Cidx%3A1-1-1%2CtarId%3A1467353699097%2Ctas%3Aenlingo" title="Enlingo Linkedin" class="linkedin"><i class="fa fa-linkedin"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 i">

@@ -1,0 +1,67 @@
+{% extends "site_base.html" %}
+{% load static from staticfiles %}
+{% load pinax_blog_tags %}
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+{% block head_title %}Enlingo Members Australia{% endblock %}
+{% block main_sub %}subpage{% endblock %}
+{% block data1_value %}top: 0%;{% endblock %}
+{% block data2_value %}top: -10%;{% endblock %}
+{% block active4 %}active{% endblock %}
+{% block index_or_subpage_component %}
+			<div class="text-center">
+				<h2 class="subpageTitle">News</h2>
+			</div>
+{% endblock %}
+{% block body_base %}
+    	<!-- Blockquote -->
+	<div class="section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+					<blockquote class="blockquote-lg">Enlingo Updates to our <strong>members</strong>. Catch up on member news and <strong>Posting Strategies</strong>.</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {% if post_list %}
+	<!-- Blog posts -->
+	<div class="section gray latestPosts">
+		<div class="container">
+			<h2 class="text-center">Latest <strong>News</strong></h2>
+
+			<div class="listing row js-latestPosts">
+                {% for post in post_list %}
+				<div class="col-xs-6 col-sm-4 i">
+					<div class="c">
+						<a href="{{ post.get_absolute_url }}" title="#">
+							<img src="{{ post.primary_image.image_path.url }}" alt="#" width="370" height="280" class="img-responsive">
+						</a>
+						<div class="wrapInfo">
+							<h3>
+								<a href="{{ post.get_absolute_url }}" title="#">{{ post.title }}</a>
+							</h3>
+							<div class="info">
+								<span class="sprite icon icon-calendar"></span>
+								<div class="date">{{ post.published|date:"jS F Y" }}</div>
+								<div class="author">By: <a href="" title="#">{{ post.author }}</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+                 {% endfor %}
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+					{% include "pagination/builtin_pagination_reverse.html" %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {% else %}
+        <p class="alert alert-info lead">No blog posts have been published.</p>
+    {% endif %}
+{% endblock %}

@@ -39,6 +39,8 @@ urlpatterns = [
 #    url(r'^account/signup/$', views.SignupViewConsultant.as_view(), name="consultant_account_signup"), #placemarker for demo
 #    url(r'^account2/signup/$', views.SignupViewConsultantAssistant.as_view(), name="consultant_assistant_account_signup"), #placemarker for demo
     url(r'^account/', include('account.urls')),
+    url(r"^newsletter/", include('newsletter.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r"^blog/", include("pinax.blog.urls")),
     url(r'^flows/', include('studentapply.urls'))
 ]
